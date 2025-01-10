@@ -1,0 +1,75 @@
+site_name: OpsBoxDocs
+
+nav:
+  - Welcome! : index.md
+  - Core:
+    - Home: core/index.md
+    - Getting Started:
+        - Installation: core/getting_started/installation.md 
+        - Running OpsBox: core/getting_started/running.md
+        - Plugin Overview: core/plugins/plugin_overview.md
+        - Available Plugins: core/plugins/available_plugins.md
+        - Contributing: core/contributing.md
+    - Making Plugins:
+        - Basics: core/plugins/development_basics.md
+        - Making Handlers: core/plugins/making_handlers.md
+        - Making Providers: core/plugins/making_providers.md
+        - Making Outputs: core/plugins/making_outputs.md
+        - Making Checks: core/plugins/making_checks.md
+    - Testing:
+        - Testing OpsBox: core/testing/testing.md
+        - Testing Handlers: core/testing/testing_handlers.md
+        - Testing General Plugins: core/testing/testing_general_plugins.md
+        - Testing Rego Plugins: core/testing/testing_rego_plugins.md
+  - Community Plugins:
+    - Home: plugins/index.md
+    - AWS:
+        - "opsbox-ec2-checks":
+          - "Old Snapshots": plugins/ec2/ec2_old_snapshots.md
+          - "Stray Instances": plugins/ec2/stray_instances.md
+          - "Unattached EIPs": plugins/ec2/unattached_eips.md
+          - "Idle Instances": plugins/ec2/idle_instances.md
+          - "Stray EBS Volumes": plugins/ec2/stray_ebs.md
+        - "opsbox-s3-checks":
+          - "Unused Buckets": plugins/s3/unused_buckets.md
+          - "Storage Class usage": plugins/s3/storage_class_usage.md
+          - "Object Last Modified": plugins/s3/object_last_modified.md
+        - "opsbox-rds-checks":
+          - RDS Idle: plugins/rds/rds_idle.md
+          - Old Snapshots: plugins/rds/old_snapshots.md
+          - Empty Storage: plugins/rds/empty_storage.md
+          - Scaling Down RDS Instances: plugins/rds/scaling_down.md
+        - "opsbox-iam-checks":
+          - Console Access: plugins/iam/console_access.md
+          - Unused Policies: plugins/iam/unused_policies.md
+          - MFA Enabled: plugins/iam/mfa_enabled.md
+          - Overdue Api Keys: plugins/iam/overdue_api_keys.md
+        - "opsbox-elb-checks":
+          - "High Error Rate Load Balancers": plugins/elb/high_error_rate.md
+          - "Inactive Load Balancers": plugins/elb/inactive_load_balancers.md
+          - "Low Request Count Load Balancers": plugins/elb/low_request_counts.md
+        - "opsbox-r53-checks":
+          - Empty Zones: plugins/r53/empty_zones.md
+    - Outputs:
+        - "opsbox-slack-output": plugins/outputs/slack.md
+        - "opsbox-cli-output": plugins/outputs/cli.md
+        - "opsbox-email-output": plugins/outputs/email.md
+        - "opsbox-jira-output": plugins/outputs/jira.md
+        - "opsbox-pagerduty-output": plugins/outputs/pagerduty.md
+        - "opsbox-azure-output": plugins/outputs/azure.md
+        - "opsbox-github-output": plugins/outputs/github.md
+        - "opsbox-text-file-output": plugins/outputs/text.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
