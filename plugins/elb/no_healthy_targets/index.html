@@ -16,7 +16,7 @@
     
     
       
-        <title>Inactive Load Balancers - Opsbox Docs</title>
+        <title>No Healthy Targets - Opsbox Docs</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#inactive-load-balancers" class="md-skip">
+        <a href="#no-healthy-targets" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Inactive Load Balancers
+              No Healthy Targets
             
           </span>
         </div>
@@ -1824,15 +1824,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#check-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Check Configuration
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -1862,14 +1853,13 @@
                   
 
 
-<h1 id="inactive-load-balancers">Inactive Load Balancers</h1>
+<h1 id="no-healthy-targets">No Healthy Targets</h1>
 <h2 id="overview">Overview</h2>
 <p>The No Healthy Targets check identifies elbs where all targets are unhealthy. </p>
 <h2 id="key-features">Key Features</h2>
 <ul>
 <li><strong>AWS ELB Integration</strong>: Fetches and processes data from AWS ELB.</li>
 <li><strong>Inactive Resource Identification</strong>: Identifies load balancers that have no healthy targets.</li>
-<li><strong>Cost Savings Recommendations</strong>: Recommends decommissioning inactive load balancers to save costs.</li>
 </ul>
 <h2 id="configuration-parameters">Configuration Parameters</h2>
 <h3 id="aws-configuration">AWS Configuration</h3>
@@ -1877,11 +1867,6 @@
 <li><strong>aws_access_key_id</strong>: AWS access key ID.</li>
 <li><strong>aws_secret_access_key</strong>: AWS secret access key.</li>
 <li><strong>aws_region</strong>: AWS region.</li>
-</ul>
-<h3 id="check-configuration">Check Configuration</h3>
-<ul>
-<li><strong>period</strong>: 86400 (seconds)</li>
-<li><strong>inactive_threshold</strong>: 30 (days)</li>
 </ul>
 <h2 id="example-configuration">Example Configuration</h2>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">aws_access_key_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_access_key_id</span>
