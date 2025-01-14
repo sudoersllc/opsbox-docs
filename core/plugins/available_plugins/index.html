@@ -1,0 +1,4998 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../plugin_overview/">
+      
+      
+        <link rel="next" href="../../contributing/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Available Plugins - OpsBoxDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#plugin-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OpsBoxDocs" class="md-header__button md-logo" aria-label="OpsBoxDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpsBoxDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Available Plugins
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Core
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../plugins/" class="md-tabs__link">
+          
+  
+  Community Plugins
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OpsBoxDocs" class="md-nav__button md-logo" aria-label="OpsBoxDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    OpsBoxDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Core
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/running/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running OpsBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plugin Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Available Plugins
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Available Plugins
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table of Contents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provider-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provider Plugins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assistant-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assistant Plugins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Plugins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rego-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rego Plugins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ec2provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      EC2Provider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EC2Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elbprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELBProvider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ELBProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdsprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDSProvider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RDSProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s3provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      S3Provider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="S3Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iamprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      IAMProvider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IAMProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#route53provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Route53Provider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Route53Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudwatchprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      CloudWatchProvider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CloudWatchProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-savings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost Savings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost Savings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#used-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Used Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lower-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lower Cost
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lower Cost">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#used-fields_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Used Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jiraoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      JiraOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JiraOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emailoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      EmailOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EmailOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slackoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      SlackOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SlackOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clioutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLIOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLIOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textfileoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      TextFileOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TextFileOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#githuboutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      GithubOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GithubOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azureoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      AzureOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AzureOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagerdutyoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      PagerDutyOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PagerDutyOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsonoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSONOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSONOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idle_instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      idle_instances
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="idle_instances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stray_ebs" class="md-nav__link">
+    <span class="md-ellipsis">
+      stray_ebs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="stray_ebs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high_error_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      high_error_rate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="high_error_rate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inactive_load_balancers" class="md-nav__link">
+    <span class="md-ellipsis">
+      inactive_load_balancers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="inactive_load_balancers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no_healthy_targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      no_healthy_targets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="no_healthy_targets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low_request_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      low_request_count
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="low_request_count">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty_storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      empty_storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="empty_storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rds_idle" class="md-nav__link">
+    <span class="md-ellipsis">
+      rds_idle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="rds_idle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object_last_modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      object_last_modified
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="object_last_modified">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage_class_usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      storage_class_usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="storage_class_usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unused_buckets" class="md-nav__link">
+    <span class="md-ellipsis">
+      unused_buckets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="unused_buckets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#console_access" class="md-nav__link">
+    <span class="md-ellipsis">
+      console_access
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="console_access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mfa_enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      mfa_enabled
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mfa_enabled">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overdue_api_keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      overdue_api_keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="overdue_api_keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unused_policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      unused_policy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="unused_policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty_zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      empty_zones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="empty_zones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cw_insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      cw_insights
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="cw_insights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Making Plugins
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Making Plugins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development_basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making_handlers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Making Handlers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making_providers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Making Providers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making_outputs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Making Outputs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making_checks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Making Checks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Testing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing/testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing OpsBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing/testing_handlers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing Handlers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing/testing_general_plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing General Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing/testing_rego_plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing Rego Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community Plugins
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Community Plugins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            AWS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-ec2-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-ec2-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/ec2/ec2_old_snapshots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Old Snapshots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/ec2/stray_instances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stray Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/ec2/unattached_eips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unattached EIPs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/ec2/idle_instances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Idle Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/ec2/stray_ebs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stray EBS Volumes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-s3-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-s3-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/s3/unused_buckets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unused Buckets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/s3/storage_class_usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage Class usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/s3/object_last_modified/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Object Last Modified
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-rds-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-rds-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/rds/rds_idle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RDS Idle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/rds/old_snapshots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Old Snapshots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/rds/empty_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empty Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/rds/scaling_down/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scaling Down RDS Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-iam-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-iam-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/iam/console_access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Console Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/iam/unused_policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unused Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/iam/mfa_enabled/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MFA Enabled
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/iam/overdue_api_keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overdue Api Keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_5" id="__nav_3_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-elb-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-elb-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/elb/high_error_rate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    High Error Rate Load Balancers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/elb/inactive_load_balancers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inactive Load Balancers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/elb/low_request_counts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Low Request Count Load Balancers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_6" id="__nav_3_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-r53-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-r53-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/r53/empty_zones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empty Zones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Outputs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Outputs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/slack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-slack-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-cli-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/email/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-email-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/jira/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-jira-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/pagerduty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-pagerduty-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/azure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-azure-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-github-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-text-file-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table of Contents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provider-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provider Plugins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assistant-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assistant Plugins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Plugins
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rego-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rego Plugins
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ec2provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      EC2Provider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EC2Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elbprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELBProvider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ELBProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdsprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDSProvider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RDSProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s3provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      S3Provider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="S3Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iamprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      IAMProvider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="IAMProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#route53provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      Route53Provider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Route53Provider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudwatchprovider" class="md-nav__link">
+    <span class="md-ellipsis">
+      CloudWatchProvider
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CloudWatchProvider">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-checks_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related Checks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cost-savings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost Savings
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost Savings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#used-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      Used Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lower-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lower Cost
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lower Cost">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#used-fields_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Used Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jiraoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      JiraOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JiraOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emailoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      EmailOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EmailOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slackoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      SlackOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SlackOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clioutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLIOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CLIOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#textfileoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      TextFileOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TextFileOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#githuboutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      GithubOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GithubOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azureoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      AzureOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AzureOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pagerdutyoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      PagerDutyOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PagerDutyOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jsonoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSONOutput
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSONOutput">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-fields_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Required Fields
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idle_instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      idle_instances
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="idle_instances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stray_ebs" class="md-nav__link">
+    <span class="md-ellipsis">
+      stray_ebs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="stray_ebs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#high_error_rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      high_error_rate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="high_error_rate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inactive_load_balancers" class="md-nav__link">
+    <span class="md-ellipsis">
+      inactive_load_balancers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="inactive_load_balancers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no_healthy_targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      no_healthy_targets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="no_healthy_targets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low_request_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      low_request_count
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="low_request_count">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty_storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      empty_storage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="empty_storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rds_idle" class="md-nav__link">
+    <span class="md-ellipsis">
+      rds_idle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="rds_idle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overview_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object_last_modified" class="md-nav__link">
+    <span class="md-ellipsis">
+      object_last_modified
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="object_last_modified">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage_class_usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      storage_class_usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="storage_class_usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unused_buckets" class="md-nav__link">
+    <span class="md-ellipsis">
+      unused_buckets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="unused_buckets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#console_access" class="md-nav__link">
+    <span class="md-ellipsis">
+      console_access
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="console_access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mfa_enabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      mfa_enabled
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="mfa_enabled">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overdue_api_keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      overdue_api_keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="overdue_api_keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unused_policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      unused_policy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="unused_policy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty_zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      empty_zones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="empty_zones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cw_insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      cw_insights
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="cw_insights">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#details_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="plugin-documentation">Plugin Documentation</h1>
+<p>This document provides an overview of the various plugins implemented for gathering and processing data, interacting with external services, and outputting results. The plugins are categorized into provider plugins for data gathering, assistant plugins for interacting with external services, and output plugins for processing and displaying results.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<h3 id="provider-plugins">Provider Plugins</h3>
+<ul>
+<li><a href="#ec2provider">EC2Provider</a></li>
+<li><a href="#elbprovider">ELBProvider</a></li>
+<li><a href="#rdsprovider">RDSProvider</a></li>
+<li><a href="#s3provider">S3Provider</a></li>
+<li><a href="#iamprovider">IAMProvider</a></li>
+<li><a href="#route53provider">Route53Provider</a></li>
+<li><a href="#cloudwatchprovider">CloudWatchProvider</a></li>
+</ul>
+<h3 id="assistant-plugins">Assistant Plugins</h3>
+<ul>
+<li><a href="#cost-savings">Cost Savings</a></li>
+<li><a href="#lower-cost">Lower Cost</a></li>
+</ul>
+<h3 id="output-plugins">Output Plugins</h3>
+<ul>
+<li><a href="#jiraoutput">JiraOutput</a></li>
+<li><a href="#emailoutput">EmailOutput</a></li>
+<li><a href="#slackoutput">SlackOutput</a></li>
+<li><a href="#clioutput">CLIOutput</a></li>
+<li><a href="#textfileoutput">TextFileOutput</a></li>
+<li><a href="#githuboutput">GithubOutput</a></li>
+<li><a href="#azureoutput">AzureOutput</a></li>
+<li><a href="#pagerdutyoutput">PagerDutyOutput</a></li>
+<li><a href="#jsonoutput">JSONOutput</a></li>
+</ul>
+<h3 id="rego-plugins">Rego Plugins</h3>
+<ul>
+<li><a href="#checks">Rego Checks</a></li>
+</ul>
+<hr />
+<h2 id="ec2provider">EC2Provider</h2>
+<p>To install with pip, run <code>pip install opsbox-ec2-provider</code>.
+To install with UV, run <code>uv add opsbox-ec2-provider</code></p>
+<h3 id="overview">Overview</h3>
+<p>The EC2Provider plugin collects detailed information about AWS EC2 instances, including their associated volumes and Elastic IP addresses, to facilitate monitoring and management.</p>
+<h3 id="required-fields">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="n">aws_access_key_id</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS access key ID&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">aws_secret_access_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS secret access key&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">aws_region</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span>  <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS region&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">volume_tags</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Key-value tag pairs for volumes&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="p">]</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">instance_tags</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Key-value tag pairs for instances&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="p">]</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">eip_tags</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Key-value tag pairs for Elastic IPs&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="p">]</span>
+</span></code></pre></div>
+<h3 id="related-checks">Related Checks</h3>
+<ul>
+<li><a href="#idle_instances">IdleInstances</a></li>
+<li><a href="#stray_ebs">StrayEbs</a></li>
+</ul>
+<hr />
+<h2 id="elbprovider">ELBProvider</h2>
+<p>To install with pip, run <code>pip install opsbox-elb-provider</code>.
+To install with UV, run <code>uv add opsbox-elb-provider</code></p>
+<h3 id="overview_1">Overview</h3>
+<p>The ELBProvider plugin gathers comprehensive data about AWS Elastic Load Balancers, including Classic, Application, and Network Load Balancers, to optimize performance and identify potential issues.</p>
+<h3 id="required-fields_1">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    <span class="n">aws_access_key_id</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS access key ID&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">aws_secret_access_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS secret access key&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">aws_region</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS-Region&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="p">]</span>
+</span></code></pre></div>
+<h3 id="related-checks_1">Related Checks</h3>
+<ul>
+<li><a href="#high_error_rate">HighErrorRate</a></li>
+<li><a href="#inactive_load_balancers">InactiveLoadBalancers</a></li>
+<li><a href="#low_request_count">LowRequestCount</a></li>
+</ul>
+<hr />
+<h2 id="rdsprovider">RDSProvider</h2>
+<p>To install with pip, run <code>pip install opsbox-rds-provider</code>.
+To install with UV, run <code>uv add opsbox-rds-provider</code></p>
+<h3 id="overview_2">Overview</h3>
+<p>The RDSProvider plugin collects information about AWS RDS instances to help manage and optimize database performance and cost.</p>
+<h3 id="required-fields_2">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    <span class="n">aws_access_key_id</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS access key ID&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">aws_secret_access_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS secret access key&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="n">aws_region</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS-Region&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="p">]</span>
+</span></code></pre></div>
+<h3 id="related-checks_2">Related Checks</h3>
+<ul>
+<li><a href="#empty_storage">EmptyStorage</a></li>
+<li><a href="#rds_idle">RDSIdle</a></li>
+<li><a href="#scaling_down">ScalingDown</a></li>
+</ul>
+<hr />
+<h2 id="s3provider">S3Provider</h2>
+<p>To install with pip, run <code>pip install opsbox-s3-provider</code>.
+To install with UV, run <code>uv add opsbox-s3-provider</code></p>
+<h3 id="overview_3">Overview</h3>
+<p>The S3Provider plugin gathers data related to AWS S3, including information about buckets, objects, and storage classes, to assist in storage management and cost optimization.</p>
+<h3 id="required-fields_3">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    <span class="n">aws_access_key_id</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS access key ID&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="n">aws_secret_access_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span><span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS secret access key&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">aws_region</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS-Region&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="p">]</span>
+</span></code></pre></div>
+<h3 id="related-checks_3">Related Checks</h3>
+<ul>
+<li><a href="#object_last_modified">ObjectLastModified</a></li>
+<li><a href="#storage_class_usage">StorageClassUsage</a></li>
+<li><a href="#unused_buckets">UnusedBuckets</a></li>
+</ul>
+<hr />
+<h2 id="iamprovider">IAMProvider</h2>
+<p>To install with pip, run <code>pip install opsbox-iam-provider</code>.
+To install with UV, run <code>uv add opsbox-iam-provider</code></p>
+<h3 id="overview_4">Overview</h3>
+<p>The IAMProvider plugin collects data related to AWS IAM, including information about users, groups, and roles, to help manage access and permissions effectively.</p>
+<h3 id="required-fields_4">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>   <span class="n">aws_access_key_id</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS access key ID&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">aws_secret_access_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS secret access key&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">aws_region</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS region&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span></code></pre></div>
+<h3 id="related-checks_4">Related Checks</h3>
+<ul>
+<li><a href="#console_access">Console_Acess</a></li>
+<li><a href="#mfa_enabled">mfa_enabled</a></li>
+<li><a href="#overdue_api_keys">overdue_api_keys</a></li>
+<li><a href="#unused_policy">usued_policy</a></li>
+</ul>
+<hr />
+<h2 id="route53provider">Route53Provider</h2>
+<p>To install with pip, run <code>pip install opsbox-r53-provider</code>.
+To install with UV, run <code>uv add opsbox-r53-provider</code></p>
+<h3 id="overview_5">Overview</h3>
+<p>The Route53Provider plugin collects data related to AWS Route53, including information about hosted zones, records, and health checks, to help manage DNS and routing effectively.</p>
+<h3 id="required-fields_5">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>    <span class="n">aws_access_key_id</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS access key ID&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="n">aws_secret_access_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS secret access key&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">aws_region</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS region&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span></code></pre></div>
+<h3 id="related-checks_5">Related Checks</h3>
+<ul>
+<li><a href="#empty_zones">empty_zones</a></li>
+</ul>
+<hr />
+<h2 id="cloudwatchprovider">CloudWatchProvider</h2>
+<h3 id="overview_6">Overview</h3>
+<p>The CloudWatchProvider plugin collects data related to AWS CloudWatch, including metrics and alarms, to help monitor and manage AWS resources effectively.</p>
+<h3 id="required-fields_6">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>   <span class="n">aws_access_key_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS access key ID&quot;</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">aws_secret_access_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS secret access key&quot;</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="n">aws_region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS region&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="related-checks_6">Related Checks</h3>
+<ul>
+<li><a href="#cw_insights">cw_insights</a></li>
+</ul>
+<h2 id="cost-savings">Cost Savings</h2>
+<p>To install with pip, run <code>pip install opsbox-cost-savings-assistant</code>.
+To install with UV, run <code>uv add opsbox-cost-savings-assistant</code></p>
+<h3 id="overview_7">Overview</h3>
+<p>The Cost Savings plugin leverages large language models (LLMs) to generate recommendations for reducing cloud infrastructure costs based on the latest pipeline analysis.</p>
+<p><strong>Module</strong>: <code>cost_savings</code></p>
+<h3 id="used-fields">Used Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>    <span class="n">arrigator</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Whether to aggregate the data and generate one response.&quot;</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="n">discard_prior</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        <span class="kc">False</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Whether to discard the data before and leave only cost saving data.&quot;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="p">)</span>
+</span></code></pre></div>
+<p>A Claude key or OpenAI key is required for generating content:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">claude_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The Claude API key used for generating email content.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">oai_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The OpenAI API key used for generating email content.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="lower-cost">Lower Cost</h2>
+<h3 id="overview_8">Overview</h3>
+<p>A plugin to generate recommendations for lowering costs on AWS EC2 instances.</p>
+<p><strong>Module</strong>: <code>lower_cost</code></p>
+<h3 id="used-fields_1">Used Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>    <span class="n">aws_access_key_id</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS access key ID&quot;</span><span class="p">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="n">aws_secret_access_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS secret access key&quot;</span><span class="p">)</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="n">aws_region</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;AWS region&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="jiraoutput">JiraOutput</h2>
+<p>To install with pip, run <code>pip install opsbox-jira-output</code>.
+To install with UV, run <code>uv add opsbox-jira-output</code></p>
+<h3 id="overview_9">Overview</h3>
+<p>The JiraOutput plugin creates and manages Jira issues based on check results, enabling effective tracking and resolution of identified problems.</p>
+<p><strong>Module</strong>: <code>jira_out</code></p>
+<h3 id="required-fields_7">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">jira_url</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The URL of the Jira instance for issue creation.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">jira_email</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The email address used for authenticating to Jira.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">jira_api_token</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The API token used for authenticating to Jira.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="n">jira_project_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The key of the Jira project where issues will be created.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span></code></pre></div>
+<p>Currently, only OpenAI is supported for Jira:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">oai_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The OpenAI API key used to assist with issue creation.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="emailoutput">EmailOutput</h2>
+<p>To install with pip, run <code>pip install opsbox-email-output</code>.
+To install with UV, run <code>uv add opsbox-email-output</code></p>
+<h3 id="overview_10">Overview</h3>
+<p>The EmailOutput plugin sends out email notifications based on check results, ensuring that relevant stakeholders are informed in a timely manner.</p>
+<p><strong>Module</strong>: <code>email_out</code></p>
+<h3 id="required-fields_8">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">smtp_username</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The username for SMTP server authentication.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="n">smtp_password</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The password for SMTP server authentication.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="n">smtp_server</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The SMTP server used for sending emails.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="n">smtp_port</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The port used for connecting to the SMTP server.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="n">receiver_email_list</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;A comma-separated list of recipient email addresses.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span></code></pre></div>
+<p>A Claude key or OpenAI key is required for generating content:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">claude_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The Claude API key used for generating email content.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">oai_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The OpenAI API key used for generating email content.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="slackoutput">SlackOutput</h2>
+<p>To install with pip, run <code>pip install opsbox-slack-output</code>.
+To install with UV, run <code>uv add opsbox-slack-output</code></p>
+<h3 id="overview_11">Overview</h3>
+<p>The SlackOutput plugin sends messages to specified Slack channels based on pipeline outputs, providing real-time alerts to relevant teams.</p>
+<p><strong>Module</strong>: <code>slack_out</code></p>
+<h3 id="required-fields_9">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">slack_token</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The Slack token used for authentication.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">slack_channel</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The Slack channel where the message will be posted.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="clioutput">CLIOutput</h2>
+<p>To install with pip, run <code>pip install opsbox-cli-output</code>.
+To install with UV, run <code>uv add opsbox-cli-output</code></p>
+<h3 id="overview_12">Overview</h3>
+<p>The CLIOutput plugin displays results directly in the command line interface, providing quick and accessible feedback.</p>
+<p><strong>Module</strong>: <code>cli_out</code></p>
+<hr />
+<h2 id="textfileoutput">TextFileOutput</h2>
+<p>To install with pip, run <code>pip install opsbox-text-file-output</code>.
+To install with UV, run <code>uv add opsbox-text-file-output</code></p>
+<h3 id="overview_13">Overview</h3>
+<p>The TextFileOutput plugin writes output results to a text file for record-keeping and further analysis.</p>
+<p><strong>Module</strong>: <code>text_out</code></p>
+<h3 id="required-fields_10">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">output_folder</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The folder to output the results to.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="githuboutput">GithubOutput</h2>
+<p>To install with pip, run <code>pip install opsbox-github-output</code>.
+To install with UV, run <code>uv add opsbox-github-output</code></p>
+<h3 id="overview_14">Overview</h3>
+<p>The GithubOutput plugin creates GitHub issues based on pipeline outputs, helping track and manage tasks or problems identified during analysis.</p>
+<p><strong>Module</strong>: <code>github_out</code></p>
+<h3 id="required-fields_11">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">github_token</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The token for authenticating the GitHub user.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">repo_owner</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The owner of the repository where the issue will be created.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">repo_name</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The name of the repository where the issue will be created.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">labels</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Labels to apply to the created issue.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="n">create_description</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Indicates whether to create a detailed description instead of an issue.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+</span></code></pre></div>
+<p>A Claude key or Open AI Keys are required if you have create_description set to true</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">claude_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span><span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The Claude API key to use.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">oai_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The OpenAI API key to use.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="azureoutput">AzureOutput</h2>
+<p>To install with pip, run <code>pip install opsbox-azure-output</code>.
+To install with UV, run <code>uv add opsbox-azure-output</code></p>
+<h3 id="overview_15">Overview</h3>
+<p>The AzureOutput plugin creates and manages Azure DevOps work items based on pipeline outputs, facilitating effective issue tracking and resolution.</p>
+<p><strong>Module</strong>: <code>azure_out</code></p>
+<h3 id="required-fields_12">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">azure_devops_token</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The personal access token for authenticating with Azure DevOps.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="n">azure_devops_organization</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The name of the Azure DevOps organization.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="n">azure_devops_project</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The name of the Azure DevOps project.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">azure_devops_username</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The username used for authenticating with Azure DevOps.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="n">azure_devops_priority</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The priority level for the work item.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">4</span><span class="p">)]</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="n">tags</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Tags to apply to the work item.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="n">create_description</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Indicates whether to create a detailed description instead of an issue.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+</span></code></pre></div>
+<p>A Claude key or Open AI Keys are required if you have create_description set to true</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>    <span class="n">claude_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span><span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The Claude API key to use.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>    <span class="n">oai_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The OpenAI API key to use.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="pagerdutyoutput">PagerDutyOutput</h2>
+<p>To install with pip, run <code>pip install opsbox-pagerduty-output</code>.
+To install with UV, run <code>uv add opsbox-pagerduty-output</code></p>
+<h3 id="overview_16">Overview</h3>
+<p>The PagerDutyOutput plugin sends alerts to PagerDuty based on pipeline outputs, ensuring prompt incident response and management.</p>
+<p><strong>Module</strong>: <code>pagerduty_out</code></p>
+<h3 id="required-fields_13">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>    <span class="n">routing_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The routing_key to use.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    <span class="n">create_description</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">bool</span><span class="p">,</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;Whether to create a description instead of an issue.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)]</span>
+</span></code></pre></div>
+<p>A Claude key or Open AI Keys are required if you have create_description set to true</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>    <span class="n">claude_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span><span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The Claude API key to use.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span></code></pre></div>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>    <span class="n">oai_key</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;The OpenAI API key to use.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">)]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="jsonoutput">JSONOutput</h2>
+<h3 id="overview_17">Overview</h3>
+<p>The JSONOutput plugin writes output results to a JSON file for further processing and analysis.</p>
+<p><strong>Module</strong>: <code>json_out</code></p>
+<h3 id="required-fields_14">Required Fields</h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>          <span class="n">output_folder</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">,</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="s2">&quot;./findings/&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;The folder to output the results to.&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="p">]</span>
+</span></code></pre></div>
+<hr />
+<h2 id="checks">Checks</h2>
+<p>To install checks for the services you want, simply run <code>pip install opsbox-&lt;service_name&gt;-checks</code> if using pip and <code>uv add opsbox-&lt;service_name&gt;-checks</code> if using uv.</p>
+<p>Available services include <code>s3</code>, <code>rds</code>, <code>elb</code>, route53 (accessed by using <code>r53</code>), <code>ec2</code>, and <code>aws-iam</code>.</p>
+<h3 id="idle_instances">idle_instances</h3>
+<h4 id="overview_18">Overview</h4>
+<p>Checks for EC2 instances that are idle, determined by low CPU utilization.</p>
+<h4 id="details">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>idle_instances</code></li>
+<li><strong>Rego File</strong>: <code>idle_instances.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#ec2provider"><code>EC2</code></a></li>
+</ul>
+<h3 id="stray_ebs">stray_ebs</h3>
+<h4 id="overview_19">Overview</h4>
+<p>Identifies EBS volumes that are not in use.</p>
+<h4 id="details_1">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>stray_ebs</code></li>
+<li><strong>Rego File</strong>: <code>stray_ebs.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#ec2provider"><code>EC2</code></a></li>
+</ul>
+<h3 id="high_error_rate">high_error_rate</h3>
+<h4 id="overview_20">Overview</h4>
+<p>Checks for ELBs with high error rates.</p>
+<h4 id="details_2">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>high_error_rate</code></li>
+<li><strong>Rego File</strong>: <code>high_error_rate.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#elbprovider"><code>ELB</code></a></li>
+</ul>
+<h3 id="inactive_load_balancers">inactive_load_balancers</h3>
+<h4 id="overview_21">Overview</h4>
+<p>Identifies underutilized ELBs based on request counts.</p>
+<h4 id="details_3">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>inactive_load_balancers</code></li>
+<li><strong>Rego File</strong>: <code>inactive_load_balancers.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#elbprovider"><code>ELB</code></a></li>
+</ul>
+<h3 id="no_healthy_targets">no_healthy_targets</h3>
+<h4 id="overview_22">Overview</h4>
+<p>Identifies ELBs with no healthy targets.</p>
+<h4 id="details_4">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>no_healthy_targets</code></li>
+<li><strong>Rego File</strong>: <code>no_healthy_targets.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#elbprovider"><code>ELB</code></a></li>
+</ul>
+<h3 id="low_request_count">low_request_count</h3>
+<h4 id="overview_23">Overview</h4>
+<p>Identifies ELBs with low request counts.</p>
+<h4 id="details_5">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>low_request_count</code></li>
+<li><strong>Rego File</strong>: <code>low_request_count.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#elbprovider"><code>ELB</code></a></li>
+</ul>
+<h3 id="empty_storage">empty_storage</h3>
+<h4 id="overview_24">Overview</h4>
+<p>Checks for RDS instances with low storage utilization.</p>
+<h4 id="details_6">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>empty_storage</code></li>
+<li><strong>Rego File</strong>: <code>empty_storage.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#rdsprovider"><code>RDS</code></a></li>
+</ul>
+<h3 id="rds_idle">rds_idle</h3>
+<h4 id="overview_25">Overview</h4>
+<p>Identifies underutilized RDS instances with low CPU utilization and connections.</p>
+<h4 id="details_7">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>rds_idle</code></li>
+<li><strong>Rego File</strong>: <code>rds_idle.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#rdsprovider"><code>RDS</code></a></li>
+</ul>
+<h4 id="overview_26">Overview</h4>
+<p>Provides recommendations for scaling down RDS instances based on low CPU utilization.</p>
+<h4 id="details_8">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>scaling_down</code></li>
+<li><strong>Rego File</strong>: <code>scaling_down.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#rdsprovider"><code>RDS</code></a></li>
+</ul>
+<h3 id="object_last_modified">object_last_modified</h3>
+<h4 id="overview_27">Overview</h4>
+<p>Identifies inactive S3 objects that haven't been modified in over 90 days.</p>
+<h4 id="details_9">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>object_last_modified</code></li>
+<li><strong>Rego File</strong>: <code>object_last_modified.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#s3provider"><code>S3</code></a></li>
+</ul>
+<h3 id="storage_class_usage">storage_class_usage</h3>
+<h4 id="overview_28">Overview</h4>
+<p>Checks the usage of different storage classes in S3 buckets.</p>
+<h4 id="details_10">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>storage_class_usage</code></li>
+<li><strong>Rego File</strong>: <code>storage_class_usage.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#s3provider"><code>S3</code></a></li>
+</ul>
+<h3 id="unused_buckets">unused_buckets</h3>
+<h4 id="overview_29">Overview</h4>
+<p>Identifies unused S3 buckets based on their last modified time.</p>
+<h4 id="details_11">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>unused_buckets</code></li>
+<li><strong>Rego File</strong>: <code>unused_buckets.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#s3provider"><code>S3</code></a></li>
+</ul>
+<h3 id="console_access">console_access</h3>
+<h4 id="overview_30">Overview</h4>
+<p>Identifies users with console access.</p>
+<h4 id="details_12">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>console_access</code></li>
+<li><strong>Rego File</strong>: <code>console_access.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#iamprovider"><code>IAM</code></a></li>
+</ul>
+<h3 id="mfa_enabled">mfa_enabled</h3>
+<h4 id="overview_31">Overview</h4>
+<p>Identifies users with MFA disabled.</p>
+<h4 id="details_13">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>mfa_enabled</code></li>
+<li><strong>Rego File</strong>: <code>mfa_enabled.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#iamprovider"><code>IAM</code></a></li>
+</ul>
+<h3 id="overdue_api_keys">overdue_api_keys</h3>
+<h4 id="overview_32">Overview</h4>
+<p>Identifies API keys that are overdue for rotation.</p>
+<h4 id="details_14">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>overdue_api_keys</code></li>
+<li><strong>Rego File</strong>: <code>overdue_api_keys.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#iamprovider"><code>IAM</code></a></li>
+</ul>
+<h3 id="unused_policy">unused_policy</h3>
+<h4 id="overview_33">Overview</h4>
+<p>Identifies unused policies in IAM.</p>
+<h4 id="details_15">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>unused_policy</code></li>
+<li><strong>Rego File</strong>: <code>unused_policy.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#iamprovider"><code>IAM</code></a></li>
+</ul>
+<h3 id="empty_zones">empty_zones</h3>
+<h4 id="overview_34">Overview</h4>
+<p>Identifies empty hosted zones in Route53.</p>
+<h4 id="details_16">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>empty_zones</code></li>
+<li><strong>Rego File</strong>: <code>empty_zones.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#route53provider"><code>Route53</code></a></li>
+</ul>
+<h3 id="cw_insights">cw_insights</h3>
+<h4 id="overview_35">Overview</h4>
+<p>provideds Cloudwatch metrics from boto3.</p>
+<h4 id="details_17">Details</h4>
+<ul>
+<li><strong>Module</strong>: <code>cw_insights</code></li>
+<li><strong>Rego File</strong>: <code>cw_insights.rego</code></li>
+<li><strong>Gather From</strong>: <a href="#cloudwatchprovider"><code>CloudWatch</code></a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

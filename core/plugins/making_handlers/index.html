@@ -1,0 +1,2688 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../development_basics/">
+      
+      
+        <link rel="next" href="../making_providers/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Making Handlers - OpsBoxDocs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-handlers-for-opsbox" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="OpsBoxDocs" class="md-header__button md-logo" aria-label="OpsBoxDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpsBoxDocs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Making Handlers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome!
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  Core
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../plugins/" class="md-tabs__link">
+          
+  
+  Community Plugins
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="OpsBoxDocs" class="md-nav__button md-logo" aria-label="OpsBoxDocs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    OpsBoxDocs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome!
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Core
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Core
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_started/running/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running OpsBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plugin Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../available_plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Available Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Making Plugins
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Making Plugins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development_basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Making Handlers
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Making Handlers
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before You Start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-create-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to Create Handlers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps to Create Handlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specify-your-hook-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specify Your Hook Implementations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-handler-configurations-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define Handler Configurations (Optional)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Define Handler Configurations (Optional)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implement-the-handler-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implement the Handler Class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implement the Handler Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process_plugin-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      process_plugin Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugininfo-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      PluginInfo Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-general-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example General Handler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-handler-toml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Handler TOML File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add Handler TOML File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-handler-toml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Handler TOML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-and-activate-the-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Register and Activate the Handler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-the-handler-into-the-plugin-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate the Handler into the Plugin Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrate the Handler into the Plugin Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-pipeline-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Pipeline Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add More!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-can-a-handler-manage-multiple-plugin-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1: Can a Handler manage multiple Plugin Types?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-how-does-the-process_plugin-method-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: How does the process_plugin Method Work?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-how-do-handlers-interact-with-the-registry-and-plugin-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q3: How Do Handlers Interact with the Registry and Plugin Pipeline?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4-can-handlers-be-specialized-for-specific-plugin-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q4: Can Handlers Be Specialized for Specific Plugin Types?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q5-what-should-i-do-if-my-handler-fails-during-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q5: What Should I Do If My Handler Fails During Execution?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q6-how-can-i-extend-the-handlerspec-with-additional-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q6: How Can I Extend the HandlerSpec with Additional Methods?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q7-can-multiple-handlers-manage-the-same-plugin-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q7: Can Multiple Handlers Manage the Same Plugin Type?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making_providers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Making Providers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making_outputs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Making Outputs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making_checks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Making Checks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Testing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Testing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing/testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing OpsBox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing/testing_handlers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing Handlers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing/testing_general_plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing General Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../testing/testing_rego_plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing Rego Plugins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community Plugins
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Community Plugins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AWS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            AWS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-ec2-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-ec2-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/ec2/ec2_old_snapshots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Old Snapshots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/ec2/stray_instances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stray Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/ec2/unattached_eips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unattached EIPs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/ec2/idle_instances/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Idle Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/ec2/stray_ebs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stray EBS Volumes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-s3-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-s3-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/s3/unused_buckets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unused Buckets
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/s3/storage_class_usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Storage Class usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/s3/object_last_modified/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Object Last Modified
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-rds-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-rds-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/rds/rds_idle/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RDS Idle
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/rds/old_snapshots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Old Snapshots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/rds/empty_storage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empty Storage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/rds/scaling_down/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scaling Down RDS Instances
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-iam-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-iam-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/iam/console_access/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Console Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/iam/unused_policies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unused Policies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/iam/mfa_enabled/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MFA Enabled
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/iam/overdue_api_keys/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overdue Api Keys
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_5" id="__nav_3_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-elb-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-elb-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/elb/high_error_rate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    High Error Rate Load Balancers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/elb/inactive_load_balancers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inactive Load Balancers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/elb/low_request_counts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Low Request Count Load Balancers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_6" id="__nav_3_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    opsbox-r53-checks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            opsbox-r53-checks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/r53/empty_zones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empty Zones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Outputs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Outputs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/slack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-slack-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/cli/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-cli-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/email/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-email-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/jira/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-jira-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/pagerduty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-pagerduty-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/azure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-azure-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-github-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/outputs/text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    opsbox-text-file-output
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before You Start
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-to-create-handlers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps to Create Handlers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps to Create Handlers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specify-your-hook-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specify Your Hook Implementations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-handler-configurations-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define Handler Configurations (Optional)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Define Handler Configurations (Optional)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Configuration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implement-the-handler-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implement the Handler Class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implement the Handler Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process_plugin-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      process_plugin Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plugininfo-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      PluginInfo Object
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-general-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example General Handler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-handler-toml-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add Handler TOML File
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Add Handler TOML File">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-handler-toml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Handler TOML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#register-and-activate-the-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Register and Activate the Handler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrate-the-handler-into-the-plugin-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integrate the Handler into the Plugin Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integrate the Handler into the Plugin Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-pipeline-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Pipeline Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add More!
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faqs" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-can-a-handler-manage-multiple-plugin-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q1: Can a Handler manage multiple Plugin Types?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-how-does-the-process_plugin-method-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q2: How does the process_plugin Method Work?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-how-do-handlers-interact-with-the-registry-and-plugin-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q3: How Do Handlers Interact with the Registry and Plugin Pipeline?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q4-can-handlers-be-specialized-for-specific-plugin-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q4: Can Handlers Be Specialized for Specific Plugin Types?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q5-what-should-i-do-if-my-handler-fails-during-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q5: What Should I Do If My Handler Fails During Execution?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q6-how-can-i-extend-the-handlerspec-with-additional-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q6: How Can I Extend the HandlerSpec with Additional Methods?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q7-can-multiple-handlers-manage-the-same-plugin-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Q7: Can Multiple Handlers Manage the Same Plugin Type?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="creating-handlers-for-opsbox">Creating Handlers for OpsBox</h1>
+<p>Handlers are the orchestrators within the OpsBox Plugin System. They manage and coordinate various types of plugins, ensuring that each plugin operates seamlessly within the defined pipeline. This document will guide you through the process of creating handlers, understanding their types, and integrating them effectively into your OpsBox setup.</p>
+<h2 id="before-you-start">Before You Start</h2>
+<p>Before you begin creating handlers, it's essential to have a solid understanding of <strong>Plugin Basics</strong>. Please refer to the <a href="../development_basics/">Development Basics</a> document, which covers:</p>
+<ul>
+<li>Setting up a proper <strong>hook implementation marker</strong> to register hook implementations</li>
+<li>Defining expected user configuration values through a <strong>Pydantic model</strong></li>
+<li>Initializing plugin classes through the <code>activate()</code> hook implementation</li>
+</ul>
+<h2 id="steps-to-create-handlers">Steps to Create Handlers</h2>
+<ol>
+<li><strong>Specify Your Hook Implementations</strong></li>
+<li><strong>Define Handler Configurations (optional)</strong></li>
+<li><strong>Implement the Handler Class</strong></li>
+<li><strong>Add Handler TOML File</strong></li>
+<li><strong>Register and Activate the Handler</strong></li>
+<li><strong>Integrate the Handler into the Plugin Pipeline</strong></li>
+<li><strong>Add More!</strong></li>
+</ol>
+<h3 id="specify-your-hook-implementations">Specify Your Hook Implementations</h3>
+<p>Handlers in OpsBox utilize <strong>hook specifications</strong> ("hookspecs") to define the contracts they must adhere to. These hookspecs ensure that handlers can manage and process different types of plugins effectively.</p>
+<p>To specify hook implementations, import <code>HookimplMarker</code> from Pluggy and set the project name to <code>"opsbox"</code>:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pluggy</span><span class="w"> </span><span class="kn">import</span> <span class="n">HookimplMarker</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Define a hook implementation marker</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">hookimpl</span> <span class="o">=</span> <span class="n">HookimplMarker</span><span class="p">(</span><span class="s2">&quot;opsbox&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="define-handler-configurations-optional">Define Handler Configurations (Optional)</h3>
+<p>While not mandatory, defining configurations for your handler can provide flexibility and control over how it manages different plugin types. Use Pydantic models to define and validate these configurations.</p>
+<h4 id="example-configuration">Example Configuration</h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pydantic</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">HandlerConfig</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="n">log_level</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Logging level for the handler&quot;</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Timeout for plugin processing in seconds&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="implement-the-handler-class">Implement the Handler Class</h3>
+<p>Create a handler class that implements the required hookspecs. This class will manage specific types of plugins based on your configuration.</p>
+<h4 id="process_plugin-method"><code>process_plugin</code> Method</h4>
+<p>The process_plugin method is the cornerstone of a handler's functionality within the OpsBox Plugin System. It is responsible for executing a specific plugin based on its type (e.g., input, output, assistant, provider, rego). This method receives three primary parameters:</p>
+<ul>
+<li>plugin (PluginInfo): Contains metadata and configuration details about the plugin to be processed.</li>
+<li>prior_results (list[Result]): A list of results produced by previously executed plugins in the pipeline.</li>
+<li>registry (Registry): The central registry managing all active plugins and their interactions.</li>
+</ul>
+<p>This function describes the flow of the plugin, and executes code according to it's own defined hookspecs on plugin objects that implement them.</p>
+<p>To do this, we use <code>PluginInfo</code> objects.</p>
+<h4 id="plugininfo-object"><code>PluginInfo</code> Object</h4>
+<p>The <code>PluginInfo</code> object is a core component of the OpsBox Plugin System, encapsulating all essential metadata and configuration details for each plugin. It serves as a standardized structure that includes attributes such as the plugin's name, module, class name, type (e.g., <code>input</code>, <code>output</code>, <code>assistant</code>), path to its TOML configuration file, and any dependencies it may have (<code>uses</code>). Additionally, it holds references to the instantiated plugin object and its validated configuration data. By utilizing the <code>PluginInfo</code> object, OpsBox ensures consistent management, loading, and execution of plugins within the system.</p>
+<p><strong>Key Attributes:</strong></p>
+<ul>
+<li><strong>name</strong> (<code>str</code>): Unique identifier for the plugin.</li>
+<li><strong>module</strong> (<code>str</code>): Python module where the plugin class is defined.</li>
+<li><strong>class_name</strong> (<code>str</code>): Name of the plugin class within the module.</li>
+<li><strong>type</strong> (<code>str</code>): Category of the plugin (e.g., <code>input</code>, <code>output</code>).</li>
+<li><strong>toml_path</strong> (<code>str</code>): File path to the plugin's TOML configuration.</li>
+<li><strong>plugin_obj</strong> (<code>Any | None</code>): Instance of the loaded plugin class.</li>
+<li><strong>config</strong> (<code>BaseModel | None</code>): Validated configuration data for the plugin.</li>
+<li><strong>uses</strong> (<code>list[str]</code>): List of other plugins this plugin depends on.</li>
+<li><strong>extra</strong> (<code>dict[str, Any] | None</code>): Additional metadata or information.</li>
+</ul>
+<p><strong>Example Usage:</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">core.plugins</span><span class="w"> </span><span class="kn">import</span> <span class="n">PluginInfo</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">plugin_info</span> <span class="o">=</span> <span class="n">PluginInfo</span><span class="p">(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;example_input&quot;</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">module</span><span class="o">=</span><span class="s2">&quot;example_input&quot;</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">class_name</span><span class="o">=</span><span class="s2">&quot;ExampleInputPlugin&quot;</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="n">toml_path</span><span class="o">=</span><span class="s2">&quot;path/to/example_input.toml&quot;</span><span class="p">,</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="n">uses</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;provider_plugin&quot;</span><span class="p">],</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;handler&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;handles&quot;</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;input&quot;</span><span class="p">,</span> <span class="s2">&quot;output&quot;</span><span class="p">,</span> <span class="s2">&quot;assistant&quot;</span><span class="p">]}}</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>By leveraging the <code>PluginInfo</code> object, developers can easily access and manage plugin-specific information.</p>
+<h4 id="example-general-handler">Example General Handler</h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># general_handler.py</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pluggy</span><span class="w"> </span><span class="kn">import</span> <span class="n">HookimplMarker</span><span class="p">,</span> <span class="n">PluginManager</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">core.plugins</span><span class="w"> </span><span class="kn">import</span> <span class="n">PluginInfo</span><span class="p">,</span> <span class="n">Result</span><span class="p">,</span> <span class="n">Registry</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">loguru</span><span class="w"> </span><span class="kn">import</span> <span class="n">logger</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="n">hookimpl</span> <span class="o">=</span> <span class="n">HookimplMarker</span><span class="p">(</span><span class="s2">&quot;opsbox&quot;</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">class</span><span class="w"> </span><span class="nc">GeneralHandler</span><span class="p">:</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;General handler for Python plugins.&quot;&quot;&quot;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>    <span class="nd">@hookimpl</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">add_hookspecs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manager</span><span class="p">:</span> <span class="n">PluginManager</span><span class="p">):</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Add the hookspecs to the manager.&quot;&quot;&quot;</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        <span class="kn">from</span><span class="w"> </span><span class="nn">core.base_hooks</span><span class="w"> </span><span class="kn">import</span> <span class="n">AssistantSpec</span><span class="p">,</span> <span class="n">OutputSpec</span><span class="p">,</span> <span class="n">ProviderSpec</span><span class="p">,</span> <span class="n">InputSpec</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        <span class="n">manager</span><span class="o">.</span><span class="n">add_hookspecs</span><span class="p">(</span><span class="n">AssistantSpec</span><span class="p">)</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        <span class="n">manager</span><span class="o">.</span><span class="n">add_hookspecs</span><span class="p">(</span><span class="n">OutputSpec</span><span class="p">)</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        <span class="n">manager</span><span class="o">.</span><span class="n">add_hookspecs</span><span class="p">(</span><span class="n">ProviderSpec</span><span class="p">)</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        <span class="n">manager</span><span class="o">.</span><span class="n">add_hookspecs</span><span class="p">(</span><span class="n">InputSpec</span><span class="p">)</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    <span class="nd">@hookimpl</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">process_plugin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plugin</span><span class="p">:</span> <span class="n">PluginInfo</span><span class="p">,</span> <span class="n">prior_results</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Result</span><span class="p">],</span> <span class="n">registry</span><span class="p">:</span> <span class="n">Registry</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Result</span><span class="p">]:</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;Process the plugin based on its type.&quot;&quot;&quot;</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>        <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;GeneralHandler processing plugin </span><span class="si">{</span><span class="n">plugin</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        <span class="k">if</span> <span class="n">plugin</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;input&quot;</span><span class="p">:</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>            <span class="c1"># Process input plugin</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>            <span class="k">return</span> <span class="n">plugin</span><span class="o">.</span><span class="n">plugin_obj</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">prior_results</span><span class="p">)</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>        <span class="k">elif</span> <span class="n">plugin</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;output&quot;</span><span class="p">:</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>            <span class="c1"># Process output plugin</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>            <span class="n">plugin</span><span class="o">.</span><span class="n">plugin_obj</span><span class="o">.</span><span class="n">process_results</span><span class="p">(</span><span class="n">prior_results</span><span class="p">)</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>            <span class="k">return</span> <span class="n">prior_results</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>        <span class="k">elif</span> <span class="n">plugin</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;assistant&quot;</span><span class="p">:</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>            <span class="c1"># Process assistant plugin</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>            <span class="k">return</span> <span class="n">plugin</span><span class="o">.</span><span class="n">plugin_obj</span><span class="o">.</span><span class="n">process_input</span><span class="p">(</span><span class="n">prior_results</span><span class="p">)</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown plugin type: </span><span class="si">{</span><span class="n">plugin</span><span class="o">.</span><span class="n">type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>            <span class="k">return</span> <span class="n">prior_results</span>
+</span></code></pre></div>
+<h3 id="add-handler-toml-file">Add Handler TOML File</h3>
+<p>Each handler must include a TOML file with essential information. This file informs the OpsBox system about the handler's metadata and the types of plugins it manages.</p>
+<h4 id="example-handler-toml">Example Handler TOML</h4>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">[info]</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;general&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;general_handler&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">class_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;GeneralHandler&quot;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;handler&quot;</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">[handler]</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">handles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;input&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;output&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;assistant&quot;</span><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>Explanation:</strong></p>
+<ul>
+<li><strong>[info] Section</strong>:</li>
+<li><code>name</code>: Unique name of the handler (<code>"general"</code>).</li>
+<li><code>module</code>: Name of the Python module containing the handler (<code>"general_handler"</code>).</li>
+<li><code>class_name</code>: Name of the handler class (<code>"GeneralHandler"</code>).</li>
+<li>
+<p><code>type</code>: Must be <code>"handler"</code> to designate this plugin as a handler.</p>
+</li>
+<li>
+<p><strong>[handler] Section</strong>:</p>
+</li>
+<li><code>handles</code>: List of plugin types this handler manages (<code>"input"</code>, <code>"output"</code>, <code>"assistant"</code>).</li>
+</ul>
+<p>For specialized handlers like the <strong>Rego Handler</strong>, the TOML file may include additional sections to handle specific plugin types.</p>
+<h3 id="register-and-activate-the-handler">Register and Activate the Handler</h3>
+<p>Ensure that your handler is placed in the designated <code>plugin_dir</code> and that the OpsBox <code>Registry</code> is aware of it. The <code>Registry</code> will automatically load and register handlers based on their TOML configurations.</p>
+<h3 id="integrate-the-handler-into-the-plugin-pipeline">Integrate the Handler into the Plugin Pipeline</h3>
+<p>Once the handler is registered and activated, it will manage the execution of plugins based on their types. Handlers ensure that each plugin is processed correctly within the pipeline.</p>
+<h4 id="example-pipeline-execution">Example Pipeline Execution</h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Produce the pipeline based on active plugins</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">pipeline</span> <span class="o">=</span> <span class="n">registry</span><span class="o">.</span><span class="n">produce_pipeline</span><span class="p">()</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Execute the pipeline, managed by the registered handlers</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">registry</span><span class="o">.</span><span class="n">process_pipeline</span><span class="p">(</span><span class="n">pipeline</span><span class="p">)</span>
+</span></code></pre></div>
+<p><strong>Output:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Activating GeneralHandler with log_level=DEBUG and timeout=60
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Activating ExampleInputPlugin with data source: SampleSource
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Processing plugin example_input
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Processing data: [{&#39;key1&#39;: &#39;value1&#39;, &#39;key2&#39;: &#39;value2&#39;}]
+</span></code></pre></div>
+<h3 id="add-more">Add More!</h3>
+<p>Feel free to extend your handlers with additional functionalities as needed. You can define more methods, utilize other libraries, and customize your handler to fit specific requirements.</p>
+<h2 id="faqs">FAQs</h2>
+<h3 id="q1-can-a-handler-manage-multiple-plugin-types"><strong>Q1: Can a Handler manage multiple Plugin Types?</strong></h3>
+<p><strong>A1:</strong><br />
+<strong>Yes</strong>, a single Handler can manage multiple plugin types. In the handler's TOML configuration file, list all the plugin types it handles under the <code>[handler]</code> section's <code>handles</code> attribute. This allows the Handler to process various plugin types within the same pipeline.</p>
+<p><strong>Example:</strong></p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">[handler]</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">handles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;input&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;output&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;assistant&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;transformer&quot;</span><span class="p">]</span>
+</span></code></pre></div>
+<hr />
+<h3 id="q2-how-does-the-process_plugin-method-work"><strong>Q2: How does the <code>process_plugin</code> Method Work?</strong></h3>
+<p><strong>A2:</strong><br />
+The <code>process_plugin</code> method is the core function of a Handler. It dictates how each plugin is executed based on its type. This method receives three parameters:</p>
+<ul>
+<li><strong><code>plugin</code> (<code>PluginInfo</code>)</strong>: Metadata and configuration of the plugin to be processed.</li>
+<li><strong><code>prior_results</code> (<code>list[Result]</code>)</strong>: Results from previously executed plugins.</li>
+<li><strong><code>registry</code> (<code>Registry</code>)</strong>: The central registry managing all plugins.</li>
+</ul>
+<p><strong>Functionality:</strong></p>
+<ol>
+<li><strong>Identify Plugin Type:</strong> Determines the type of the plugin (e.g., <code>input</code>, <code>output</code>).</li>
+<li><strong>Execute Plugin Logic:</strong> Calls the appropriate method on the plugin object based on its type.</li>
+<li><strong>Return Results:</strong> Outputs a list of <code>Result</code> objects for further processing.</li>
+</ol>
+<p><strong>Example Implementation:</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nd">@hookimpl</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">process_plugin</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">plugin</span><span class="p">:</span> <span class="n">PluginInfo</span><span class="p">,</span> <span class="n">prior_results</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">Result</span><span class="p">],</span> <span class="n">registry</span><span class="p">:</span> <span class="n">Registry</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">Result</span><span class="p">]:</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;CustomHandler processing plugin </span><span class="si">{</span><span class="n">plugin</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="k">if</span> <span class="n">plugin</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">&quot;transformer&quot;</span><span class="p">:</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        <span class="k">return</span> <span class="n">plugin</span><span class="o">.</span><span class="n">plugin_obj</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">prior_results</span><span class="p">)</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unhandled plugin type: </span><span class="si">{</span><span class="n">plugin</span><span class="o">.</span><span class="n">type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        <span class="k">return</span> <span class="n">prior_results</span>
+</span></code></pre></div>
+<hr />
+<h3 id="q3-how-do-handlers-interact-with-the-registry-and-plugin-pipeline"><strong>Q3: How Do Handlers Interact with the Registry and Plugin Pipeline?</strong></h3>
+<p><strong>A3:</strong><br />
+Handlers are integrated into the OpsBox Plugin Pipeline through the <code>Registry</code>. When the <code>Registry</code> initializes, it loads all handlers based on their TOML configurations. During pipeline execution:</p>
+<ol>
+<li><strong>Pipeline Production:</strong> The <code>Registry</code> compiles an ordered list of active plugins.</li>
+<li><strong>Handler Invocation:</strong> For each plugin, the corresponding Handler's <code>process_plugin</code> method is invoked.</li>
+<li><strong>Result Management:</strong> Handlers process plugins and return <code>Result</code> objects, which are then passed to subsequent plugins as needed.</li>
+</ol>
+<p>This interaction ensures that each plugin is executed in the correct context and sequence, maintaining the pipeline's integrity.</p>
+<hr />
+<h3 id="q4-can-handlers-be-specialized-for-specific-plugin-types"><strong>Q4: Can Handlers Be Specialized for Specific Plugin Types?</strong></h3>
+<p><strong>A4:</strong><br />
+<strong>Yes</strong>, Handlers can be specialized to manage specific plugin types, enhancing modularity and scalability. For example, a <strong>Rego Handler</strong> can be created to exclusively manage <code>rego</code> plugins, ensuring that policy compliance checks are handled separately from other plugin types.</p>
+<p><strong>Example:</strong></p>
+<div class="language-toml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1"># rego_handler.toml</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">[info]</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;rego_handler&quot;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="n">module</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;rego_handler&quot;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="n">class_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;RegoHandler&quot;</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;handler&quot;</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">[handler]</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="n">handles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;rego&quot;</span><span class="p">]</span>
+</span></code></pre></div>
+<hr />
+<h3 id="q5-what-should-i-do-if-my-handler-fails-during-execution"><strong>Q5: What Should I Do If My Handler Fails During Execution?</strong></h3>
+<p><strong>A5:</strong><br />
+If a Handler encounters an error during execution:</p>
+<ol>
+<li><strong>Logging:</strong> The system logs the error details using <code>loguru</code>, providing insights into what went wrong.</li>
+<li><strong>Graceful Degradation:</strong> Depending on the severity, the system may skip the faulty handler or halt the entire pipeline to prevent inconsistent states.</li>
+<li><strong>Debugging:</strong> Review the logs to identify and address the issue within the Handler's implementation.</li>
+<li><strong>Retry Mechanism:</strong> Implement retry logic within the Handler if appropriate, to handle transient errors.</li>
+</ol>
+<p><strong>Best Practice:</strong> Always include robust error handling within your Handlers to manage exceptions gracefully and maintain system stability.</p>
+<hr />
+<h3 id="q6-how-can-i-extend-the-handlerspec-with-additional-methods"><strong>Q6: How Can I Extend the HandlerSpec with Additional Methods?</strong></h3>
+<p><strong>A6:</strong><br />
+To extend the <code>HandlerSpec</code> with additional methods:</p>
+<ol>
+<li><strong>Define New Hookspecs:</strong></li>
+<li>Add new methods annotated with <code>@hookspec</code> in <code>core/base_hooks.py</code>.</li>
+</ol>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># core/base_hooks.py</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">CustomSpec</span><span class="p">:</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="nd">@hookspec</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">custom_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="sd">&quot;&quot;&quot;A custom hook method.&quot;&quot;&quot;</span>
+</span></code></pre></div>
+<ol>
+<li><strong>Register the New Hookspecs:</strong></li>
+<li>Update the Handler's <code>add_hookspecs</code> method to include the new hookspecs.</li>
+</ol>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nd">@hookimpl</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">add_hookspecs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manager</span><span class="p">:</span> <span class="n">PluginManager</span><span class="p">):</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">core.base_hooks</span><span class="w"> </span><span class="kn">import</span> <span class="n">CustomSpec</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="n">manager</span><span class="o">.</span><span class="n">add_hookspecs</span><span class="p">(</span><span class="n">CustomSpec</span><span class="p">)</span>
+</span></code></pre></div>
+<ol>
+<li><strong>Implement the New Methods in the Handler:</strong></li>
+<li>Define the corresponding hook implementations in your Handler class.</li>
+</ol>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nd">@hookimpl</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">custom_method</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="c1"># Implement custom logic</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="k">return</span> <span class="n">processed_data</span>
+</span></code></pre></div>
+<ol>
+<li><strong>Update Handler Configuration:</strong></li>
+<li>Ensure that your handler's TOML file and any related configurations accommodate the new methods.</li>
+</ol>
+<hr />
+<h3 id="q7-can-multiple-handlers-manage-the-same-plugin-type"><strong>Q7: Can Multiple Handlers Manage the Same Plugin Type?</strong></h3>
+<p><strong>A7:</strong><br />
+While it's technically possible to have multiple Handlers manage the same plugin type, it's generally <strong>not recommended</strong> as it can lead to conflicts and unpredictable behaviors. Instead, designate a single Handler to manage each plugin type to maintain clarity and control within the pipeline.</p>
+<p><strong>Recommendation:</strong><br />
+Ensure that each plugin type is managed by only one Handler to avoid overlapping responsibilities and potential processing issues.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
