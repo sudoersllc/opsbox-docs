@@ -7,6 +7,18 @@ Ensure you have the following installed on your machine:
 
 - [Python](https://www.python.org/downloads/) == 3.11
 - [UV](https://docs.astral.sh/uv/) for dependency management
+- [Docker](https://docs.docker.com/engine/install/) for running OPA server
+
+## Verifying Installations
+
+To verify that Python is installed, run the following command:
+
+```bash
+python --version
+uv --version
+docker --version
+```
+
 
 **Installing Python:**
 
