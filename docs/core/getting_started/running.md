@@ -77,7 +77,7 @@ You can run a local test OPA instance by following the steps in [installation](i
 ```
 
 
-To do this, one required configuration parameters are needed:
+To do this, one required configuration parameters is needed:
 
 - `opa_url` : URL to upload rego policies to
 
