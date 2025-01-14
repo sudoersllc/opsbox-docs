@@ -8,10 +8,25 @@ When run *outside of a venv*, use the `main.py` script found in `core`.
 
 An example call to opsbox must at least include the `modules` argument, like so:
 
-``` bash
-python core/main.py --modules stray_ebs-oai_cost-text_out --aws_access_key_id "AWS_access_key_id" --aws_secret_access_key "AWS_secrett_key"  --aws_region "AWS_region" --oai_assistant_id "oai_assistant_id" --oai_vector_store_id "oai_vector_store_id" --oai_key "oai_key"
+```bash
+uv run opsbox --modules your_input-your_optional_assistant-your_output --opa_url http://your-opa-url 
 ```
 
+A recommended command to start is stray_ebs
+
+```bash
+uv run opsbox --modules stray_ebs-cli_out --opa_url http://localhost:8181/ --aws_access_key_id {YOUR_ACCESS_KEY_ID} --aws_secret_access_key {YOUR_SECRET_ACCESS_KEY} --aws_region us-east-1
+```
+
+or, if not using UV:
+
+```bash
+python -m opsbox --modules your_input-your_optional_assistant-your_output --opa_url http://your-opa-url 
+```
+
+```bash
+python -m opsbox --modules stray_ebs-cli_out --opa_url http://localhost:8181/ --aws_access_key_id {YOUR_ACCESS_KEY_ID} --aws_secret_access_key {YOUR_SECRET_ACCESS_KEY} --aws_region us-east-1
+```
 Make sure you have any of the prerequisite packages for the plugins you want to use!
 
 ### Configuration

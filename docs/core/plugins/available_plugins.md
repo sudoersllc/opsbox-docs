@@ -518,6 +518,17 @@ underutilized_elb_names[name] {
 }
 ```
 
+### no_healthy_targets
+
+#### Overview
+Identifies ELBs with no healthy targets.
+
+#### Details
+- **Module**: `no_healthy_targets`
+- **Rego File**: `no_healthy_targets.rego`
+- **Gather From**: [`ELB`](#elbprovider)
+
+
 ### low_request_count
 
 #### Overview
