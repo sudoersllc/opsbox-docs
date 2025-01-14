@@ -35,6 +35,8 @@ This document provides an overview of the various plugins implemented for gather
 
 
 ## EC2Provider
+To install with pip, run `pip install opsbox-ec2-provider`.
+To install with UV, run `uv add opsbox-ec2-provider`
 
 ### Overview
 The EC2Provider plugin collects detailed information about AWS EC2 instances, including their associated volumes and Elastic IP addresses, to facilitate monitoring and management.
@@ -64,6 +66,8 @@ The EC2Provider plugin collects detailed information about AWS EC2 instances, in
 ---
 
 ## ELBProvider
+To install with pip, run `pip install opsbox-elb-provider`.
+To install with UV, run `uv add opsbox-elb-provider`
 
 ### Overview
 The ELBProvider plugin gathers comprehensive data about AWS Elastic Load Balancers, including Classic, Application, and Network Load Balancers, to optimize performance and identify potential issues.
@@ -86,6 +90,8 @@ The ELBProvider plugin gathers comprehensive data about AWS Elastic Load Balance
 ---
 
 ## RDSProvider
+To install with pip, run `pip install opsbox-rds-provider`.
+To install with UV, run `uv add opsbox-rds-provider`
 
 ### Overview
 The RDSProvider plugin collects information about AWS RDS instances to help manage and optimize database performance and cost.
@@ -107,6 +113,8 @@ The RDSProvider plugin collects information about AWS RDS instances to help mana
 ---
 
 ## S3Provider
+To install with pip, run `pip install opsbox-s3-provider`.
+To install with UV, run `uv add opsbox-s3-provider`
 
 ### Overview
 The S3Provider plugin gathers data related to AWS S3, including information about buckets, objects, and storage classes, to assist in storage management and cost optimization.
@@ -128,6 +136,8 @@ The S3Provider plugin gathers data related to AWS S3, including information abou
 ---
 
 ## IAMProvider
+To install with pip, run `pip install opsbox-iam-provider`.
+To install with UV, run `uv add opsbox-iam-provider`
 
 ### Overview
 The IAMProvider plugin collects data related to AWS IAM, including information about users, groups, and roles, to help manage access and permissions effectively.
@@ -147,6 +157,8 @@ The IAMProvider plugin collects data related to AWS IAM, including information a
 ---
 
 ## Route53Provider
+To install with pip, run `pip install opsbox-r53-provider`.
+To install with UV, run `uv add opsbox-r53-provider`
 
 ### Overview
 The Route53Provider plugin collects data related to AWS Route53, including information about hosted zones, records, and health checks, to help manage DNS and routing effectively.
@@ -181,6 +193,8 @@ The CloudWatchProvider plugin collects data related to AWS CloudWatch, including
 
 
 ## Cost Savings
+To install with pip, run `pip install opsbox-cost-savings-assistant`.
+To install with UV, run `uv add opsbox-cost-savings-assistant`
 
 ### Overview
 The Cost Savings plugin leverages large language models (LLMs) to generate recommendations for reducing cloud infrastructure costs based on the latest pipeline analysis.
@@ -219,6 +233,8 @@ A plugin to generate recommendations for lowering costs on AWS EC2 instances.
 ---
 
 ## JiraOutput
+To install with pip, run `pip install opsbox-jira-output`.
+To install with UV, run `uv add opsbox-jira-output`
 
 ### Overview
 The JiraOutput plugin creates and manages Jira issues based on check results, enabling effective tracking and resolution of identified problems.
@@ -241,6 +257,8 @@ oai_key: Annotated[str, Field(description="The OpenAI API key used to assist wit
 ---
 
 ## EmailOutput
+To install with pip, run `pip install opsbox-email-output`.
+To install with UV, run `uv add opsbox-email-output`
 
 ### Overview
 The EmailOutput plugin sends out email notifications based on check results, ensuring that relevant stakeholders are informed in a timely manner.
@@ -265,6 +283,8 @@ oai_key: Annotated[str | None, Field(description="The OpenAI API key used for ge
 ---
 
 ## SlackOutput
+To install with pip, run `pip install opsbox-slack-output`.
+To install with UV, run `uv add opsbox-slack-output`
 
 ### Overview
 The SlackOutput plugin sends messages to specified Slack channels based on pipeline outputs, providing real-time alerts to relevant teams.
@@ -280,6 +300,8 @@ slack_channel: Annotated[str, Field(description="The Slack channel where the mes
 ---
 
 ## CLIOutput
+To install with pip, run `pip install opsbox-cli-output`.
+To install with UV, run `uv add opsbox-cli-output`
 
 ### Overview
 The CLIOutput plugin displays results directly in the command line interface, providing quick and accessible feedback.
@@ -289,6 +311,8 @@ The CLIOutput plugin displays results directly in the command line interface, pr
 ---
 
 ## TextFileOutput
+To install with pip, run `pip install opsbox-text-file-output`.
+To install with UV, run `uv add opsbox-text-file-output`
 
 ### Overview
 The TextFileOutput plugin writes output results to a text file for record-keeping and further analysis.
@@ -303,6 +327,8 @@ output_folder: Annotated[str | None, Field(description="The folder to output the
 ---
 
 ## GithubOutput
+To install with pip, run `pip install opsbox-github-output`.
+To install with UV, run `uv add opsbox-github-output`
 
 ### Overview
 The GithubOutput plugin creates GitHub issues based on pipeline outputs, helping track and manage tasks or problems identified during analysis.
@@ -331,6 +357,8 @@ oai_key: Annotated[str | None, Field(description="The OpenAI API key to use.", r
 ---
 
 ## AzureOutput
+To install with pip, run `pip install opsbox-azure-output`.
+To install with UV, run `uv add opsbox-azure-output`
 
 ### Overview
 The AzureOutput plugin creates and manages Azure DevOps work items based on pipeline outputs, facilitating effective issue tracking and resolution.
@@ -361,6 +389,8 @@ A Claude key or Open AI Keys are required if you have create_description set to 
 ---
 
 ## PagerDutyOutput
+To install with pip, run `pip install opsbox-pagerduty-output`.
+To install with UV, run `uv add opsbox-pagerduty-output`
 
 ### Overview
 The PagerDutyOutput plugin sends alerts to PagerDuty based on pipeline outputs, ensuring prompt incident response and management.
@@ -404,7 +434,9 @@ The JSONOutput plugin writes output results to a JSON file for further processin
 
 
 ## Checks
+To install checks for the services you want, simply run `pip install opsbox-<service_name>-checks` if using pip and `uv add opsbox-<service_name>-checks` if using uv.
 
+Available services include `s3`, `rds`, `elb`, route53 (accessed by using `r53`), `ec2`, and `aws-iam`.
 
 ### idle_instances
 
