@@ -14,8 +14,6 @@ New to OpsBox? Start here to set up your environment and learn the basics.
 Understand the core concepts and components of OpsBox.
 
 - [Plugin Overview](core/plugins/plugin_overview.md)
-- [Available Plugins](core/plugins/available_plugins.md)
-
 ## Developing Plugins
 
 Learn how to extend OpsBox by developing your own plugins.
