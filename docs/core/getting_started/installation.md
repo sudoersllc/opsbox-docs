@@ -27,7 +27,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```powershell
 powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
-## Through PyPI
+## Installing Opsbox Through PyPI
 
 Simply run `pip install opsbox` to install the minimal set of opsbox tools.
 
@@ -37,7 +37,7 @@ then `uv add opsbox`
 
 *Note: If you want to install AWS plugins, use the aws extras group, `opsbox[aws]`*
 
-## Through Github
+## Installing Opsbox Through Github
 
 1. **Clone the Repository**
 
