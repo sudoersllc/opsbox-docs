@@ -1,5 +1,5 @@
 
-# Inactive Load Balancers
+# No Healthy Targets
 
 ## Overview
 
@@ -9,7 +9,6 @@ The No Healthy Targets check identifies elbs where all targets are unhealthy.
 
 - **AWS ELB Integration**: Fetches and processes data from AWS ELB.
 - **Inactive Resource Identification**: Identifies load balancers that have no healthy targets.
-- **Cost Savings Recommendations**: Recommends decommissioning inactive load balancers to save costs.
 
 ## Configuration Parameters
 
@@ -18,11 +17,6 @@ The No Healthy Targets check identifies elbs where all targets are unhealthy.
 - **aws_access_key_id**: AWS access key ID.
 - **aws_secret_access_key**: AWS secret access key.
 - **aws_region**: AWS region.
-
-### Check Configuration
-
-- **period**: 86400 (seconds)
-- **inactive_threshold**: 30 (days)
 
 ## Example Configuration
 
