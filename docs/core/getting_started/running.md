@@ -77,10 +77,9 @@ You can run a local test OPA instance by following the steps in [installation](i
 ```
 
 
-To do this, two required configuration parameters are needed:
+To do this, one required configuration parameters are needed:
 
-- `opa_upload_url` : URL to upload rego policies to
-- `opa_apply_url` : URL to use to execute rego policies
+- `opa_url` : URL to upload rego policies to
 
 If you created a docker container in the last step, you should be able to access the local OPA
 
