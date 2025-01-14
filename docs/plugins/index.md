@@ -6,9 +6,13 @@ Welcome to the Opsbox plugins directory. This repository contains a collection o
 
 Most of the packages in this directory are already distributed! Simply download them from PyPI, using the package name desired.
 
-To install in UV, simply do the following:
+To install checks for the services you want, simply run `pip install opsbox-<service_name>-checks` if using pip and `uv add opsbox-<service_name>-checks` if using uv.
 
-`uv add opsbox-<package-name>`
+Available services include `s3`, `rds`, `elb`, route53 (accessed by using `r53`), `ec2`, and `aws-iam`.
+
+To install outputs for the services you want, simply run `pip install opsbox-<output_name>-output` if using pip and `uv add opsbox-<output_name>-output` if using uv.
+
+Available outputs include `azure`, `github`, `cli`, `text-file`, `email`, `jira`, `pagerduty`, and `slack`.
 
 ### Local Build
 

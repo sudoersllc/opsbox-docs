@@ -1,4 +1,4 @@
-site_name: OpsBoxDocs
+site_name: Opsbox Docs
 
 nav:
   - Welcome! : index.md
@@ -8,7 +8,6 @@ nav:
         - Installation: core/getting_started/installation.md 
         - Running OpsBox: core/getting_started/running.md
         - Plugin Overview: core/plugins/plugin_overview.md
-        - Available Plugins: core/plugins/available_plugins.md
         - Contributing: core/contributing.md
     - Making Plugins:
         - Basics: core/plugins/development_basics.md
