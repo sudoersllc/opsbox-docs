@@ -84,7 +84,7 @@ To do this, one required configuration parameters is needed:
 If you created a docker container in the last step, you should be able to access the local OPA
 
 #### Specifying configuration
-Configuration can be specified with each required item being spoecified in a credential file located in the home directory, a command-line argument, an enviornment variable, or in a json configuration file.
+Configuration can be specified with each required item being specified in a credential file located in the home directory, a command-line argument, an enviornment variable, or in a json configuration file.
 
 ##### Configration File
 You can specify most or all of the arguments as a json dictionary stored in `~/.opsbox.json`, similar to the AWS main.

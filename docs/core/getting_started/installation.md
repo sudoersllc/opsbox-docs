@@ -81,7 +81,7 @@ Open Policy Agent (OPA) is an open-source policy engine that enables organizatio
 
 We use rego code to gather details about connected systems, alongside an Open Policy Agent (OPA) server, then format it for consumption by a language model.
 
-### Create a OPA Policy docker image
+### Create an OPA Policy docker image
 To run OpsBox with rego plugins, you'll need an OPA server. This is because OpsBox uses OPA to enforce policies on all resources that are being managed.
 
 if you don't have OPA installed on your machine, or you dont have a running OPA instance, you can create a docker image for OPA.
