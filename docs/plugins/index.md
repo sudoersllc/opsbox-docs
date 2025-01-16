@@ -4,31 +4,111 @@ Welcome to the Opsbox plugins directory. This repository contains a collection o
 ## Installing Plugins
 ### Through PyPI
 
-Most of the packages in this directory are already distributed! Simply download them from PyPI, using the package name desired.
+This document outlines how to install Opsbox **[checks](#1-checks)** (for different services) and **[outputs](#2-outputs)** (for various integrations). 
 
-To install checks for the services you want, simply run `pip install opsbox-<service_name>-checks` if using pip and `uv add opsbox-<service_name>-checks` if using uv.
+---
 
-Available services include `s3`, `rds`, `elb`, route53 (accessed by using `r53`), `ec2`, and `aws-iam`.
+## 1. Checks
 
-To install outputs for the services you want, simply run `pip install opsbox-<output_name>-output` if using pip and `uv add opsbox-<output_name>-output` if using uv.
+Opsbox checks let you verify and monitor specific AWS services such as S3, RDS, ELB, EC2, etc. When you install the checks, Opsbox will also install the provider for the service.
 
-Available outputs include `azure`, `github`, `cli`, `text-file`, `email`, `jira`, `pagerduty`, and `slack`.
+### Installation
 
-### Local Build
+- **Using pip**:
+  ```bash
+  pip install opsbox-<service_name>-checks
+  ```
+
+- **Using uv**:
+  ```bash
+  uv add opsbox-<service_name>-checks
+  ```
+
+### Examples
+- **Installing S3 checks (pip)**:
+  ```bash
+  pip install opsbox-s3-checks
+  ```
+
+- **Installing ELB checks (uv)**:
+  ```bash
+  uv add opsbox-elb-checks
+  ```
+
+- **Installing Route 53 checks (pip)**:
+  ```bash
+  pip install opsbox-r53-checks
+  ```
+  Note: Even though the service is called Route 53, use r53 in the package name.
+
+## 2. Outputs
+Opsbox outputs allow you to send results to various destinations—Slack, PagerDuty, GitHub, Azure DevOps, etc.
+
+### Installation
+- **Using pip**:
+  ```bash
+  pip install opsbox-<output_name>-output
+  ```
+
+- **Using uv**:
+  ```bash
+  uv add opsbox-<output_name>-output
+  ```
+
+### Examples
+- **Installing Slack output (pip)**:
+  ```bash
+  pip install opsbox-slack-output
+  ```
+
+- **Installing Email output (uv)**:
+  ```bash
+  uv add opsbox-email-output
+  ```
+
+- **Installing JSON file output (pip)**:
+  ```bash
+  pip install opsbox-json-file-output
+  ```
+
+## Available Plugins
+
+### Available Services
+- AWS services:
+    - [s3](/plugins/s3/s3_provider/s3_provider/)
+    - [rds](/plugins/rds/rds_provider/rds_provider/)
+    - [elb](/plugins/elb/elb_provider/elb_provider/)
+    - [ec2](/plugins/ec2/ec2_provider/ec2_provider/)
+    - [iam](/plugins/iam/iam_provider/iam_provider/)
+    - [route53](/plugins/r53/r53_provider/r53_provider/)
+
+### Available Outputs
+
+- [azure](/plugins/outputs/azure/)
+- [github](/plugins/outputs/github/)
+- [cli](/plugins/outputs/cli/)
+- [text-file](/plugins/outputs/text/)
+- [json-file](/plugins/outputs/json/)
+- [email](/plugins/outputs/email/)
+- [jira](/plugins/outputs/jira/)
+- [pagerduty](/plugins/outputs/pagerduty/)
+- [slack](/plugins/outputs/slack/)
+
+## Local Build
 
 1. *Sync UV environment*
 2. *Run build.py*
 3. *Enjoy dists!*
 
-#### Sync UV environment
+### Sync UV environment
 To begin, we first need to have a good testing/build environment.
 
 In the root of the git directory, run `uv sync`. This will install everything needed.
 
-#### Run build.py
+### Run build.py
 Next, run the bulk build script using `uv run build.py`
 
-#### Enjoy!
+### Enjoy!
 The build script will copy all the distributions to the root /dist folder.
 
 Enjoy your distributions!

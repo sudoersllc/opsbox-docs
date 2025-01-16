@@ -4,6 +4,12 @@
 
 The CLIOutput Plugin processes and displays results directly in the command line interface (CLI), providing immediate feedback and insights based on the results of checks.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-cli-output
+```
+
 ## Key Features
 
 - **Immediate Feedback**: Displays results directly in the CLI.

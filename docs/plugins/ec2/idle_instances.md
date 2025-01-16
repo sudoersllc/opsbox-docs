@@ -4,6 +4,16 @@
 
 The Idle Instances Plugin identifies EC2 instances that are running but have low utilization, helping to reduce costs by stopping or terminating these instances.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-ec2-checks
+```
+to install the plugin as part of the AWS bundle use the following command
+```bash
+uv add "opsbox[aws]"
+```
+
 ## Key Features
 
 - **AWS EC2 Integration**: Fetches and processes data from AWS EC2.

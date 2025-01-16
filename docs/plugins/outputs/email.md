@@ -4,6 +4,12 @@
 
 The EmailOutput Plugin processes and creates emails based on the results of checks, allowing for easy communication and reporting of findings.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-email-output
+```
+
 ## Key Features
 
 - **Email Integration**: Sends results via email.

@@ -4,6 +4,12 @@
 
 The GithubOutput Plugin processes and creates GitHub ticket issues based on the results of checks, helping to manage and track cost-saving recommendations and other tasks.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-github-output
+```
+
 ***Description creation requires LLM***
 
 ## Key Features

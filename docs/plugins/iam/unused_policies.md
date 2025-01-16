@@ -4,6 +4,15 @@
 
 The Unused IAM Policies Plugin identifies IAM policies with zero attachments, helping to optimize IAM policy management by identifying policies that can be deleted or reviewed.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-iam-checks
+```
+to install the plugin as part of the AWS bundle use the following command
+```bash
+uv add "opsbox[aws]"
+```
 ## Key Features
 
 - **AWS IAM Integration**: Fetches and processes data from AWS IAM.

@@ -4,6 +4,12 @@
 
 The JiraOutput Plugin processes and creates Jira issues based on the results of checks, helping to manage and track cost-saving recommendations and other tasks.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-jira-output
+```
+
 ***Requires LLM***
 
 ## Key Features

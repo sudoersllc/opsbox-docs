@@ -4,6 +4,12 @@
 
 The TextFileOutput Plugin writes the results of checks to text files, allowing for easy storage and review of the output data.
 
+### Commands to install the plugin
+tp install the plugin use the following command
+```bash
+uv add opsbox-text-file-output
+```
+
 ## Key Features
 
 - **File Output**: Writes results to text files.

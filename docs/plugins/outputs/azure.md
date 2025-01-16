@@ -6,6 +6,13 @@ Here is the document for the AzureOutput plugin in the requested format:
 
 The AzureOutput Plugin processes and creates Azure DevOps ticket issues based on the results of checks, helping to manage and track cost-saving recommendations and other tasks.
 
+### Commands to install the plugin
+
+To install the plugin use the following command
+```bash
+uv add opsbox-azure-output
+```
+
 ***Description creation requires LLM***
 
 ## Key Features

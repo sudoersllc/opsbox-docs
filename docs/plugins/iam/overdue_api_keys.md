@@ -4,6 +4,15 @@
 
 The Overdue API Keys Plugin identifies IAM API keys that are overdue, helping to enhance security by ensuring all API keys are rotated regularly.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-iam-checks
+```
+to install the plugin as part of the AWS bundle use the following command
+```bash
+uv add "opsbox[aws]"
+```
 ## Key Features
 
 - **AWS IAM Integration**: Fetches and processes data from AWS IAM.

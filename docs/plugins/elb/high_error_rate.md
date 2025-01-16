@@ -4,6 +4,15 @@
 
 The High Error Rate Load Balancers check identifies load balancers with a high error rate.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-elb-checks
+```
+to install the plugin as part of the AWS bundle use the following command
+```bash
+uv add "opsbox[aws]"
+```
 ## Key Features
 
 - **AWS ELB Integration**: Fetches and processes data from AWS ELB.

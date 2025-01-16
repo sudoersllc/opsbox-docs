@@ -4,6 +4,12 @@
 
 The SlackOutput Plugin processes and sends results to a specified Slack channel, allowing for easy communication and reporting of findings.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-slack-output
+```
+
 ## Key Features
 
 - **Slack Integration**: Sends results to a Slack channel.
