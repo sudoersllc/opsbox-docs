@@ -4,6 +4,16 @@
 
 The Stray EBS Volumes Plugin identifies EBS volumes that are not attached to any instances, helping to reduce costs by deleting unused volumes.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-ec2-checks
+```
+to install the plugin as part of the AWS bundle use the following command
+```bash
+uv add "opsbox[aws]"
+```
+
 ## Key Features
 
 - **AWS EC2 Integration**: Fetches and processes data from AWS EC2.

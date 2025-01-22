@@ -4,6 +4,12 @@
 
 The JSONFileOutput Plugin writes the results of checks to json files, allowing for easy storage and review of the output data.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-json-file-output
+```
+
 ## Key Features
 
 - **File Output**: Writes results to json files.

@@ -4,6 +4,16 @@
 
 The Old EC2 Snapshots Plugin identifies EC2 snapshots that are older than a specified period, helping to optimize storage costs by identifying snapshots that can be deleted or archived.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-ec2-checks
+```
+to install the plugin as part of the AWS bundle use the following command
+```bash
+uv add "opsbox[aws]"
+```
+
 ## Key Features
 
 - **AWS EC2 Integration**: Fetches and processes data from AWS EC2.

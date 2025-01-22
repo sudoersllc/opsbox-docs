@@ -4,6 +4,16 @@
 
 The IAM Users Without MFA Plugin identifies IAM users who do not have Multi-Factor Authentication (MFA) enabled, helping to enhance security by ensuring all users have MFA enabled.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-iam-checks
+```
+to install the plugin as part of the AWS bundle use the following command
+```bash
+uv add "opsbox[aws]"
+```
+
 ## Key Features
 
 - **AWS IAM Integration**: Fetches and processes data from AWS IAM.

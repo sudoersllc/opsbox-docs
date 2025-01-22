@@ -4,7 +4,14 @@
 
 The PagerDutyOutput Plugin processes and sends results to PagerDuty, allowing for incident creation and management based on the findings.
 
-***LLM required for description creation***
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-pagerduty-output
+```
+
+***Description creation requires LLM***
+
 ## Key Features
 
 - **PagerDuty Integration**: Sends results to PagerDuty.

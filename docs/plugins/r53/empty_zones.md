@@ -4,6 +4,16 @@
 
 The Empty Route 53 Hosted Zones Plugin identifies Route 53 hosted zones with no DNS records, helping to optimize DNS management by identifying zones that can be deleted or reviewed.
 
+### Commands to install the plugin
+to install the plugin use the following command
+```bash
+uv add opsbox-r53-checks
+```
+to install the plugin as part of the AWS bundle use the following command
+```bash
+uv add "opsbox[aws]"
+```
+
 ## Key Features
 
 - **AWS Route 53 Integration**: Fetches and processes data from AWS Route 53.
