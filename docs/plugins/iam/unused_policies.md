@@ -14,7 +14,7 @@ The Unused IAM Policies Plugin identifies IAM policies with zero attachments, he
 - Provides detailed information on IAM policies with zero attachments.
 
 ## Configuration Parameters
-Besides [provider configuration](./ec2_provider/ec2_provider.md#fields),
+Besides [provider configuration](./iam_provider/iam_provider.md#fields),
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|

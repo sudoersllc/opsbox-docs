@@ -14,7 +14,7 @@ The Overdue API Keys Plugin identifies IAM API keys that are overdue, helping to
 - Identifies overdue API keys to improve security.
 
 ## Configuration Parameters
-Besides [provider configuration](./ec2_provider/ec2_provider.md#fields),
+Besides [provider configuration](./iam_provider/iam_provider.md#fields),
 
 
 | Parameter | Type | Default | Description |

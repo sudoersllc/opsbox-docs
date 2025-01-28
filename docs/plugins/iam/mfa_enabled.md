@@ -15,4 +15,4 @@ The IAM Users Without MFA Plugin identifies IAM users who do not have Multi-Fact
 - Provides detailed information on IAM users without MFA.
 
 ## Configuration Parameters
-Besides [provider configuration](./ec2_provider/ec2_provider.md#fields), there are none.
+Besides [provider configuration](./iam_provider/iam_provider.md#fields), there are none.
