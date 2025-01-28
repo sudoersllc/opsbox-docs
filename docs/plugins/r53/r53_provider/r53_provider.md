@@ -4,22 +4,20 @@
 The Route53Provider plugin collects data related to AWS Route53, including information about hosted zones, records, and health checks, to help manage DNS and routing effectively.
 
 ### Commands to install the plugin
-to install the plugin individually use the following command
-```bash
-uv add opsbox-r53-provider
-```
-to install the plugin as part of the AWS bundle use the following command
-```bash
-uv add "opsbox[aws]"
-```
-### Required Fields
-```python
-    aws_access_key_id: Annotated[str, Field(..., description="AWS access key ID", required=True)]
-    aws_secret_access_key: Annotated[str, Field(..., description="AWS secret access key", required=True)]
-    aws_region: Annotated[str | None, Field(description="AWS region", required=False, default=None)]
-```
+To install the plugin individually use the following command, simply add the `opsbox-r53-provider` package to your project.
 
-### Related Checks
-- [empty_zones](#empty_zones)
+
+!!! info
+
+    This plugin is *automatically installed* as part of the Opsbox Route53 check collection, installable with the `opsbox-r53-checks` package.
+
+
+### Fields
+
+| Field                  | Type   | Description                | Required | Default |
+|------------------------|--------|----------------------------|----------|---------|
+| aws_access_key_id      | string | AWS access key ID          | Yes      | -       |
+| aws_secret_access_key  | string | AWS secret access key      | Yes      | -       |
+| aws_region             | string | AWS Region                 | No       | None    |
 
 

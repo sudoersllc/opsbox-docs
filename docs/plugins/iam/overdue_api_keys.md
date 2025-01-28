@@ -4,37 +4,19 @@
 
 The Overdue API Keys Plugin identifies IAM API keys that are overdue, helping to enhance security by ensuring all API keys are rotated regularly.
 
-### Commands to install the plugin
-to install the plugin use the following command
-```bash
-uv add opsbox-iam-checks
-```
-to install the plugin as part of the AWS bundle use the following command
-```bash
-uv add "opsbox[aws]"
-```
-## Key Features
+!!! info "Bundled Check"
 
-- **AWS IAM Integration**: Fetches and processes data from AWS IAM.
-- **Security Recommendations**: Identifies overdue API keys to improve security.
-- **Detailed Analysis**: Provides detailed information on overdue API keys.
+    This check is bundled alongside the rest of the community IAM checks, installable by adding `opsbox-aws-iam-checks` to your project.
+
+## Features
+
+- Fetches and processes data from AWS IAM.
+- Identifies overdue API keys to improve security.
 
 ## Configuration Parameters
+Besides [provider configuration](./iam_provider/iam_provider.md#fields),
 
-### AWS Configuration
 
-- **aws_access_key_id**: AWS access key ID.
-- **aws_secret_access_key**: AWS secret access key.
-- **aws_region**: AWS region.
-
-### Plugin Specific Configuration
-
-- **rotation_threshold_days**: The threshold for API key rotation (in days). Default: 90.
-
-## Example Configuration
-
-```yaml
-aws_access_key_id: your_access_key_id
-aws_secret_access_key: your_secret_access_key
-aws_region: your_aws_region
-```
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `iam_overdue_key_date_threshold` | `datetime` | `datetime.now() - timedelta(days=90)` | How long ago a key was last used for it to be considered overdue. Default is 90 days. |

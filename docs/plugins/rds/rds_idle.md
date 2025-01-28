@@ -4,29 +4,20 @@
 
 The RDS Idle Plugin identifies idle RDS instances, helping to optimize resource usage and reduce costs by identifying instances that can be stopped or terminated.
 
-## Key Features
+!!! info "Bundled Check"
 
-- **AWS RDS Integration**: Fetches and processes data from AWS RDS.
-- **Cost Savings Recommendations**: Identifies idle RDS instances that can be stopped or terminated to save costs.
-- **Performance and Security Insights**: Provides detailed analysis on performance and security metrics.
+    This check is bundled alongside the rest of the community RDS checks, installable by adding `opsbox-rds-checks` to your project.
+
+## Features
+
+- Fetches and processes data from AWS RDS.
+- Identifies idle RDS instances that can be stopped or terminated to save costs.
 
 ## Configuration Parameters
 
-### AWS Configuration
+Besides [provider configuration](./rds_provider/rds_provider.md#fields),
 
-- **aws_access_key_id**: AWS access key ID.
-- **aws_secret_access_key**: AWS secret access key.
-- **aws_region**: AWS region.
+| Parameter                  | Type           | Default | Description                                                                 |
+|----------------------------|----------------|---------|-----------------------------------------------------------------------------|
+| `rds_cpu_idle_threshold`   | Annotated[int] | 5       | % of CPU utilization under which an RDS instance is flagged as idle. Default = 5. |
 
-### Plugin Specific Configuration
-
-- **cpu_utilization**: CPU utilization threshold for determining idle instances. Default = 5%
-- **num_connections**: Number of connections threshold for determining idle instances. Default = 100000
-
-## Example Configuration
-
-```yaml
-aws_access_key_id: your_access_key_id
-aws_secret_access_key: your_secret_access_key
-aws_region: your_aws_region
-```

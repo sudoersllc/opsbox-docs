@@ -24,47 +24,47 @@ nav:
     - Home: plugins/index.md
     - AWS:
         - "EC2": 
-          - "EC2 Provider":
-            - "EC2 provider": plugins/ec2/ec2_provider/ec2_provider.md
+          - plugins/ec2/index.md
+          - "EC2 Provider": plugins/ec2/ec2_provider/ec2_provider.md
           - "EC2 Checks":
             - "Old Snapshots": plugins/ec2/ec2_old_snapshots.md
-            - "Stray Instances": plugins/ec2/stray_instances.md
             - "Unattached EIPs": plugins/ec2/unattached_eips.md
             - "Idle Instances": plugins/ec2/idle_instances.md
             - "Stray EBS Volumes": plugins/ec2/stray_ebs.md
         - "S3":
-          - "Amazon S3 Provider":
-            - "S3 provider": plugins/s3/s3_provider/s3_provider.md
+          - plugins/s3/index.md
+          - "S3 provider": plugins/s3/s3_provider/s3_provider.md
           - "Amazon S3 Checks":
             - "Unused Buckets": plugins/s3/unused_buckets.md
             - "Storage Class usage": plugins/s3/storage_class_usage.md
             - "Object Last Modified": plugins/s3/object_last_modified.md
         - "RDS":
-          - "Amazon RDS Provider":
-            - "RDS provider": plugins/rds/rds_provider/rds_provider.md
+          - plugins/rds/index.md
+          - "RDS provider": plugins/rds/rds_provider/rds_provider.md
           - "Amazon RDS Checks":
             - "RDS Idle": plugins/rds/rds_idle.md
             - "Old Snapshots": plugins/rds/old_snapshots.md
             - "Empty Storage": plugins/rds/empty_storage.md
+            - "Scaling Down": plugins/rds/scaling_down.md
         - "IAM":
-          - "Amazon IAM Provider":
-            - "IAM provider": plugins/iam/iam_provider/iam_provider.md
+          - plugins/iam/index.md
+          - "IAM provider": plugins/iam/iam_provider/iam_provider.md
           - "Amazon IAM Checks":
             - "Console Access": plugins/iam/console_access.md
             - "Unused Policies": plugins/iam/unused_policies.md
             - "MFA Enabled": plugins/iam/mfa_enabled.md
             - "Overdue Api Keys": plugins/iam/overdue_api_keys.md
         - "ELB":
-          - "Amazon ELB Provider":
-            - "ELB provider": plugins/elb/elb_provider/elb_provider.md
+          - plugins/elb/index.md
+          - "ELB provider": plugins/elb/elb_provider/elb_provider.md
           - "Amazon ELB Checks":
             - "High Error Rate Load Balancers": plugins/elb/high_error_rate.md
             - "Inactive Load Balancers": plugins/elb/inactive_load_balancers.md
             - "Low Request Count Load Balancers": plugins/elb/low_request_counts.md
-
+            - "No Healthy Targets Load Balancers": plugins/elb/no_healthy_targets.md
         - "R53":
-          - "Amazon R53 Provider":
-            - "R53 provider": plugins/r53/r53_provider/r53_provider.md
+          - plugins/r53/index.md
+          - "R53 provider": plugins/r53/r53_provider/r53_provider.md
           - "Amazon R53 Checks":
             - "Empty Zones": plugins/r53/empty_zones.md
     - Outputs:
@@ -82,8 +82,11 @@ theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.indexes 
+
 
 markdown_extensions:
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span

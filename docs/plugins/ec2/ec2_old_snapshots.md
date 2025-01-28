@@ -4,34 +4,18 @@
 
 The Old EC2 Snapshots Plugin identifies EC2 snapshots that are older than a specified period, helping to optimize storage costs by identifying snapshots that can be deleted or archived.
 
-### Commands to install the plugin
-to install the plugin use the following command
-```bash
-uv add opsbox-ec2-checks
-```
-to install the plugin as part of the AWS bundle use the following command
-```bash
-uv add "opsbox[aws]"
-```
+!!! info "Bundled Check"
 
-## Key Features
+    This check is bundled alongside the rest of the community EC2 checks, installable by adding `opsbox-ec2-checks` to your project.
 
-- **AWS EC2 Integration**: Fetches and processes data from AWS EC2.
-- **Cost Savings Recommendations**: Identifies old snapshots that can be deleted or archived to save costs.
-- **Detailed Analysis**: Provides detailed information on old EC2 snapshots.
+## Features
+- Fetches and processes data from AWS EC2.
+- Identifies old snapshots that can be deleted or archived to save costs.
+- Provides detailed information on old EC2 snapshots.
 
 ## Configuration Parameters
+Besides [provider configuration](./ec2_provider/ec2_provider.md#fields),
 
-### AWS Configuration
-
-- **aws_access_key_id**: AWS access key ID.
-- **aws_secret_access_key**: AWS secret access key.
-- **aws_region**: AWS region.
-
-## Example Configuration
-
-```yaml
-aws_access_key_id: your_access_key_id
-aws_secret_access_key: your_secret_access_key
-aws_region: your_aws_region
-```
+| Parameter                    | Type     | Default Value                          | Description                                                                 |
+|------------------------------|----------|----------------------------------------|-----------------------------------------------------------------------------|
+| ec2_snapshot_old_threshold   | datetime | `datetime.now() - timedelta(days=90)`  | How long ago a snapshot was created to be considered old. Default is 90 days. |

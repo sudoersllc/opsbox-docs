@@ -4,28 +4,20 @@
 
 The Unused Buckets Plugin identifies S3 buckets that have not been accessed or modified for a specified period, helping to optimize storage costs by identifying buckets that can be deleted or archived.
 
-## Key Features
+!!! info "Bundled Check"
 
-- **AWS S3 Integration**: Fetches and processes data from AWS S3.
-- **Cost Savings Recommendations**: Identifies unused buckets that can be deleted or archived to save costs.
-- **Performance and Security Insights**: Provides detailed analysis on performance and security metrics.
+    This check is bundled alongside the rest of the community S3 checks, installable by adding `opsbox-s3-checks` to your project.
+
+## Features
+
+- Fetches and processes data from AWS S3.
+- Identifies unused buckets that can be deleted or archived to save costs.
 
 ## Configuration Parameters
+Besides [provider configuration](./s3_provider/s3_provider.md#fields),
 
-### AWS Configuration
 
-- **aws_access_key_id**: AWS access key ID.
-- **aws_secret_access_key**: AWS secret access key.
-- **aws_region**: AWS region.
+| Parameter                          | Type     | Default Value                          | Description                                                                 |
+|------------------------------------|----------|----------------------------------------|-----------------------------------------------------------------------------|
+| s3_unused_bucket_date_threshold    | datetime | (datetime.now() - timedelta(days=90))  | How long ago a bucket has to have been last used for it to be considered unused. Default is 90 days. |
 
-### Plugin Specific Configuration
-
-- **unused_period**: The period of inactivity to consider a bucket as unused. Default: 1 year.
-
-## Example Configuration
-
-```yaml
-aws_access_key_id: your_access_key_id
-aws_secret_access_key: your_secret_access_key
-aws_region: your_aws_region
-```

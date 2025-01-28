@@ -5,39 +5,19 @@
 
 The Low Request Count Load Balancers check identifies load balancers with low request counts.
 
-### Commands to install the plugin
-to install the plugin use the following command
-```bash
-uv add opsbox-elb-checks
-```
-to install the plugin as part of the AWS bundle use the following command
-```bash
-uv add "opsbox[aws]"
-```
+!!! info "Bundled Check"
 
-## Key Features
+    This check is bundled alongside the rest of the community ELB checks, installable by adding `opsbox-elb-checks` to your project.
 
-- **AWS ELB Integration**: Fetches and processes data from AWS ELB.
-- **Request Count Analysis**: Identifies load balancers with low request counts.
-- **Performance Insights**: Provides detailed analysis on performance metrics.
+## Features
+
+- Fetches and processes data from AWS ELB.
+- Identifies load balancers with low request counts.
 
 ## Configuration Parameters
+Besides [provider configuration](./elb_provider/elb_provider.md#fields),
 
-### AWS Configuration
+| Parameter                  | Type  | Default | Description                                                                 |
+|----------------------------|-------|---------|-----------------------------------------------------------------------------|
+| elb_low_requests_threshold | int   | 100     | # of requests below which to consider an ELB to have low request counts.    |
 
-- **aws_access_key_id**: AWS access key ID.
-- **aws_secret_access_key**: AWS secret access key.
-- **aws_region**: AWS region.
-
-### Check Configuration
-
-- **period**: 300 (seconds)
-- **request_threshold**: 100 (requests)
-
-## Example Configuration
-
-```yaml
-aws_access_key_id: your_access_key_id
-aws_secret_access_key: your_secret_access_key
-aws_region: your_aws_region
-```
