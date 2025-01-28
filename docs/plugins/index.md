@@ -75,24 +75,24 @@ Opsbox outputs allow you to send results to various destinations—Slack, PagerD
 
 ### Available Services
 - AWS services:
-    - [s3](/plugins/s3/s3_provider/s3_provider/)
-    - [rds](/plugins/rds/rds_provider/rds_provider/)
-    - [elb](/plugins/elb/elb_provider/elb_provider/)
-    - [ec2](/plugins/ec2/ec2_provider/ec2_provider/)
-    - [iam](/plugins/iam/iam_provider/iam_provider/)
-    - [route53](/plugins/r53/r53_provider/r53_provider/)
+    - [s3](s3/s3_provider/s3_provider.md)
+    - [rds](rds/rds_provider/rds_provider.md)
+    - [elb](elb/elb_provider/elb_provider.md)
+    - [ec2](ec2/ec2_provider/ec2_provider.md)
+    - [iam](iam/iam_provider/iam_provider.md)
+    - [route53](r53/r53_provider/r53_provider.md)
 
 ### Available Outputs
 
-- [azure](/plugins/outputs/azure/)
-- [github](/plugins/outputs/github/)
-- [cli](/plugins/outputs/cli/)
-- [text-file](/plugins/outputs/text/)
-- [json-file](/plugins/outputs/json/)
-- [email](/plugins/outputs/email/)
-- [jira](/plugins/outputs/jira/)
-- [pagerduty](/plugins/outputs/pagerduty/)
-- [slack](/plugins/outputs/slack/)
+- [azure](outputs/azure.md)
+- [github](outputs/github.md)
+- [cli](outputs/cli.md)
+- [text-file](outputs/text.md)
+- [json-file](outputs/json.md)
+- [email](outputs/email.md)
+- [jira](outputs/jira.md)
+- [pagerduty](outputs/pagerduty.md)
+- [slack](outputs/slack.md)
 
 ## Local Build
 

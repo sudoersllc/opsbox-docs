@@ -4,17 +4,19 @@
 ### Overview
 The S3Provider plugin gathers data related to AWS S3, including information about buckets, objects, and storage classes, to assist in storage management and cost optimization.
 
-### Required Fields
-```python
-    aws_access_key_id: Annotated[str,Field(..., description="AWS access key ID", required=True)]
-    aws_secret_access_key: Annotated[str,Field(..., description="AWS secret access key", required=True)]
-    aws_region: Annotated[
-        str | None, Field(description="AWS-Region", required=False, default=None)
-    ]
-```
+### Commands to install the plugin
+To install the plugin individually use the following command, simply add the `opsbox-s3-provider` package to your project.
+This can be done through pip or uv.
 
-### Related Checks
-- [ObjectLastModified](#object_last_modified)
-- [StorageClassUsage](#storage_class_usage)
-- [UnusedBuckets](#unused_buckets)
+!!! info
 
+    This plugin is *automatically installed* as part of the Opsbox Route53 check collection, installable with the `opsbox-s3-checks` package.
+
+
+### Fields
+
+| Field                  | Type   | Description                | Required | Default |
+|------------------------|--------|----------------------------|----------|---------|
+| aws_access_key_id      | string | AWS access key ID          | Yes      | -       |
+| aws_secret_access_key  | string | AWS secret access key      | Yes      | -       |
+| aws_region             | string | AWS Region                 | No       | None    |

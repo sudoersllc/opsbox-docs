@@ -11,7 +11,7 @@ This can be done through pip or uv.
 
     This plugin is *automatically installed* as part of the Opsbox EC2 check collection, installable with the `opsbox-ec2-checks` package.
 
-### Required Fields
+### Fields
 | Field Name            | Type                | Description                             | Required | Default |
 |-----------------------|---------------------|-----------------------------------------|----------|---------|
 | aws_access_key_id     | str                 | AWS access key ID                       | Yes      | -       |

@@ -3,16 +3,20 @@
 ### Overview
 The RDSProvider plugin collects information about AWS RDS instances to help manage and optimize database performance and cost.
 
-### Required Fields
-```python
-    aws_access_key_id: Annotated[str,Field(..., description="AWS access key ID", required=True)]
-    aws_secret_access_key: Annotated[str,Field(..., description="AWS secret access key", required=True)]
-    aws_region: Annotated[
-        str | None, Field(description="AWS-Region", required=False, default=None)
-    ]
-```
+### Commands to install the plugin
+To install the plugin individually use the following command, simply add the `opsbox-rds-provider` package to your project.
+This can be done through pip or uv.
 
-### Related Checks
-- [EmptyStorage](#empty_storage)
-- [RDSIdle](#rds_idle)
-- [ScalingDown](#scaling_down)
+!!! info
+
+    This plugin is *automatically installed* as part of the Opsbox ELB check collection, installable with the `opsbox-rds-checks` package.
+
+
+### Fields
+
+| Field                  | Type   | Description                | Required | Default |
+|------------------------|--------|----------------------------|----------|---------|
+| aws_access_key_id      | string | AWS access key ID          | Yes      | -       |
+| aws_secret_access_key  | string | AWS secret access key      | Yes      | -       |
+| aws_region             | string | AWS Region                 | No       | None    |
+
