@@ -5,7 +5,7 @@ The Route53Provider plugin collects data related to AWS Route53, including infor
 
 ### Commands to install the plugin
 To install the plugin individually use the following command, simply add the `opsbox-r53-provider` package to your project.
-This can be done through pip or uv.
+
 
 !!! info
 
