@@ -5,7 +5,7 @@ The EC2Provider plugin collects detailed information about AWS EC2 instances, in
 
 ### Commands to install the plugin
 To install the plugin individually use the following command, simply add the `opsbox-ec2-provider` package to your project.
-This can be done through pip or uv.
+
 
 !!! info
 
