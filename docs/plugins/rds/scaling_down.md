@@ -8,7 +8,7 @@ Scaling down RDS instances involves reducing the allocated resources (such as CP
 
     This check is bundled alongside the rest of the community RDS checks, installable by adding `opsbox-rds-checks` to your project.
 
-## Key Features
+## Features
 
 - Recommends adjusting the instance size to better fit the workload.
 - Reduces costs by allocating fewer resources.

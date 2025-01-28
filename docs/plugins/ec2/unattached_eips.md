@@ -8,7 +8,7 @@ The Unattached EIPs Plugin identifies Elastic IPs (EIPs) that are not associated
 
     This check is bundled alongside the rest of the community EC2 checks, installable by adding `opsbox-ec2-checks` to your project.
 
-## Key Features
+## Features
 
 - Fetches and processes data from AWS EC2.
 - Identifies EIPs that can be released to save costs.

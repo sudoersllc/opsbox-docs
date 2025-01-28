@@ -6,7 +6,7 @@ The S3Provider plugin gathers data related to AWS S3, including information abou
 
 ### Commands to install the plugin
 To install the plugin individually use the following command, simply add the `opsbox-s3-provider` package to your project.
-This can be done through pip or uv.
+
 
 !!! info
 

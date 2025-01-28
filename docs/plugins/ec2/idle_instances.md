@@ -8,7 +8,7 @@ The Idle Instances Plugin identifies EC2 instances that are running but have low
 
     This check is bundled alongside the rest of the community EC2 checks, installable by adding `opsbox-ec2-checks` to your project.
 
-## Key Features
+## Features
 
 - Fetches and processes data from AWS EC2.
 - Identifies instances that can be stopped or terminated to save costs.

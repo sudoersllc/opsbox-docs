@@ -8,7 +8,7 @@ The Old Snapshots Plugin identifies old RDS snapshots that are no longer needed,
 
     This check is bundled alongside the rest of the community RDS checks, installable by adding `opsbox-rds-checks` to your project.
 
-## Key Features
+## Features
 
 - Fetches and processes data from AWS RDS.
 - Identifies old snapshots that can be deleted to save storage costs.

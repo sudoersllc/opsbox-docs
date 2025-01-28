@@ -4,28 +4,17 @@
 
 The Storage Class Usage Plugin identifies S3 buckets using specific storage classes (e.g., GLACIER, STANDARD), helping to optimize storage costs by recommending appropriate storage classes based on usage patterns.
 
-## Key Features
+!!! info "Bundled Check"
 
-- **AWS S3 Integration**: Fetches and processes data from AWS S3.
-- **Cost Savings Recommendations**: Identifies buckets that can benefit from different storage classes to save costs.
-- **Performance and Security Insights**: Provides detailed analysis on performance and security metrics.
+    This check is bundled alongside the rest of the community S3 checks, installable by adding `opsbox-s3-checks` to your project.
+
+## Features
+- Fetches and processes data from AWS S3.
+- Identifies buckets that can benefit from different storage classes to save costs.
 
 ## Configuration Parameters
+Besides [provider configuration](./s3_provider/s3_provider.md#fields),
 
-### AWS Configuration
-
-- **aws_access_key_id**: AWS access key ID.
-- **aws_secret_access_key**: AWS secret access key.
-- **aws_region**: AWS region.
-
-### Plugin Specific Configuration
-
-- **storage_classes**: List of storage classes to check. Default: `["GLACIER", "STANDARD"]`.
-
-## Example Configuration
-
-```yaml
-aws_access_key_id: your_access_key_id
-aws_secret_access_key: your_secret_access_key
-aws_region: your_aws_region
-```
+| Parameter                         | Type     | Default Value                          | Description                                                                 |
+|-----------------------------------|----------|----------------------------------------|-----------------------------------------------------------------------------|
+| s3_stale_bucket_date_threshold    | datetime | (datetime.now() - timedelta(days=90))  | How long ago a bucket has to have been last used for it to be considered stale. Default is 90 days.               |

@@ -8,7 +8,7 @@ The Empty Storage Plugin identifies RDS instances with empty storage, helping to
 
     This check is bundled alongside the rest of the community RDS checks, installable by adding `opsbox-rds-checks` to your project.
 
-## Key Features
+## Features
 
 - Fetches and processes data from AWS RDS.
 - Identifies RDS instances with empty storage that can be resized or terminated to save costs.

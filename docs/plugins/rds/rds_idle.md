@@ -8,7 +8,7 @@ The RDS Idle Plugin identifies idle RDS instances, helping to optimize resource 
 
     This check is bundled alongside the rest of the community RDS checks, installable by adding `opsbox-rds-checks` to your project.
 
-## Key Features
+## Features
 
 - Fetches and processes data from AWS RDS.
 - Identifies idle RDS instances that can be stopped or terminated to save costs.

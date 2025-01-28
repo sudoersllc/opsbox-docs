@@ -12,7 +12,7 @@ Opsbox has a collection of rego checks to monitor various aspects of your S3 env
 
     `opsbox-s3-checks` is the name of this collection.
 
-    To install any of the S3 checks in this collection, install this collection by adding `opsbox-s3-checks` to your project in either UV or pip.
+    To install any of the S3 checks in this collection, install this collection by adding `opsbox-s3-checks` to your project.
 
     *These checks rely on the S3 Provider, which is installed as a prerequisite of this package.*
     *More info on the S3 provider can be found [here](./s3_provider/s3_provider.md)*

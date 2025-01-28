@@ -8,7 +8,7 @@ The Console Access IAM Plugin identifies IAM users with console access enabled, 
 
     This check is bundled alongside the rest of the community IAM checks, installable by adding `opsbox-aws-iam-checks` to your project.
 
-## Key Features
+## Features
 
 - Fetches and processes data from AWS IAM.
 - Identifies IAM users with console access to improve security.

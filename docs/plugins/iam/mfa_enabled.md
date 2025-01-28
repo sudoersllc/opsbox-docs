@@ -8,7 +8,7 @@ The IAM Users Without MFA Plugin identifies IAM users who do not have Multi-Fact
 
     This check is bundled alongside the rest of the community IAM checks, installable by adding `opsbox-aws-iam-checks` to your project.
 
-## Key Features
+## Features
 
 - Fetches and processes data from AWS IAM.
 - Identifies IAM users without MFA to improve security.
