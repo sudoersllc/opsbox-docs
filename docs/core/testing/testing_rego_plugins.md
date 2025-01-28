@@ -78,7 +78,7 @@ This test simulates how a Rego plugin gathers data from a provider plugin and ap
 
 ```python
 import pytest
-from core.plugins import Result, PLuginFlow
+from opsbox import Result, PLuginFlow
 from rego_handler import RegoHandler
 from tests.mocks import MockPlugin, MockConfig
 

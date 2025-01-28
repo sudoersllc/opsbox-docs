@@ -36,7 +36,7 @@ Below is an example implementation of an output plugin that writes results to a 
 
 ```python
 from pluggy import HookimplMarker
-from core.plugins import Result
+from opsbox import Result
 import os
 
 hookimpl = HookimplMarker("opsbox")
