@@ -224,7 +224,7 @@ Suppose you have an input plugin that gathers data and needs to output it for as
 
 ```python
 from pydantic import BaseModel
-from core.plugins import Result
+from opsbox import Result
 from pluggy import HookimplMarker
 
 hookimpl = HookimplMarker("opsbox")
@@ -254,7 +254,7 @@ class ExampleInputPlugin:
 In an assistant plugin, you can process the results from previous plugins:
 
 ```python
-from core.plugins import Result
+from opsbox import Result
 from pluggy import HookimplMarker
 
 hookimpl = HookimplMarker("opsbox")
@@ -282,7 +282,7 @@ class ExampleAssistantPlugin:
 Finally, an output plugin can take the processed results and output them accordingly:
 
 ```python
-from core.plugins import Result
+from opsbox import Result
 from pluggy import HookimplMarker
 
 hookimpl = HookimplMarker("opsbox")
