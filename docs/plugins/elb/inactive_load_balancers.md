@@ -5,38 +5,20 @@
 
 The Inactive Load Balancers check identifies load balancers that are inactive.
 
-### Commands to install the plugin
-to install the plugin use the following command
-```bash
-uv add opsbox-elb-checks
-```
-to install the plugin as part of the AWS bundle use the following command
-```bash
-uv add "opsbox[aws]"
-```
-## Key Features
+!!! info "Bundled Check"
 
-- **AWS ELB Integration**: Fetches and processes data from AWS ELB.
-- **Inactive Resource Identification**: Identifies load balancers that are inactive.
-- **Cost Savings Recommendations**: Recommends decommissioning inactive load balancers to save costs.
+    This check is bundled alongside the rest of the community ELB checks, installable by adding `opsbox-elb-checks` to your project.
+
+## Features
+
+- Fetches and processes data from AWS ELB.
+- Identifies load balancers that are inactive.
+- Recommends decommissioning inactive load balancers to save costs.
 
 ## Configuration Parameters
+Besides [provider configuration](./elb_provider/elb_provider.md#fields),
 
-### AWS Configuration
+| Parameter                        | Type | Default | Description                                                                 |
+|----------------------------------|------|---------|-----------------------------------------------------------------------------|
+| elb_inactive_requests_threshold  | int  | 0       | # of requests below which to consider an ELB to be inactive. Default = 0.   |
 
-- **aws_access_key_id**: AWS access key ID.
-- **aws_secret_access_key**: AWS secret access key.
-- **aws_region**: AWS region.
-
-### Check Configuration
-
-- **period**: 86400 (seconds)
-- **inactive_threshold**: 30 (days)
-
-## Example Configuration
-
-```yaml
-aws_access_key_id: your_access_key_id
-aws_secret_access_key: your_secret_access_key
-aws_region: your_aws_region
-```

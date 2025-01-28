@@ -5,7 +5,7 @@ The ELBProvider plugin gathers comprehensive data about AWS Elastic Load Balance
 
 ### Commands to install the plugin
 To install the plugin individually use the following command, simply add the `opsbox-elb-provider` package to your project.
-This can be done through pip or uv.
+
 
 !!! info
 

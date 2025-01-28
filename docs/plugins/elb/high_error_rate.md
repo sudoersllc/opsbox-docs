@@ -4,38 +4,18 @@
 
 The High Error Rate Load Balancers check identifies load balancers with a high error rate.
 
-### Commands to install the plugin
-to install the plugin use the following command
-```bash
-uv add opsbox-elb-checks
-```
-to install the plugin as part of the AWS bundle use the following command
-```bash
-uv add "opsbox[aws]"
-```
-## Key Features
+!!! info "Bundled Check"
 
-- **AWS ELB Integration**: Fetches and processes data from AWS ELB.
-- **Error Rate Analysis**: Identifies load balancers with high error rates.
-- **Performance Insights**: Provides detailed analysis on performance metrics.
+    This check is bundled alongside the rest of the community ELB checks, installable by adding `opsbox-elb-checks` to your project.
+
+## Features
+
+- Fetches and processes data from AWS ELB.
+- Identifies load balancers with high error rates.
 
 ## Configuration Parameters
+Besides [provider configuration](./elb_provider/elb_provider.md#fields),
 
-### AWS Configuration
-
-- **aws_access_key_id**: AWS access key ID.
-- **aws_secret_access_key**: AWS secret access key.
-- **aws_region**: AWS region.
-
-### Check Configuration
-
-- **period**: 300 (seconds)
-- **threshold**: 5 (error rate percentage)
-
-## Example Configuration
-
-```yaml
-aws_access_key_id: your_access_key_id
-aws_secret_access_key: your_secret_access_key
-aws_region: your_aws_region
-```
+| Parameter                | Type  | Default | Description                                                                 |
+|--------------------------|-------|---------|-----------------------------------------------------------------------------|
+| elb_error_rate_threshold | int   | 0       | # of errors needed to consider an ELB to have a high error rate.            |

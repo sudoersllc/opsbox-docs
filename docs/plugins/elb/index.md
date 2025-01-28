@@ -13,7 +13,7 @@ Opsbox has a collection of rego checks to monitor various aspects of your ELB en
 
     `opsbox-elb-checks` is the name of this collection.
 
-    To install any of the ELB checks in this collection, install this collection by adding `opsbox-elb-checks` to your project in either UV or pip.
+    To install any of the ELB checks in this collection, install this collection by adding `opsbox-elb-checks` to your project.
 
     *These checks rely on the ELB Provider, which is installed as a prerequisite of this package.*
     *More info on the ELB provider can be found [here](./elb_provider/elb_provider.md)*
