@@ -45,16 +45,13 @@ from pluggy import HookimplMarker
 
 hookimpl = HookimplMarker("opsbox")
 
-class CostAssistant:
-    
+class HelperAssistant:
     @hookimpl
     def grab_config(self) -> type[BaseModel]:
         """Return the plugin's configuration Pydantic model."""
-        class OAICostConfig(BaseModel):
-            oai_assistant_id: str = Field(..., description="The ID of the OpenAI assistant")
-            oai_vector_store_id: str = Field(..., description="The ID of the OpenAI vector store")
-            oai_key: str = Field(..., description="The OpenAI API key")
-        return OAICostConfig
+        class AssistantConfig(BaseModel):
+            aggregate: bool = Field(..., description="Whether to aggregate past results")
+        return AssistantConfig
 
     @hookimpl
     def set_data(self, model: BaseModel) -> None:
@@ -64,7 +61,10 @@ class CostAssistant:
     @hookimpl
     def activate(self) -> None:
         """Activate the plugin by initializing the OpenAI client."""
-        self.client = OpenAI(api_key=self.config.oai_key)
+        if self.config.aggregate:
+            client = client_with_aggregation
+        else:
+            client = client_without_aggregation
 ```
 
 ### Define Configuration (Optional)
@@ -74,26 +74,20 @@ To define the expected configuration for your plugin, implement the `grab_config
 #### Example Configuration
 
 ```python
-from pydantic import BaseModel, Field
-from pluggy import HookimplMarker
-
-hookimpl = HookimplMarker("opsbox")
-
-class CostAssistant:
-    
+class HelperAssistant:
     @hookimpl
     def grab_config(self) -> type[BaseModel]:
         """Return the plugin's configuration Pydantic model."""
-        class OAICostConfig(BaseModel):
-            oai_assistant_id: str = Field(..., description="The ID of the OpenAI assistant")
-            oai_vector_store_id: str = Field(..., description="The ID of the OpenAI vector store")
-            oai_key: str = Field(..., description="The OpenAI API key")
-        return OAICostConfig
+        class AssistantConfig(BaseModel):
+            aggregate: bool = Field(..., description="Whether to aggregate past results")
+        return AssistantConfig
 
     @hookimpl
     def set_data(self, model: BaseModel) -> None:
         """Set the plugin's data."""
         self.config = model
+    
+    ...
 ```
 
 ### Define Activation (Optional)
@@ -103,22 +97,15 @@ Sometimes, you need to initialize data *before* processing but *after* setting t
 #### Example Activation
 
 ```python
-from openai import OpenAI
-from pydantic import BaseModel, Field
-from pluggy import HookimplMarker
+from service_sdk import service_client
 
-hookimpl = HookimplMarker("opsbox")
-
-class CostAssistant:
-    
+class ClientOutput:
     @hookimpl
     def grab_config(self) -> type[BaseModel]:
         """Return the plugin's configuration Pydantic model."""
-        class OAICostConfig(BaseModel):
-            oai_assistant_id: str = Field(..., description="The ID of the OpenAI assistant")
-            oai_vector_store_id: str = Field(..., description="The ID of the OpenAI vector store")
-            oai_key: str = Field(..., description="The OpenAI API key")
-        return OAICostConfig
+        class ClientOutputConfig(BaseModel):
+            service_key: str = Field(..., description="The service API key")
+        return ClientOutputConfig
 
     @hookimpl
     def set_data(self, model: BaseModel) -> None:
@@ -127,8 +114,8 @@ class CostAssistant:
 
     @hookimpl
     def activate(self) -> None:
-        """Activate the plugin by initializing the OpenAI client."""
-        self.client = OpenAI(api_key=self.config.oai_key)
+        """Activate the plugin by initializing the service client."""
+        self.client = service_client(api_key=self.config.service_key)
 ```
 
 ### Define plugin info toml file
