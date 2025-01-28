@@ -5,7 +5,7 @@ The IAMProvider plugin collects data related to AWS IAM, including information a
 
 ### Commands to install the plugin
 To install the plugin individually use the following command, simply add the `opsbox-iam-provider` package to your project.
-This can be done through pip or uv.
+
 
 !!! info
 

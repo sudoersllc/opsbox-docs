@@ -4,33 +4,18 @@
 
 The Unused IAM Policies Plugin identifies IAM policies with zero attachments, helping to optimize IAM policy management by identifying policies that can be deleted or reviewed.
 
-### Commands to install the plugin
-to install the plugin use the following command
-```bash
-uv add opsbox-iam-checks
-```
-to install the plugin as part of the AWS bundle use the following command
-```bash
-uv add "opsbox[aws]"
-```
-## Key Features
+!!! info "Bundled Check"
 
-- **AWS IAM Integration**: Fetches and processes data from AWS IAM.
-- **Optimization Recommendations**: Identifies unused IAM policies to optimize policy management.
-- **Detailed Analysis**: Provides detailed information on IAM policies with zero attachments.
+    This check is bundled alongside the rest of the community IAM checks, installable by adding `opsbox-aws-iam-checks` to your project.
+
+## Features
+
+- Fetches and processes data from AWS IAM.
+- Provides detailed information on IAM policies with zero attachments.
 
 ## Configuration Parameters
+Besides [provider configuration](./ec2_provider/ec2_provider.md#fields),
 
-### AWS Configuration
-
-- **aws_access_key_id**: AWS access key ID.
-- **aws_secret_access_key**: AWS secret access key.
-- **aws_region**: AWS region.
-
-## Example Configuration
-
-```yaml
-aws_access_key_id: your_access_key_id
-aws_secret_access_key: your_secret_access_key
-aws_region: your_aws_region
-```
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| iam_unused_attachment_threshold | int | 0 | The number of attachments a policy must have to be considered used. Default is 0. |

@@ -11,9 +11,9 @@ Opsbox has a collection of rego checks to monitor various aspects of your IAM en
 
 !!! note "Installation Collection Package Name"
 
-    `opsbox-iam-checks` is the name of this collection.
+    `opsbox-aws-iam-checks` is the name of this collection.
 
-    To install any of the IAM checks in this collection, install this collection by adding `opsbox-iam-checks` to your project in either UV or pip.
+    To install any of the IAM checks in this collection, install this collection by adding `opsbox-aws-iam-checks` to your project.
 
     *These checks rely on the IAM Provider, which is installed as a prerequisite of this package.*
     *More info on the IAM provider can be found [here](./iam_provider/iam_provider.md)*
