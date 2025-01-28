@@ -5,7 +5,7 @@ The RDSProvider plugin collects information about AWS RDS instances to help mana
 
 ### Commands to install the plugin
 To install the plugin individually use the following command, simply add the `opsbox-rds-provider` package to your project.
-This can be done through pip or uv.
+
 
 !!! info
 

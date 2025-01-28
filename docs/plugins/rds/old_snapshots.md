@@ -4,28 +4,19 @@
 
 The Old Snapshots Plugin identifies old RDS snapshots that are no longer needed, helping to reduce storage costs by deleting outdated snapshots.
 
+!!! info "Bundled Check"
+
+    This check is bundled alongside the rest of the community RDS checks, installable by adding `opsbox-rds-checks` to your project.
+
 ## Key Features
 
-- **AWS RDS Integration**: Fetches and processes data from AWS RDS.
-- **Cost Savings Recommendations**: Identifies old snapshots that can be deleted to save storage costs.
-- **Performance and Security Insights**: Provides detailed analysis on performance and security metrics.
+- Fetches and processes data from AWS RDS.
+- Identifies old snapshots that can be deleted to save storage costs.
 
 ## Configuration Parameters
 
-### AWS Configuration
+Besides [provider configuration](./rds_provider/rds_provider.md#fields),
 
-- **aws_access_key_id**: AWS access key ID.
-- **aws_secret_access_key**: AWS secret access key.
-- **aws_region**: AWS region.
-
-### Plugin Specific Defaults
-
-- **snapshot_age_threshold**: The age threshold to consider. Default is 1 year.
-
-## Example Configuration
-
-```yaml
-aws_access_key_id: your_access_key_id
-aws_secret_access_key: your_secret_access_key
-aws_region: your_aws_region
-```
+| Parameter                | Type     | Default Value                        | Description                                                                 |
+|--------------------------|----------|--------------------------------------|-----------------------------------------------------------------------------|
+| `rds_old_date_threshold` | datetime | (datetime.now() - timedelta(days=90)) | How long ago a snapshot was created to be considered old. Default is 90 days. |

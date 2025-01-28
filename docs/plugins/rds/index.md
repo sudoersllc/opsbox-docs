@@ -13,7 +13,7 @@ Opsbox has a collection of rego checks to monitor various aspects of your RDS en
 
     `opsbox-rds-checks` is the name of this collection.
 
-    To install any of the RDS checks in this collection, install this collection by adding `opsbox-rds-checks` to your project in either UV or pip.
+    To install any of the RDS checks in this collection, install this collection by adding `opsbox-rds-checks` to your project.
 
     *These checks rely on the RDS Provider, which is installed as a prerequisite of this package.*
     *More info on the RDS provider can be found [here](./rds_provider/rds_provider.md)*
