@@ -13,7 +13,7 @@ Opsbox has a collection of rego checks to monitor various aspects of your EC2 en
 
     `opsbox-ec2-checks` is the name of this collection.
 
-    To install any of the EC2 checks in this collection, install this collection by adding `opsbox-ec2-checks` to your project in either UV or pip.
+    To install any of the EC2 checks in this collection, install this collection by adding `opsbox-ec2-checks` to your project.
 
     *These checks rely on the EC2 Provider, which is installed as a prerequisite of this package.*
     *More info on the EC2 provider can be found [here](./ec2_provider/ec2_provider.md)*
