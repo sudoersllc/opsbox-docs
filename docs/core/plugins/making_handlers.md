@@ -82,7 +82,7 @@ The `PluginInfo` object is a core component of the OpsBox Plugin System, encapsu
 **Example Usage:**
 
 ```python
-from core.plugins import PluginInfo
+from opsbox import PluginInfo
 
 plugin_info = PluginInfo(
     name="example_input",
@@ -102,7 +102,7 @@ By leveraging the `PluginInfo` object, developers can easily access and manage p
 ```python
 # general_handler.py
 from pluggy import HookimplMarker, PluginManager
-from core.plugins import PluginInfo, Result, Registry
+from opsbox import PluginInfo, Result, Registry
 from loguru import logger
 
 hookimpl = HookimplMarker("opsbox")
@@ -113,7 +113,7 @@ class GeneralHandler:
     @hookimpl
     def add_hookspecs(self, manager: PluginManager):
         """Add the hookspecs to the manager."""
-        from core.base_hooks import AssistantSpec, OutputSpec, ProviderSpec, InputSpec
+        from opsbox.base_hooks import AssistantSpec, OutputSpec, ProviderSpec, InputSpec
         manager.add_hookspecs(AssistantSpec)
         manager.add_hookspecs(OutputSpec)
         manager.add_hookspecs(ProviderSpec)
@@ -314,7 +314,7 @@ To extend the `HandlerSpec` with additional methods:
    ```python
    @hookimpl
    def add_hookspecs(self, manager: PluginManager):
-       from core.base_hooks import CustomSpec
+       from opsbox.base_hooks import CustomSpec
        manager.add_hookspecs(CustomSpec)
    ```
 

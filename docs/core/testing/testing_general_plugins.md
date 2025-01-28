@@ -58,7 +58,7 @@ class InputSpec:
 
 ```python
 import pytest
-from core.plugins import PluginInfo, Result
+from opsbox import PluginInfo, Result
 from general_handler import GeneralHandler
 from mock_plugin_utils import MockPlugin, MockConfig
 
