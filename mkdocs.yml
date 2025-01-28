@@ -24,8 +24,8 @@ nav:
     - Home: plugins/index.md
     - AWS:
         - "EC2": 
-          - "EC2 Provider":
-            - "EC2 provider": plugins/ec2/ec2_provider/ec2_provider.md
+          - plugins/ec2/index.md
+          - "EC2 Provider": plugins/ec2/ec2_provider/ec2_provider.md
           - "EC2 Checks":
             - "Old Snapshots": plugins/ec2/ec2_old_snapshots.md
             - "Stray Instances": plugins/ec2/stray_instances.md
@@ -61,7 +61,7 @@ nav:
             - "High Error Rate Load Balancers": plugins/elb/high_error_rate.md
             - "Inactive Load Balancers": plugins/elb/inactive_load_balancers.md
             - "Low Request Count Load Balancers": plugins/elb/low_request_counts.md
-
+    
         - "R53":
           - "Amazon R53 Provider":
             - "R53 provider": plugins/r53/r53_provider/r53_provider.md
@@ -82,8 +82,11 @@ theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.indexes 
+
 
 markdown_extensions:
+  - admonition
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
