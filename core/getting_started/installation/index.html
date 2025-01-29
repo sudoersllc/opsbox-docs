@@ -12,7 +12,7 @@
         <link rel="prev" href="../../">
       
       
-        <link rel="next" href="../running/">
+        <link rel="next" href="../configuration/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -356,6 +356,8 @@
       
         
       
+        
+      
     
     
       
@@ -449,46 +451,109 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-installations" class="md-nav__link">
+  <a href="#recommended-install-in-an-isolated-environment" class="md-nav__link">
     <span class="md-ellipsis">
-      Verifying Installations
+      (Recommended) Install in an isolated environment
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-opsbox-through-pypi" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Opsbox Through PyPI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-opsbox-through-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Opsbox Through Github
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-rego-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Rego Plugins
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using Rego Plugins">
+    <nav class="md-nav" aria-label="(Recommended) Install in an isolated environment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-an-opa-policy-docker-image" class="md-nav__link">
+  <a href="#uv-as-tool-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Create an OPA Policy docker image
+      UV as tool manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UV as tool manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipx-as-tool-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      pipx as tool manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pipx as tool manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#not-recommended-install-from-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      (Not Recommended) Install from source
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(Not Recommended) Install from source">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
     </span>
   </a>
   
@@ -499,10 +564,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#installing-opa-for-rego-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing OPA for Rego Compatibility
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2575,46 +2670,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#verifying-installations" class="md-nav__link">
+  <a href="#recommended-install-in-an-isolated-environment" class="md-nav__link">
     <span class="md-ellipsis">
-      Verifying Installations
+      (Recommended) Install in an isolated environment
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-opsbox-through-pypi" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Opsbox Through PyPI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-opsbox-through-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installing Opsbox Through Github
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-rego-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using Rego Plugins
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Using Rego Plugins">
+    <nav class="md-nav" aria-label="(Recommended) Install in an isolated environment">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#create-an-opa-policy-docker-image" class="md-nav__link">
+  <a href="#uv-as-tool-manager" class="md-nav__link">
     <span class="md-ellipsis">
-      Create an OPA Policy docker image
+      UV as tool manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UV as tool manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
     </span>
   </a>
   
@@ -2622,6 +2709,86 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipx-as-tool-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      pipx as tool manager
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="pipx as tool manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#not-recommended-install-from-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      (Not Recommended) Install from source
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="(Not Recommended) Install from source">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-opa-for-rego-compatibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing OPA for Rego Compatibility
+    </span>
+  </a>
   
 </li>
       
@@ -2643,80 +2810,157 @@
 <h1 id="installation">Installation</h1>
 <p>Ready to dive in? Let's get you set up!</p>
 <h2 id="prerequisites">Prerequisites</h2>
-<p>Ensure you have the following installed on your machine:</p>
+<p>Ensure you have <a href="https://www.python.org/downloads/">Python</a> <em>version 3.11</em> installed.</p>
+<p>If you'd like to use this <strong><em>as a tool</em></strong> and you <em>don't</em> need to mess with the <code>opsbox</code> code, we recommend that you <a href="#recommended-install-in-an-isolated-environment">install in an isolated environment</a>.
+To do that, you'll want to install either <a href="https://docs.astral.sh/uv/">UV</a> or <a href="https://pipx.pypa.io/stable/">pipx</a>.</p>
+<p>If you'd like to <strong><em>develop</em></strong> for opsbox or want to <a href="#not-recommended-install-from-source">install from source</a>, you will <em>need</em> <a href="https://docs.astral.sh/uv/">UV</a>.
+It's what we use in this project to manage dependencies.</p>
+<p>If you'd like to run <strong><em>rego plugins</em></strong> <em>(you probably do)</em> you'll need to <a href="#installing-opa-for-rego-compatibility">install a local copy of OPA</a>.</p>
+<h2 id="recommended-install-in-an-isolated-environment">(Recommended) Install in an isolated environment</h2>
+<p>If you are primarily using opsbox as a tool, we recommend installing it in it's own <em>isolated environment</em>.</p>
+<p>Normally, when you install through <code>pip</code>, you install into the <strong>system-wide</strong> package directory, which can lead to havoc, <em>especially</em> on distros reliant on python.</p>
+<p>Installing in our own environment allows us to avoid:</p>
 <ul>
-<li><a href="https://www.python.org/downloads/">Python</a> == 3.11</li>
-<li><a href="https://docs.astral.sh/uv/">UV</a> for dependency management</li>
-<li><a href="https://docs.docker.com/engine/install/">Docker</a> for running OPA server</li>
+<li>Version conflicts in system-wide dependencies</li>
+<li>Polluting global namespace with our package and all of our plugins</li>
+<li>Breaking systems reliant on a system python</li>
 </ul>
-<h2 id="verifying-installations">Verifying Installations</h2>
-<p>To verify that Python is installed, run the following command:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>--version
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>uv<span class="w"> </span>--version
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>docker<span class="w"> </span>--version
+<p>To manage these isolated tool environments for this project, you can use either <a href="https://docs.astral.sh/uv/">UV</a> or <a href="https://pipx.pypa.io/stable/">pipx</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Which One?</p>
+<p>UV is a tool and project environment manager, while pipx is simply a tool environment manager.</p>
+<p>If you ever want to develop opsbox in the future, it might be prudent to install UV, as that's what we use to manage packages.</p>
+<p>However, if you only want to use packaged plugins, either or will work.</p>
+</div>
+<h3 id="uv-as-tool-manager">UV as tool manager</h3>
+<h4 id="installation_1">Installation</h4>
+<p>To install just the opsbox tool with UV acting as the tool environment manager, you'll want to run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>opsbox
 </span></code></pre></div>
-<p><strong>Installing Python:</strong></p>
-<p>Visit the <a href="https://www.python.org/downloads/">official Python website</a> and download the latest version of Python for your operating system.</p>
-<p><strong>Installing UV</strong></p>
-<p>UV can be installed in various ways. The recommended method is to use the installer script:</p>
-<p><em>For Linux/Mac</em></p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span>-LsSf<span class="w"> </span>https://astral.sh/uv/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+<p>In UV you can add packages during the install process using the <code>--with</code> flag.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>uv<span class="w"> </span>tool<span class="w"> </span>install<span class="w"> </span>--with<span class="w"> </span><span class="s2">&quot;opsbox-cli-output&quot;</span><span class="w"> </span><span class="s2">&quot;opsbox[aws]&quot;</span><span class="w"> </span><span class="c1"># installing the AWS extras group, alongside the CLI output</span>
 </span></code></pre></div>
-<p><em>For Windows</em>
-<div class="language-powershell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">powershell</span> <span class="n">-c</span> <span class="s2">&quot;irm https://astral.sh/uv/install.ps1 | iex&quot;</span>
+<p>To add new packages to the environment after installing, simply <em>rerun the command with all desired packages in the <code>--with</code> flag.</em></p>
+<div class="admonition warning">
+<p class="admonition-title">UV and caching</p>
+<p>Sometimes, you might run into issues where UV downloads the <em>wrong version</em> or <em>can't find the package requested</em>.</p>
+<p>To fix this, it's helpful to clear the UV cache through the following command:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>uv<span class="w"> </span>cache<span class="w"> </span>clean
+</span></code></pre></div>
+and retry the install process.</p>
+</div>
+<h4 id="execution">Execution</h4>
+<p>To execute the opsbox binary in UV, simply run either:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>uv<span class="w"> </span>tool<span class="w"> </span>run<span class="w"> </span>opsbox<span class="w"> </span>...
+</span></code></pre></div>
+<p>or</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>uvx<span class="w"> </span>opsbox<span class="w"> </span>...
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">UV &amp; Tool Environments</p>
+<p>Virtual environment plugin detection <em>will not work</em> if you use the <code>--with</code> flag with anything other than <code>uv tool install</code>. This is because the execution-time <code>--with</code> flag acts differently, creating a temporary virtual environment on execute time.</p>
+<p>To add a package to the tool's virtual environment, you'll need to run the entire install command again with the proper packages in the <code>--with</code> flag.</p>
+</div>
+<h3 id="pipx-as-tool-manager">pipx as tool manager</h3>
+<h4 id="installation_2">Installation</h4>
+<p>To install just the opsbox tool with pipx acting as the tool environment manager, you'll want to run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>pipx<span class="w"> </span>install<span class="w"> </span>opsbox
+</span></code></pre></div>
+<p>In pipx you can add packages after the install process using the <code>inject</code> flag.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>pipx<span class="w"> </span>inject<span class="w"> </span>opsbox<span class="w"> </span>opsbox-cli-output<span class="w"> </span><span class="c1"># installing the CLI output into the opsbox venv</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>You can replace every mention of the bare <code>opsbox</code> package with the <code>"opsbox[aws]"</code> extras group to install AWS plugins.</p>
+</div>
+<h4 id="execution_1">Execution</h4>
+<p>To execute the opsbox binary in pipx, you'll need to add it to your path.</p>
+<p>To do this, run:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pipx<span class="w"> </span>ensurepath
+</span></code></pre></div>
+<p>Then, you can access it by calling <code>opsbox</code> by name in your shell.</p>
+<h2 id="not-recommended-install-from-source">(Not Recommended) Install from source</h2>
+<p>If you'd like to develop on top of opsbox, or just want a local copy of it to see what's going on as you run it, you can install from our git repository.</p>
+<p>You will <em>need</em> <a href="https://docs.astral.sh/uv/">UV</a> to continue, as that's what manages our dependencies.</p>
+<div class="admonition warning">
+<p class="admonition-title">Read this first</p>
+<p>While you <em>can</em> install this from source if you want to use this as a tool, we don't recommend it.</p>
+<p>If you want to use pre-packaged plugins with this style of install, you'll have to install them into the <em>same virtual environment running opsbox</em> or point to a plugin directory, which means <strong><em>you'll have to install all plugin dependencies into the main virtual environment</em></strong>.</p>
+<p>This means a lot more manual dependency management and directory making, which is not ideal for users that aren't looking for the development benefits this install method provides.</p>
+</div>
+<h3 id="installation_3">Installation</h3>
+<p>First, start by cloning our github repo.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/sudoersllc/opsbox-core.git
+</span></code></pre></div>
+<p>Next, we'll want to sync our python dependencies through UV by running the following <em>at the root of the repo</em>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>uv<span class="w"> </span>sync
 </span></code></pre></div></p>
-<h2 id="installing-opsbox-through-pypi">Installing Opsbox Through PyPI</h2>
-<p>Simply run <code>pip install opsbox</code> to install the minimal set of opsbox tools.</p>
-<p>If using UV, initilize your project using <code>uv init</code>.</p>
-<p>then <code>uv add opsbox</code></p>
-<p><em>Note: If you want to install AWS plugins, use the aws extras group, <code>opsbox[aws]</code></em></p>
-<h2 id="installing-opsbox-through-github">Installing Opsbox Through Github</h2>
+<p>This will create a <code>.venv</code> folder for our virtual environment, and download our dependencies.</p>
+<div class="admonition note">
+<p class="admonition-title">Python Version Issues While Syncing? Read This</p>
+<p>If you run into python versioning issues when running these commands on your copy of the repo, you might be able to install and pin the projects python version to our required 3.11.</p>
+<p>In your clone, run the following:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>uv<span class="w"> </span>python<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.11
+</span></code></pre></div></p>
+<p>Then, delete the <code>.python-version</code> file in the repo and run:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>uv<span class="w"> </span>python<span class="w"> </span>pin<span class="w"> </span><span class="m">3</span>.11
+</span></code></pre></div></p>
+<p>This should repin your python version to the UV-managed python interpreter.</p>
+</div>
+<h3 id="execution_2">Execution</h3>
+<p>To execute from this style of install, you'll want to run the <code>opsbox/main.py</code> file in your python virtual environment.</p>
+<p>You can do this by either activating your .venv and running it using python, or you could do it using UV in the following way from the <em>root of your repo</em>:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>uv<span class="w"> </span>run<span class="w"> </span>./opsbox/main.py<span class="w"> </span>...
+</span></code></pre></div></p>
+<p>This will run that file in the projects .venv, and will be <strong><em>the main thing you run instead of <code>opsbox</code> wherever you see it being mentioned</em></strong>.</p>
+<h2 id="installing-opa-for-rego-compatibility">Installing OPA for Rego Compatibility</h2>
+<p>Our program comes with compatibility for the Rego language, which is used to filter out data from various providers and return metrics for various services.</p>
+<p><strong><em>Hint: You probably want to use it if you're running any AWS plugins!</em></strong></p>
+<p>The first thing to do is to download the OPA binary to a safe space, following <a href="https://www.openpolicyagent.org/docs/latest/#running-opa">these instructions</a>.</p>
+<p>After you have downloaded and are able to run the OPA binary, add it to your path.</p>
+<div class="admonition tip">
+<p class="admonition-title">Adding to system PATH</p>
+<p><strong>Linux/macOS</strong></p>
 <ol>
 <li>
-<p><strong>Clone the Repository</strong></p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/sudoersllc/Opsbox.git
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>Opsbox
-</span></code></pre></div>
+<p><strong>Open your shell's config file:</strong> This is usually <code>~/.bashrc</code> (Bash), <code>~/.zshrc</code> (Zsh), or <code>~/.config/fish/config.fish</code> (Fish).</p>
 </li>
 <li>
-<p><strong>Install with uv</strong></p>
-<p>We use [<code>uv</code>] for managing dependencies. If you don't have it installed, you can get it via pip:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip<span class="w"> </span>install<span class="w"> </span>uv
-</span></code></pre></div>
-<p>Now, let's install Opsbox:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>uv<span class="w"> </span>sync
-</span></code></pre></div>
-<p>This command will install all required dependencies specified in <code>pyproject.toml</code>.</p>
+<p><strong>Add the directory:</strong> Find the <code>PATH</code> line. If it's missing, add this line at the end, replacing <code>/path/to/your/opa/directory</code> with the actual directory:</p>
 </li>
 </ol>
-<h2 id="using-rego-plugins">Using Rego Plugins</h2>
-<p>Open Policy Agent (OPA) is an open-source policy engine that enables organizations to implement policy as code across diverse environments. Its policy language, Rego, allows users to define rules that dictate system and application behavior.</p>
-<p>We use rego code to gather details about connected systems, alongside an Open Policy Agent (OPA) server, then format it for consumption by a language model.</p>
-<h3 id="create-an-opa-policy-docker-image">Create an OPA Policy docker image</h3>
-<p>To run OpsBox with rego plugins, you'll need an OPA server. This is because OpsBox uses OPA to enforce policies on all resources that are being managed.</p>
-<p>if you don't have OPA installed on your machine, or you dont have a running OPA instance, you can create a docker image for OPA.</p>
-<p>Start by <a href="https://docs.docker.com/engine/install/">installing docker</a>.</p>
-<p>Create a dockerfile and add the following code:
-<div class="language-docker highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span>#<span class="w"> </span>Use<span class="w"> </span>the<span class="w"> </span>official<span class="w"> </span>OPA<span class="w"> </span>image
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span>FROM<span class="w"> </span>openpolicyagent/opa:latest
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span>#<span class="w"> </span>Expose<span class="w"> </span>OPA<span class="err">&#39;</span>s<span class="w"> </span>default<span class="w"> </span>port
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span>EXPOSE<span class="w"> </span><span class="m">8181</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span>#<span class="w"> </span>Run<span class="w"> </span>OPA<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>specified<span class="w"> </span>policy<span class="w"> </span>file
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span>CMD<span class="w"> </span><span class="o">[</span><span class="s2">&quot;run&quot;</span>,<span class="w"> </span><span class="s2">&quot;--server&quot;</span>,<span class="w"> </span><span class="s2">&quot;--addr&quot;</span>,<span class="w"> </span><span class="s2">&quot;0.0.0.0:8181&quot;</span><span class="o">]</span>
-</span></code></pre></div></p>
-<p>Navigate to the directory and Build the Docker image:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>opa-server<span class="w"> </span>.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/path/to/your/opa/directory
 </span></code></pre></div>
-or you can also follow the offical OPA documentation to create the engine: <a href="https://www.openpolicyagent.org/docs/latest/">OPA Documentation</a></p>
-<p>Finally, run the OPA server as follows:
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8181</span>:8181<span class="w"> </span>--name<span class="w"> </span>opa-server<span class="w"> </span>opa-server
-</span></code></pre></div></p>
-<p>Or the docker image can be found here
-(https://hub.docker.com/r/openpolicyagent/opa/)</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">    </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>-p<span class="w"> </span><span class="m">8181</span>:8181<span class="w"> </span>--name<span class="w"> </span>opa<span class="w"> </span>openpolicyagent/opa<span class="w"> </span>run<span class="w"> </span>--server<span class="w"> </span>--addr<span class="o">=</span><span class="m">0</span>.0.0.0:8181*
-</span></code></pre></div>
+<ol>
+<li><strong>Save and apply:</strong> Save the file, then run <code>source ~/.bashrc</code> (or your file's name) in your terminal, or just restart your terminal.</li>
+</ol>
+<p><strong>Windows</strong></p>
+<ol>
+<li>
+<p><strong>Search for "environment variables":</strong>  Open "Edit the system environment variables".</p>
+</li>
+<li>
+<p><strong>Edit PATH:</strong> Click "Environment Variables...", then edit the "Path" variable (either User or System).  System changes need admin rights.</p>
+</li>
+<li>
+<p><strong>Add the directory:</strong> Click "New" and enter the full path to the directory. Example: <code>C:\path\to\your\opa\directory</code></p>
+</li>
+<li>
+<p><strong>Save and restart:</strong> Click "OK" on all windows. Open a <em>new</em> command prompt or PowerShell window.</p>
+</li>
+</ol>
+<p><strong>Important Notes:</strong></p>
+<ul>
+<li><strong>Executable Name:</strong> Make sure OPA has the right name and extension (e.g., <code>.exe</code> on Windows).</li>
+<li><strong>Permissions (Linux/macOS):</strong> Use <code>chmod +x /path/to/your/opa</code> to give your OPA execute permissions.</li>
+</ul>
+</div>
+<p><strong><em>Once added to your path, rego plugins should be able to find and detect your OPA install.</em></strong></p>
+<div class="admonition note">
+<p class="admonition-title">Using Servers</p>
+<p>While unlikely, you may have an existing OPA server you want to use.</p>
+<p>Simply pass the url base in the <code>opa_url</code> parameter, and we'll take care of the rest.</p>
+</div>
 
 
 

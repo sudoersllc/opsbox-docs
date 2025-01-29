@@ -9,22 +9,22 @@
       
       
       
-        <link rel="prev" href="../../">
+        <link rel="prev" href="../installation/">
       
       
-        <link rel="next" href="../../ec2_old_snapshots/">
+        <link rel="next" href="../running/">
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>EC2 Provider - Opsbox Docs</title>
+        <title>Configuration - Opsbox Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
       
       
 
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ec2provider" class="md-skip">
+        <a href="#configuration" class="md-skip">
           Skip to content
         </a>
       
@@ -76,7 +76,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Opsbox Docs" class="md-header__button md-logo" aria-label="Opsbox Docs" data-md-component="logo">
+    <a href="../../.." title="Opsbox Docs" class="md-header__button md-logo" aria-label="Opsbox Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EC2 Provider
+              Configuration
             
           </span>
         </div>
@@ -165,7 +165,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -180,11 +180,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../../core/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -200,13 +202,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../plugins/" class="md-tabs__link">
           
   
     
@@ -241,7 +241,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Opsbox Docs" class="md-nav__button md-logo" aria-label="Opsbox Docs" data-md-component="logo">
+    <a href="../../.." title="Opsbox Docs" class="md-nav__button md-logo" aria-label="Opsbox Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -259,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -276,6 +276,8 @@
       
   
   
+    
+  
   
   
     
@@ -294,19 +296,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../../core/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -317,13 +322,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Core
@@ -336,8 +341,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -357,11 +364,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -375,7 +382,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -389,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/getting_started/installation/" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -407,10 +414,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../core/getting_started/configuration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -419,6 +446,71 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-specify-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to Specify Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifying-your-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifying your pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-local-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with local plugins
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -431,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/getting_started/running/" class="md-nav__link">
+      <a href="../running/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/plugins/plugin_overview/" class="md-nav__link">
+      <a href="../../plugins/plugin_overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -473,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/contributing/" class="md-nav__link">
+      <a href="../../contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -552,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/plugins/development_basics/" class="md-nav__link">
+      <a href="../../plugins/development_basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/plugins/making_handlers/" class="md-nav__link">
+      <a href="../../plugins/making_handlers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -594,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/plugins/making_providers/" class="md-nav__link">
+      <a href="../../plugins/making_providers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -615,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/plugins/making_outputs/" class="md-nav__link">
+      <a href="../../plugins/making_outputs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -636,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/plugins/making_checks/" class="md-nav__link">
+      <a href="../../plugins/making_checks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -713,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/testing/testing/" class="md-nav__link">
+      <a href="../../testing/testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/testing/testing_handlers/" class="md-nav__link">
+      <a href="../../testing/testing_handlers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/testing/testing_general_plugins/" class="md-nav__link">
+      <a href="../../testing/testing_general_plugins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -776,7 +868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../core/testing/testing_rego_plugins/" class="md-nav__link">
+      <a href="../../testing/testing_rego_plugins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,8 +901,6 @@
       
   
   
-    
-  
   
   
     
@@ -827,22 +917,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../" class="md-nav__link ">
+            <a href="../../../plugins/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -853,13 +940,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Community Plugins
@@ -872,10 +959,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -897,11 +982,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -915,7 +1000,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             AWS
@@ -926,8 +1011,6 @@
                 
   
   
-    
-  
   
   
     
@@ -947,16 +1030,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../plugins/ec2/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -973,7 +1056,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2_1">
             <span class="md-nav__icon md-icon"></span>
             EC2
@@ -986,30 +1069,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    EC2 Provider
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../plugins/ec2/ec2_provider/ec2_provider/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1018,53 +1081,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fields" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fields
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1125,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ec2_old_snapshots/" class="md-nav__link">
+      <a href="../../../plugins/ec2/ec2_old_snapshots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1146,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unattached_eips/" class="md-nav__link">
+      <a href="../../../plugins/ec2/unattached_eips/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1167,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../idle_instances/" class="md-nav__link">
+      <a href="../../../plugins/ec2/idle_instances/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1188,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stray_ebs/" class="md-nav__link">
+      <a href="../../../plugins/ec2/stray_ebs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1250,7 +1266,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../s3/" class="md-nav__link ">
+            <a href="../../../plugins/s3/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1283,7 +1299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../s3/s3_provider/s3_provider/" class="md-nav__link">
+      <a href="../../../plugins/s3/s3_provider/s3_provider/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1350,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../s3/unused_buckets/" class="md-nav__link">
+      <a href="../../../plugins/s3/unused_buckets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1371,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../s3/storage_class_usage/" class="md-nav__link">
+      <a href="../../../plugins/s3/storage_class_usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1392,7 +1408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../s3/object_last_modified/" class="md-nav__link">
+      <a href="../../../plugins/s3/object_last_modified/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1454,7 +1470,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../rds/" class="md-nav__link ">
+            <a href="../../../plugins/rds/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1487,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rds/rds_provider/rds_provider/" class="md-nav__link">
+      <a href="../../../plugins/rds/rds_provider/rds_provider/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1556,7 +1572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rds/rds_idle/" class="md-nav__link">
+      <a href="../../../plugins/rds/rds_idle/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1577,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rds/old_snapshots/" class="md-nav__link">
+      <a href="../../../plugins/rds/old_snapshots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1598,7 +1614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rds/empty_storage/" class="md-nav__link">
+      <a href="../../../plugins/rds/empty_storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1619,7 +1635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../rds/scaling_down/" class="md-nav__link">
+      <a href="../../../plugins/rds/scaling_down/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1681,7 +1697,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../iam/" class="md-nav__link ">
+            <a href="../../../plugins/iam/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1714,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../iam/iam_provider/iam_provider/" class="md-nav__link">
+      <a href="../../../plugins/iam/iam_provider/iam_provider/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1783,7 +1799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../iam/console_access/" class="md-nav__link">
+      <a href="../../../plugins/iam/console_access/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1804,7 +1820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../iam/unused_policies/" class="md-nav__link">
+      <a href="../../../plugins/iam/unused_policies/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1825,7 +1841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../iam/mfa_enabled/" class="md-nav__link">
+      <a href="../../../plugins/iam/mfa_enabled/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1846,7 +1862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../iam/overdue_api_keys/" class="md-nav__link">
+      <a href="../../../plugins/iam/overdue_api_keys/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1908,7 +1924,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../elb/" class="md-nav__link ">
+            <a href="../../../plugins/elb/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1941,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../elb/elb_provider/elb_provider/" class="md-nav__link">
+      <a href="../../../plugins/elb/elb_provider/elb_provider/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2010,7 +2026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../elb/high_error_rate/" class="md-nav__link">
+      <a href="../../../plugins/elb/high_error_rate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2031,7 +2047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../elb/inactive_load_balancers/" class="md-nav__link">
+      <a href="../../../plugins/elb/inactive_load_balancers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2052,7 +2068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../elb/low_request_counts/" class="md-nav__link">
+      <a href="../../../plugins/elb/low_request_counts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2073,7 +2089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../elb/no_healthy_targets/" class="md-nav__link">
+      <a href="../../../plugins/elb/no_healthy_targets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2135,7 +2151,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../r53/" class="md-nav__link ">
+            <a href="../../../plugins/r53/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2168,7 +2184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../r53/r53_provider/r53_provider/" class="md-nav__link">
+      <a href="../../../plugins/r53/r53_provider/r53_provider/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2231,7 +2247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../r53/empty_zones/" class="md-nav__link">
+      <a href="../../../plugins/r53/empty_zones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2334,7 +2350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../outputs/slack/" class="md-nav__link">
+      <a href="../../../plugins/outputs/slack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2355,7 +2371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../outputs/cli/" class="md-nav__link">
+      <a href="../../../plugins/outputs/cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2376,7 +2392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../outputs/email/" class="md-nav__link">
+      <a href="../../../plugins/outputs/email/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2397,7 +2413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../outputs/jira/" class="md-nav__link">
+      <a href="../../../plugins/outputs/jira/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2418,7 +2434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../outputs/pagerduty/" class="md-nav__link">
+      <a href="../../../plugins/outputs/pagerduty/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2439,7 +2455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../outputs/azure/" class="md-nav__link">
+      <a href="../../../plugins/outputs/azure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2460,7 +2476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../outputs/github/" class="md-nav__link">
+      <a href="../../../plugins/outputs/github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2481,7 +2497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../outputs/text/" class="md-nav__link">
+      <a href="../../../plugins/outputs/text/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2502,7 +2518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../outputs/json/" class="md-nav__link">
+      <a href="../../../plugins/outputs/json/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2558,27 +2574,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#where-to-specify-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Where to Specify Configuration
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
+  <a href="#specifying-your-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands to install the plugin
+      Specifying your pipeline
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#fields" class="md-nav__link">
+  <a href="#logging" class="md-nav__link">
     <span class="md-ellipsis">
-      Fields
+      Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Help
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-local-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with local plugins
     </span>
   </a>
   
@@ -2599,71 +2633,71 @@
                   
 
 
-<h1 id="ec2provider">EC2Provider</h1>
-<h3 id="overview">Overview</h3>
-<p>The EC2Provider plugin collects detailed information about AWS EC2 instances, including their associated volumes and Elastic IP addresses, to facilitate monitoring and management.</p>
-<h3 id="commands-to-install-the-plugin">Commands to install the plugin</h3>
-<p>To install the plugin individually use the following command, simply add the <code>opsbox-ec2-provider</code> package to your project.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This plugin is <em>automatically installed</em> as part of the Opsbox EC2 check collection, installable with the <code>opsbox-ec2-checks</code> package.</p>
+<h1 id="configuration">Configuration</h1>
+<p>Before you can run opsbox, you must know how to configure it.</p>
+<p>Opsbox runs on a flexible, modular arguments-based configuration system.</p>
+<p>Each and every plugin can specify desired parameters, needed information, and other details that it wants from the user, which the user can set from a file, command line, or environment variable.</p>
+<h2 id="where-to-specify-configuration">Where to Specify Configuration</h2>
+<p>Argument values can be specified in 4 places:</p>
+<ul>
+<li>The default arguments file (<code>~/.opsbox.json</code>)</li>
+<li>A file specified with the <code>--config &lt;path&gt;</code> flag</li>
+<li>Double-dashed command line arguments and flags</li>
+<li>Environment variables.</li>
+</ul>
+<p><strong><em>This is also the resolution order!</em></strong></p>
+<p>Both the default and specified configuration files consist of a <strong>JSON dictionary</strong>, where each <em>key</em> corresponds to an <em>argument name</em> and each <em>value</em> is the <em>value you want that argument to have</em>.</p>
+<h2 id="specifying-your-pipeline">Specifying your pipeline</h2>
+<p>This is an argument that is core to how opsbox functions and works.
+It is <em>highly recommended</em> to take a look over this next section.</p>
+<p>Opsbox uses a series of plugins specified at runtime to analyze different environments.</p>
+<p>These plugins <em>have their own</em> arguments and required settings that will be looked for upon startup, and <em>must</em> specified as a pipeline in the following format:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>input_1,input_2-assistant_1-assistant_2-output_1,output_2
+</span></code></pre></div>
+<p>Where:</p>
+<ul>
+<li>The first arguments are the input plugins we want to use, seperated with a comma</li>
+<li>The middle arguments are the assistants we want to use, seperated by a hyphen</li>
+<li>The last arguments are the outputs we want to use, sepereated by a comma</li>
+</ul>
+<p>For instance, if we wanted to get data related to AWS EBS volumes that have gone astray, we can use the <code>stray_ebs</code> plugin from our plugins repo and specify a pipeline like so:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>stray_ebs-cost_savings-cli_out
+</span></code></pre></div>
+<p>In this pipeline:</p>
+<ul>
+<li>We take <code>stray_ebs</code> as our input.</li>
+<li><code>cost_savings</code> will work on the data from stray_ebs and format it in it's own way (providing cost savings recommendations)</li>
+<li><code>cli_out</code> will handle the formatted output of <code>cost_savings</code> and display it to the user on the cli.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Keep in mind plugins all have their own parameters they look for!</p>
 </div>
-<h3 id="fields">Fields</h3>
-<table>
-<thead>
-<tr>
-<th>Field Name</th>
-<th>Type</th>
-<th>Description</th>
-<th>Required</th>
-<th>Default</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>aws_access_key_id</td>
-<td>str</td>
-<td>AWS access key ID</td>
-<td>Yes</td>
-<td>-</td>
-</tr>
-<tr>
-<td>aws_secret_access_key</td>
-<td>str</td>
-<td>AWS secret access key</td>
-<td>Yes</td>
-<td>-</td>
-</tr>
-<tr>
-<td>aws_region</td>
-<td>str | None</td>
-<td>AWS region</td>
-<td>No</td>
-<td>None</td>
-</tr>
-<tr>
-<td>volume_tags</td>
-<td>str | None</td>
-<td>Key-value tag pairs for volumes</td>
-<td>No</td>
-<td>None</td>
-</tr>
-<tr>
-<td>instance_tags</td>
-<td>str | None</td>
-<td>Key-value tag pairs for instances</td>
-<td>No</td>
-<td>None</td>
-</tr>
-<tr>
-<td>eip_tags</td>
-<td>str | None</td>
-<td>Key-value tag pairs for Elastic IPs</td>
-<td>No</td>
-<td>None</td>
-</tr>
-</tbody>
-</table>
+<h2 id="logging">Logging</h2>
+<p>Opsbox provides a lot of customization over it's logging practices.</p>
+<p>There are 4 configuration parameters that help you see what you want to see:</p>
+<ul>
+<li><code>log_level</code>, which specifies the minimum level of logs you want to see.
+    Must be one of "TRACE", "DEBUG", "INFO", "WARNING", "ERROR", and "CRITICAL". </li>
+<li><code>log_file</code>, which specifies a path to a log file you want to output to.</li>
+<li><code>init_debug</code>, which allows you to see traces from the <em>very beginning</em> of our progrms execution.
+    Useful mostly for people developing these parts of opsbox.</li>
+<li><code>verbose</code>, which allows you to see the data that flows in certain parts of the application on the CLI.</li>
+</ul>
+<p>By default, we output to <code>stdout</code>, and we specify the "INFO" logging level.</p>
+<h2 id="getting-help">Getting Help</h2>
+<p>Opsbox has a colorful help system that can lend a helping hand.</p>
+<p>To access <strong><em>general, application wide parameters and help</em></strong>, run <code>opsbox --help</code> <em>without</em> any modules specified.</p>
+<p>If you'd like to see the <strong><em>arguments for a specific pipeline</em></strong>, run <code>opsbox --help</code> <em>with</em> the ppipeline you want specified.</p>
+<p>If you'd like to <em>see all plugins from the help screen</em>, add the <code>see_all</code> argument.</p>
+<h2 id="working-with-local-plugins">Working with local plugins</h2>
+<p>When developing plugins, you will want to point to the directory in which they can be found.</p>
+<p>This can be done using the <code>plugin_dir</code> argument, which should point to a directory that contains a plugin in its or its children's subdirectories.</p>
+<div class="admonition warning">
+<p class="admonition-title">Buyer Beware</p>
+<p>When specifying this argument, <strong><em>you will lose access to plugins stored in your virtual environment.</em></strong></p>
+<p>In addition, this argument requires that <strong><em>all plugin dependencies be installed in your executing virtual environment</em></strong>.</p>
+</div>
 
 
 
@@ -2710,10 +2744,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   </body>
