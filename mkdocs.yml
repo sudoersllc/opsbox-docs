@@ -6,6 +6,7 @@ nav:
     - Home: core/index.md
     - Getting Started:
         - Installation: core/getting_started/installation.md 
+        - Configuration: core/getting_started/configuration.md
         - Running OpsBox: core/getting_started/running.md
         - Plugin Overview: core/plugins/plugin_overview.md
         - Contributing: core/contributing.md
