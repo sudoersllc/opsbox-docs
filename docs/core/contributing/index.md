@@ -5,7 +5,7 @@ Thank you for your interest in contributing to Opsbox!
 We welcome contributions in the form of bug reports, feature requests, documentation improvements, new rego checks, and code changes. To ensure a smooth and efficient collaboration process, please follow these rules and guidelines.
 
 ## Code of Conduct
-By participating in the Opsbox project, you agree to abide by the following guidelines:
+***By participating in the Opsbox project, you agree to abide by the following guidelines:***
 
 1. **Respectful Interaction**: Treat all participants with respect. Consider different viewpoints and experiences.
 2. **Inclusivity**: Promote a diverse and inclusive environment.

@@ -226,3 +226,15 @@ logger.info("User {} created a new order with ID {}", user_id, order_id)
 ```python
 logger.info("Order created")
 ```
+
+## Formatting code
+We use [ruff](https://github.com/charliermarsh/ruff) for formatting and linting. 
+Make sure to run `ruff` before submitting your changes.
+```bash
+uv run ruff check . # for linting
+uv run ruff format . # for formatting
+```
+
+!!! tip
+
+    You can add the `--fix` flag to your ruff command and it will try and fix linting issues for you!
