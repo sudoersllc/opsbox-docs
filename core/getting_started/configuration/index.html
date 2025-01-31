@@ -293,6 +293,8 @@
       
         
       
+        
+      
     
     
       
@@ -347,8 +349,6 @@
   
     
     
-      
-        
       
         
       
@@ -558,6 +558,72 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../contributing/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Contributing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
               
                 
   
@@ -565,11 +631,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/" class="md-nav__link">
+      <a href="../../contributing/style_guide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Contributing
+    Style Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/git_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Workflow
   </span>
   
 
@@ -616,10 +703,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -630,8 +717,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Making Plugins
           </label>
@@ -777,10 +864,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
         
           
-          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -791,8 +878,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
             <span class="md-nav__icon md-icon"></span>
             Testing
           </label>
@@ -2677,22 +2764,22 @@ It is <em>highly recommended</em> to take a look over this next section.</p>
 <p>Opsbox provides a lot of customization over it's logging practices.</p>
 <p>There are 4 configuration parameters that help you see what you want to see:</p>
 <ul>
-<li><code>log_level</code>, which specifies the minimum level of logs you want to see.
+<li><code>--log_level</code>, which specifies the minimum level of logs you want to see.
     Must be one of "TRACE", "DEBUG", "INFO", "WARNING", "ERROR", and "CRITICAL". </li>
-<li><code>log_file</code>, which specifies a path to a log file you want to output to.</li>
-<li><code>init_debug</code>, which allows you to see traces from the <em>very beginning</em> of our progrms execution.
+<li><code>--log_file</code>, which specifies a path to a log file you want to output to.</li>
+<li><code>--init_debug</code>, which allows you to see traces from the <em>very beginning</em> of our program's execution.
     Useful mostly for people developing these parts of opsbox.</li>
-<li><code>verbose</code>, which allows you to see the data that flows in certain parts of the application on the CLI.</li>
+<li><code>--verbose</code>, which allows you to see the data that flows in certain parts of the application on the CLI.</li>
 </ul>
 <p>By default, we output to <code>stdout</code>, and we specify the "INFO" logging level.</p>
 <h2 id="getting-help">Getting Help</h2>
 <p>Opsbox has a colorful help system that can lend a helping hand.</p>
 <p>To access <strong><em>general, application wide parameters and help</em></strong>, run <code>opsbox --help</code> <em>without</em> any modules specified.</p>
-<p>If you'd like to see the <strong><em>arguments for a specific pipeline</em></strong>, run <code>opsbox --help</code> <em>with</em> the ppipeline you want specified.</p>
-<p>If you'd like to <em>see all plugins from the help screen</em>, add the <code>see_all</code> argument.</p>
+<p>If you'd like to see the <strong><em>arguments for a specific pipeline</em></strong>, run <code>opsbox --help</code> <em>with</em> the pipeline you want specified.</p>
+<p>If you'd like to <em>see all plugins from the help screen</em>, add the <code>--see_all</code> argument.</p>
 <h2 id="working-with-local-plugins">Working with local plugins</h2>
 <p>When developing plugins, you will want to point to the directory in which they can be found.</p>
-<p>This can be done using the <code>plugin_dir</code> argument, which should point to a directory that contains a plugin in its or its children's subdirectories.</p>
+<p>This can be done using the <code>--plugin_dir</code> argument, which should point to a directory that contains a plugin in its or its children's subdirectories.</p>
 <div class="admonition warning">
 <p class="admonition-title">Buyer Beware</p>
 <p>When specifying this argument, <strong><em>you will lose access to plugins stored in your virtual environment.</em></strong></p>
