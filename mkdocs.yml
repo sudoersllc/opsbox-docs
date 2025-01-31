@@ -10,6 +10,10 @@ nav:
         - Running OpsBox: core/getting_started/running.md
         - Plugin Overview: core/plugins/plugin_overview.md
         - Contributing: core/contributing.md
+    - Contributing:
+        - core/contributing/index.md
+        - "Style Guide": core/contributing/style_guide.md
+        - "Git Workflow": core/contributing/git_management.md
     - Making Plugins:
         - Basics: core/plugins/development_basics.md
         - Making Handlers: core/plugins/making_handlers.md
