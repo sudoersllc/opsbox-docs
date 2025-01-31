@@ -57,12 +57,12 @@ Opsbox provides a lot of customization over it's logging practices.
 
 There are 4 configuration parameters that help you see what you want to see:
 
-- `log_level`, which specifies the minimum level of logs you want to see.
+- `--log_level`, which specifies the minimum level of logs you want to see.
     Must be one of "TRACE", "DEBUG", "INFO", "WARNING", "ERROR", and "CRITICAL". 
-- `log_file`, which specifies a path to a log file you want to output to.
-- `init_debug`, which allows you to see traces from the *very beginning* of our progrms execution.
+- `--log_file`, which specifies a path to a log file you want to output to.
+- `--init_debug`, which allows you to see traces from the *very beginning* of our program's execution.
     Useful mostly for people developing these parts of opsbox.
-- `verbose`, which allows you to see the data that flows in certain parts of the application on the CLI.
+- `--verbose`, which allows you to see the data that flows in certain parts of the application on the CLI.
 
 By default, we output to `stdout`, and we specify the "INFO" logging level.
 
@@ -71,14 +71,14 @@ Opsbox has a colorful help system that can lend a helping hand.
 
 To access ***general, application wide parameters and help***, run `opsbox --help` *without* any modules specified.
 
-If you'd like to see the ***arguments for a specific pipeline***, run `opsbox --help` *with* the ppipeline you want specified.
+If you'd like to see the ***arguments for a specific pipeline***, run `opsbox --help` *with* the pipeline you want specified.
 
-If you'd like to *see all plugins from the help screen*, add the `see_all` argument.
+If you'd like to *see all plugins from the help screen*, add the `--see_all` argument.
 
 ## Working with local plugins
 When developing plugins, you will want to point to the directory in which they can be found.
 
-This can be done using the `plugin_dir` argument, which should point to a directory that contains a plugin in its or its children's subdirectories.
+This can be done using the `--plugin_dir` argument, which should point to a directory that contains a plugin in its or its children's subdirectories.
 
 !!! warning "Buyer Beware"
 
