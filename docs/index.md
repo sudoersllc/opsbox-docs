@@ -37,7 +37,7 @@ Ensure your plugins and configurations work as expected with our testing guides.
 
 Want to contribute to OpsBox? Check out our guidelines.
 
-- [Contributing Guide](core/contributing.md)
+- [Contributing Guide](core/contributing/index.md)
 
 ## Community Plugins
 
