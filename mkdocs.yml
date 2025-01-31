@@ -9,7 +9,6 @@ nav:
         - Configuration: core/getting_started/configuration.md
         - Running OpsBox: core/getting_started/running.md
         - Plugin Overview: core/plugins/plugin_overview.md
-        - Contributing: core/contributing.md
     - Contributing:
         - core/contributing/index.md
         - "Style Guide": core/contributing/style_guide.md
