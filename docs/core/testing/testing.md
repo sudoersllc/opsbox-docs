@@ -93,18 +93,3 @@ pytest --cov=opsbox --cov-report=html
 ```
 
 For more details, see the [pytest-cov documentation](https://pytest-cov.readthedocs.io/en/latest/).
-
-
-
-
----
-
-## Conclusion
-
-By following this guide, you can run, extend, and create new tests for your OpsBox project using `pytest`. This ensures that all plugins, handlers, and registries are functioning as expected across different scenarios.
-
-For more detailed information on writing tests in pytest, visit the [official pytest documentation](https://docs.pytest.org/en/latest/contents.html).
-
----
-
-Let me know if you'd like any more modifications!
