@@ -1,37 +1,27 @@
-# EmailOutput Plugin
+# Email Output Plugin
 
 ## Overview
 
 The EmailOutput Plugin processes and creates emails based on the results of checks, allowing for easy communication and reporting of findings.
 
-### Commands to install the plugin
-to install the plugin use the following command
-```bash
-uv add opsbox-email-output
-```
+*This output plugin can be used by adding `email_out` to your pipeline.*
 
-## Key Features
+!!! note "Installation Package Name"
+
+    `opsbox-email-output` is the name of this package.
+
+    To use it, add `opsbox-email-output` to your project.
+
+## Features
 
 - **Email Integration**: Sends results via email.
-- **Customizable SMTP Settings**: Allows specifying SMTP server details.
 
 ## Configuration Parameters
 
-### Email Configuration
-
-- **smtp_username**: The username for the SMTP server.
-- **smtp_password**: The password for the SMTP server.
-- **smtp_server**: The SMTP server to use.
-- **smtp_port**: The port to use for the SMTP server.
-- **receiver_email_list**: A comma-separated list of email addresses to send the email to.
-
-
-## Example Configuration
-
-```yaml
-smtp_username: your_smtp_username
-smtp_password: your_smtp_password
-smtp_server: your_smtp_server
-smtp_port: your_smtp_port
-receiver_email_list: your_receiver_email_list
-```
+| Parameter            | Type | Description                                                                 | Required | Default |
+|----------------------|------|-----------------------------------------------------------------------------|----------|---------|
+| smtp_username        | str  | The username for the SMTP server.                                           | Yes      | -       |
+| smtp_password        | str  | The password for the SMTP server.                                           | Yes      | -       |
+| smtp_server          | str  | The SMTP server to use.                                                     | Yes      | -       |
+| smtp_port            | str  | The port to use for the SMTP server.                                        | Yes      | -       |
+| receiver_email_list  | str  | A comma-separated list of email addresses to send the email to.             | Yes      | -       |

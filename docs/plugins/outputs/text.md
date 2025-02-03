@@ -4,11 +4,15 @@
 
 The TextFileOutput Plugin writes the results of checks to text files, allowing for easy storage and review of the output data.
 
-### Commands to install the plugin
-tp install the plugin use the following command
-```bash
-uv add opsbox-text-file-output
-```
+
+*This output plugin can be used by adding `text_out` to your pipeline.*
+
+!!! note "Installation Package Name"
+
+    `opsbox-text-file-output` is the name of this package.
+
+    To use it, add `opsbox-text-file-output` to your project.
+
 
 ## Key Features
 
@@ -18,12 +22,6 @@ uv add opsbox-text-file-output
 
 ## Configuration Parameters
 
-### Text File Configuration
-
-- **output_folder**: The folder to output the results to (default: `./findings/`).
-
-## Example Configuration
-
-```yaml
-output_folder: ./findings/
-```
+| Parameter      | Type    | Description                              | Required | Default       |
+|----------------|---------|------------------------------------------|----------|---------------|
+| output_folder  | str\|None | The folder to output the results to.     | No       | ./findings/   |
