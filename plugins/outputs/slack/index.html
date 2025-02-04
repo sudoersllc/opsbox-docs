@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slackoutput-plugin" class="md-skip">
+        <a href="#slack-output-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -2404,27 +2404,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2434,30 +2419,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#slack-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Slack Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2688,27 +2649,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2718,30 +2664,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#slack-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Slack Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2762,28 +2684,47 @@
                   
 
 
-<h1 id="slackoutput-plugin">SlackOutput Plugin</h1>
+<h1 id="slack-output-plugin">Slack Output Plugin</h1>
 <h2 id="overview">Overview</h2>
 <p>The SlackOutput Plugin processes and sends results to a specified Slack channel, allowing for easy communication and reporting of findings.</p>
-<h3 id="commands-to-install-the-plugin">Commands to install the plugin</h3>
-<p>to install the plugin use the following command
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>add<span class="w"> </span>opsbox-slack-output
-</span></code></pre></div></p>
-<h2 id="key-features">Key Features</h2>
+<p><em>This output plugin can be used by adding <code>slack_out</code> to your pipeline.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Installation Package Name</p>
+<p><code>opsbox-slack-output</code> is the name of this package.</p>
+<p>To use it, add <code>opsbox-slack-output</code> to your project.</p>
+</div>
+<h2 id="features">Features</h2>
 <ul>
 <li><strong>Slack Integration</strong>: Sends results to a Slack channel.</li>
-<li><strong>Customizable Slack Settings</strong>: Allows specifying Slack token and channel.</li>
 </ul>
 <h2 id="configuration-parameters">Configuration Parameters</h2>
-<h3 id="slack-configuration">Slack Configuration</h3>
-<ul>
-<li><strong>slack_token</strong>: The Slack token to use.</li>
-<li><strong>slack_channel</strong>: The Slack channel to send the message to.</li>
-</ul>
-<h2 id="example-configuration">Example Configuration</h2>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">slack_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_slack_token</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">slack_channel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_slack_channel</span>
-</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>slack_token</td>
+<td>str</td>
+<td>The Slack token to use.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>slack_channel</td>
+<td>str</td>
+<td>The Slack channel to send the message to.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 
 
 

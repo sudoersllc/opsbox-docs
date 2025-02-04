@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jiraoutput-plugin" class="md-skip">
+        <a href="#jira-output-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -2467,27 +2467,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2497,30 +2482,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jira-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Jira Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2688,27 +2649,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2718,30 +2664,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#jira-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Jira Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2762,34 +2684,63 @@
                   
 
 
-<h1 id="jiraoutput-plugin">JiraOutput Plugin</h1>
+<h1 id="jira-output-plugin">Jira Output Plugin</h1>
 <h2 id="overview">Overview</h2>
 <p>The JiraOutput Plugin processes and creates Jira issues based on the results of checks, helping to manage and track cost-saving recommendations and other tasks.</p>
-<h3 id="commands-to-install-the-plugin">Commands to install the plugin</h3>
-<p>to install the plugin use the following command
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>add<span class="w"> </span>opsbox-jira-output
-</span></code></pre></div></p>
-<p><strong><em>Requires LLM</em></strong></p>
-<h2 id="key-features">Key Features</h2>
+<p><em>This output plugin can be used by adding <code>jira_out</code> to your pipeline.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Installation Package Name</p>
+<p><code>opsbox-jira-output</code> is the name of this package.</p>
+<p>To use it, add <code>opsbox-jira-output</code> to your project.</p>
+</div>
+<h2 id="features">Features</h2>
 <ul>
 <li><strong>Jira Integration</strong>: Fetches and processes data from Jira.</li>
 <li><strong>Issue Creation</strong>: Creates detailed Jira issues based on the provided results.</li>
-<li><strong>Customizable Project Key</strong>: Allows specifying the Jira project to create issues in.</li>
 </ul>
 <h2 id="configuration-parameters">Configuration Parameters</h2>
-<h3 id="jira-configuration">Jira Configuration</h3>
-<ul>
-<li><strong>jira_url</strong>: The URL of the Jira instance.</li>
-<li><strong>jira_email</strong>: The email to authenticate to Jira with.</li>
-<li><strong>jira_api_token</strong>: The API key to authenticate to Jira with.</li>
-<li><strong>jira_project_key</strong>: The Jira project to create issues in.</li>
-</ul>
-<h2 id="example-configuration">Example Configuration</h2>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">jira_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_jira_url</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">jira_email</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_jira_email</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">jira_api_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_jira_api_token</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">jira_project_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_jira_project_key</span>
-</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JIRA_USERNAME</td>
+<td>str</td>
+<td>The URL of the Jira instance.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>JIRA_EMAIL</td>
+<td>str</td>
+<td>The email to authenticate to Jira with.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>JIRA_API_TOKEN</td>
+<td>str</td>
+<td>The API key to authenticate to Jira with.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>JIRA_PROJECT_KEY</td>
+<td>str</td>
+<td>The Jira project to create issues in.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Requires LLM</em></strong></p>
 
 
 

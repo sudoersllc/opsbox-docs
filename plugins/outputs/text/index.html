@@ -2551,21 +2551,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2581,30 +2566,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#text-file-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Text File Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2688,21 +2649,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2718,30 +2664,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#text-file-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Text File Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2765,10 +2687,12 @@
 <h1 id="textfileoutput-plugin">TextFileOutput Plugin</h1>
 <h2 id="overview">Overview</h2>
 <p>The TextFileOutput Plugin writes the results of checks to text files, allowing for easy storage and review of the output data.</p>
-<h3 id="commands-to-install-the-plugin">Commands to install the plugin</h3>
-<p>tp install the plugin use the following command
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>add<span class="w"> </span>opsbox-text-file-output
-</span></code></pre></div></p>
+<p><em>This output plugin can be used by adding <code>text_out</code> to your pipeline.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Installation Package Name</p>
+<p><code>opsbox-text-file-output</code> is the name of this package.</p>
+<p>To use it, add <code>opsbox-text-file-output</code> to your project.</p>
+</div>
 <h2 id="key-features">Key Features</h2>
 <ul>
 <li><strong>File Output</strong>: Writes results to text files.</li>
@@ -2776,13 +2700,26 @@
 <li><strong>Detailed Logging</strong>: Provides detailed logs of the results.</li>
 </ul>
 <h2 id="configuration-parameters">Configuration Parameters</h2>
-<h3 id="text-file-configuration">Text File Configuration</h3>
-<ul>
-<li><strong>output_folder</strong>: The folder to output the results to (default: <code>./findings/</code>).</li>
-</ul>
-<h2 id="example-configuration">Example Configuration</h2>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">output_folder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./findings/</span>
-</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>output_folder</td>
+<td>str|None</td>
+<td>The folder to output the results to.</td>
+<td>No</td>
+<td>./findings/</td>
+</tr>
+</tbody>
+</table>
 
 
 

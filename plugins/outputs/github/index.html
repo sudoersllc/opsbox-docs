@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#githuboutput-plugin" class="md-skip">
+        <a href="#github-output-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -2530,27 +2530,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2560,30 +2545,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#github-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      GitHub Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2688,27 +2649,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2718,30 +2664,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#github-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      GitHub Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2762,36 +2684,71 @@
                   
 
 
-<h1 id="githuboutput-plugin">GithubOutput Plugin</h1>
+<h1 id="github-output-plugin">Github Output Plugin</h1>
 <h2 id="overview">Overview</h2>
 <p>The GithubOutput Plugin processes and creates GitHub ticket issues based on the results of checks, helping to manage and track cost-saving recommendations and other tasks.</p>
-<h3 id="commands-to-install-the-plugin">Commands to install the plugin</h3>
-<p>to install the plugin use the following command
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>add<span class="w"> </span>opsbox-github-output
-</span></code></pre></div></p>
-<p><strong><em>Description creation requires LLM</em></strong></p>
-<h2 id="key-features">Key Features</h2>
+<p><em>This output plugin can be used by adding <code>github_out</code> to your pipeline.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Installation Package Name</p>
+<p><code>opsbox-github-output</code> is the name of this package.</p>
+<p>To use it, add <code>opsbox-github-output</code> to your project.</p>
+</div>
+<h2 id="features">Features</h2>
 <ul>
 <li><strong>GitHub Integration</strong>: Fetches and processes data from GitHub.</li>
 <li><strong>Issue Creation</strong>: Creates detailed GitHub issues based on the provided results.</li>
 <li><strong>Customizable Labels</strong>: Allows setting labels for the created issues.</li>
 </ul>
 <h2 id="configuration-parameters">Configuration Parameters</h2>
-<h3 id="github-configuration">GitHub Configuration</h3>
-<ul>
-<li><strong>github_token</strong>: The token for the GitHub user.</li>
-<li><strong>repo_owner</strong>: The owner of the repository.</li>
-<li><strong>repo_name</strong>: The name of the repository.</li>
-<li><strong>labels</strong>: The labels to apply to the issue (optional).</li>
-<li><strong>create_description</strong>: Whether to create a description instead of an issue (default: false).</li>
-</ul>
-<h2 id="example-configuration">Example Configuration</h2>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_github_token</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">repo_owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_repo_owner</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">repo_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_repo_name</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">labels</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_labels</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">create_description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>github_token</td>
+<td>str</td>
+<td>The token for the GitHub user.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>repo_owner</td>
+<td>str</td>
+<td>The owner of the repository.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>repo_name</td>
+<td>str</td>
+<td>The name of the repository.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>labels</td>
+<td>str|None</td>
+<td>The labels to apply to the issue.</td>
+<td>No</td>
+<td>None</td>
+</tr>
+<tr>
+<td>create_description</td>
+<td>bool</td>
+<td>Whether to create a description instead of an issue.</td>
+<td>No</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Description creation requires LLM</em></strong></p>
 
 
 

@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#emailoutput-plugin" class="md-skip">
+        <a href="#email-output-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -2446,27 +2446,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2476,30 +2461,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#email-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Email Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2688,27 +2649,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2718,30 +2664,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#email-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Email Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2762,34 +2684,68 @@
                   
 
 
-<h1 id="emailoutput-plugin">EmailOutput Plugin</h1>
+<h1 id="email-output-plugin">Email Output Plugin</h1>
 <h2 id="overview">Overview</h2>
 <p>The EmailOutput Plugin processes and creates emails based on the results of checks, allowing for easy communication and reporting of findings.</p>
-<h3 id="commands-to-install-the-plugin">Commands to install the plugin</h3>
-<p>to install the plugin use the following command
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>add<span class="w"> </span>opsbox-email-output
-</span></code></pre></div></p>
-<h2 id="key-features">Key Features</h2>
+<p><em>This output plugin can be used by adding <code>email_out</code> to your pipeline.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Installation Package Name</p>
+<p><code>opsbox-email-output</code> is the name of this package.</p>
+<p>To use it, add <code>opsbox-email-output</code> to your project.</p>
+</div>
+<h2 id="features">Features</h2>
 <ul>
 <li><strong>Email Integration</strong>: Sends results via email.</li>
-<li><strong>Customizable SMTP Settings</strong>: Allows specifying SMTP server details.</li>
 </ul>
 <h2 id="configuration-parameters">Configuration Parameters</h2>
-<h3 id="email-configuration">Email Configuration</h3>
-<ul>
-<li><strong>smtp_username</strong>: The username for the SMTP server.</li>
-<li><strong>smtp_password</strong>: The password for the SMTP server.</li>
-<li><strong>smtp_server</strong>: The SMTP server to use.</li>
-<li><strong>smtp_port</strong>: The port to use for the SMTP server.</li>
-<li><strong>receiver_email_list</strong>: A comma-separated list of email addresses to send the email to.</li>
-</ul>
-<h2 id="example-configuration">Example Configuration</h2>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">smtp_username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_smtp_username</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">smtp_password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_smtp_password</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">smtp_server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_smtp_server</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">smtp_port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_smtp_port</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">receiver_email_list</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_receiver_email_list</span>
-</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>smtp_username</td>
+<td>str</td>
+<td>The username for the SMTP server.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>smtp_password</td>
+<td>str</td>
+<td>The password for the SMTP server.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>smtp_server</td>
+<td>str</td>
+<td>The SMTP server to use.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>smtp_port</td>
+<td>str</td>
+<td>The port to use for the SMTP server.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>receiver_email_list</td>
+<td>str</td>
+<td>A comma-separated list of email addresses to send the email to.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
 
 
 

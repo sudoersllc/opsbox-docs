@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#azureoutput-plugin" class="md-skip">
+        <a href="#azure-output-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -2509,27 +2509,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2539,30 +2524,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#azure-devops-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Azure DevOps Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2688,27 +2649,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2718,30 +2664,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#azure-devops-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Azure DevOps Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2762,41 +2684,85 @@
                   
 
 
-<p>Here is the document for the AzureOutput plugin in the requested format:</p>
-<h1 id="azureoutput-plugin">AzureOutput Plugin</h1>
+<h1 id="azure-output-plugin">Azure Output Plugin</h1>
 <h2 id="overview">Overview</h2>
 <p>The AzureOutput Plugin processes and creates Azure DevOps ticket issues based on the results of checks, helping to manage and track cost-saving recommendations and other tasks.</p>
-<h3 id="commands-to-install-the-plugin">Commands to install the plugin</h3>
-<p>To install the plugin use the following command
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>add<span class="w"> </span>opsbox-azure-output
-</span></code></pre></div></p>
-<p><strong><em>Description creation requires LLM</em></strong></p>
-<h2 id="key-features">Key Features</h2>
+<p><em>This output plugin can be used by adding <code>azure_out</code> to your pipeline.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Installation Package Name</p>
+<p><code>opsbox-azure-output</code> is the name of this package.</p>
+<p>To use it, add <code>opsbox-azure-output</code> to your project.</p>
+</div>
+<h2 id="features">Features</h2>
 <ul>
 <li><strong>Azure DevOps Integration</strong>: Fetches and processes data from Azure DevOps.</li>
 <li><strong>Issue Creation</strong>: Creates detailed Azure DevOps issues based on the provided results.</li>
 <li><strong>Customizable Priority and Tags</strong>: Allows setting priority and tags for the created issues.</li>
 </ul>
 <h2 id="configuration-parameters">Configuration Parameters</h2>
-<h3 id="azure-devops-configuration">Azure DevOps Configuration</h3>
-<ul>
-<li><strong>azure_devops_token</strong>: The personal access token for Azure DevOps.</li>
-<li><strong>azure_devops_organization</strong>: The name of the Azure DevOps organization.</li>
-<li><strong>azure_devops_project</strong>: The name of the Azure DevOps project.</li>
-<li><strong>azure_devops_username</strong>: The username for Azure DevOps.</li>
-<li><strong>azure_devops_priority</strong>: The priority of the work item (default: 4).</li>
-<li><strong>tags</strong>: The tags to apply to the work item (optional).</li>
-<li><strong>create_description</strong>: Whether to create a description instead of an issue (default: false).</li>
-</ul>
-<h2 id="example-configuration">Example Configuration</h2>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">azure_devops_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_azure_devops_token</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">azure_devops_organization</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_azure_devops_organization</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">azure_devops_project</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_azure_devops_project</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">azure_devops_username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_azure_devops_username</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">azure_devops_priority</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">tags</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_tags</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nt">create_description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>azure_devops_token</td>
+<td>str</td>
+<td>The personal access token for Azure DevOps.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>azure_devops_organization</td>
+<td>str</td>
+<td>The name of the Azure DevOps organization.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>azure_devops_project</td>
+<td>str</td>
+<td>The name of the Azure DevOps project.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>azure_devops_username</td>
+<td>str</td>
+<td>The username for Azure DevOps.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>azure_devops_priority</td>
+<td>int</td>
+<td>The priority of the work item.</td>
+<td>No</td>
+<td>4</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>str|None</td>
+<td>The tags to apply to the work item.</td>
+<td>No</td>
+<td>None</td>
+</tr>
+<tr>
+<td>create_description</td>
+<td>bool</td>
+<td>Whether to create a description instead of an issue.</td>
+<td>No</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Description creation requires LLM configuration</em></strong></p>
 
 
 

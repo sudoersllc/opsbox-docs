@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pagerdutyoutput-plugin" class="md-skip">
+        <a href="#pagerduty-output-plugin" class="md-skip">
           Skip to content
         </a>
       
@@ -2488,27 +2488,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2518,30 +2503,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pagerduty-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      PagerDuty Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2688,27 +2649,12 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Overview">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#commands-to-install-the-plugin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands to install the plugin
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Features
+      Features
     </span>
   </a>
   
@@ -2718,30 +2664,6 @@
   <a href="#configuration-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Configuration Parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Parameters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pagerduty-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      PagerDuty Configuration
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example Configuration
     </span>
   </a>
   
@@ -2762,29 +2684,49 @@
                   
 
 
-<h1 id="pagerdutyoutput-plugin">PagerDutyOutput Plugin</h1>
+<h1 id="pagerduty-output-plugin">Pagerduty Output Plugin</h1>
 <h2 id="overview">Overview</h2>
 <p>The PagerDutyOutput Plugin processes and sends results to PagerDuty, allowing for incident creation and management based on the findings.</p>
-<h3 id="commands-to-install-the-plugin">Commands to install the plugin</h3>
-<p>to install the plugin use the following command
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv<span class="w"> </span>add<span class="w"> </span>opsbox-pagerduty-output
-</span></code></pre></div></p>
-<p><strong><em>Description creation requires LLM</em></strong></p>
-<h2 id="key-features">Key Features</h2>
+<p><em>This output plugin can be used by adding <code>pagerduty_out</code> to your pipeline.</em></p>
+<div class="admonition note">
+<p class="admonition-title">Installation Package Name</p>
+<p><code>opsbox-pagerduty-output</code> is the name of this package.</p>
+<p>To use it, add <code>opsbox-pagerduty-output</code> to your project.</p>
+</div>
+<h2 id="features">Features</h2>
 <ul>
 <li><strong>PagerDuty Integration</strong>: Sends results to PagerDuty.</li>
 <li><strong>Customizable Incident Creation</strong>: Allows specifying whether to create a description or an issue.</li>
 </ul>
 <h2 id="configuration-parameters">Configuration Parameters</h2>
-<h3 id="pagerduty-configuration">PagerDuty Configuration</h3>
-<ul>
-<li><strong>routing_key</strong>: The routing key to use.</li>
-<li><strong>create_description</strong>: Whether to create a description instead of an issue.</li>
-</ul>
-<h2 id="example-configuration">Example Configuration</h2>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">routing_key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">your_routing_key</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">create_description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+<th>Required</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>routing_key</td>
+<td>str</td>
+<td>The routing key to use.</td>
+<td>Yes</td>
+<td>-</td>
+</tr>
+<tr>
+<td>create_description</td>
+<td>bool</td>
+<td>Whether to create a description instead of an issue.</td>
+<td>No</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>Description creation requires LLM</em></strong></p>
 
 
 
