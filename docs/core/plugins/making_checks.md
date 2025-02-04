@@ -255,7 +255,7 @@ This allows for a bunch of fun, interesting dynamic attributes to be added to yo
 One of the more common things to do with this input injection method is to ***parameterize your rego functions*** by injecting user-specified arguments into the `input` object.
 
 ### Defining the arguments
-First thhing to do when needing accessible arguments is to add a config model that's returned from `grab_config`, along side a proper setter of `set_data`.
+First thing to do when needing accessible arguments is to add a config model that's returned from `grab_config`, along side a proper setter of `set_data`.
 
 Let's take a look at another plugin, this time the `overdue_api_keys` from the AWS IAM checks plugin, to see how it does it:
 
