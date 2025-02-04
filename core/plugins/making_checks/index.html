@@ -2928,7 +2928,7 @@
 <p>These fields tell Opsbox what it needs to know to accurately manage Rego checks.</p>
 <h2 id="defining-hook-implementations">Defining Hook Implementations</h2>
 <p>Rego checks implement the hooks from <code>RegoSpec</code>. </p>
-<p>The key method to implement is <code>report_findings(self, data: "Result") -&gt; "Result"</code>. This hook takes in a Result with rego-processed details from the rego check speicified and formats it into an LLM-usable text format, returning the result.</p>
+<p>The key method to implement is <code>report_findings(self, data: "Result") -&gt; "Result"</code>. This hook takes in a Result with rego-processed details from the rego check specified and formats it into an LLM-usable text format, returning the result.</p>
 <p>If you want to have user-settable parameters, you must also use the <code>inject_data(self, data: "Result") -&gt; "Result"</code> method. This method will intercept data from the provider and modify it's <code>Result</code> object.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -3103,7 +3103,7 @@ method.</p>
 <p>This allows for a bunch of fun, interesting dynamic attributes to be added to your rego checks to make them more powerful.</p>
 <p>One of the more common things to do with this input injection method is to <strong><em>parameterize your rego functions</em></strong> by injecting user-specified arguments into the <code>input</code> object.</p>
 <h3 id="defining-the-arguments">Defining the arguments</h3>
-<p>First thhing to do when needing accessible arguments is to add a config model that's returned from <code>grab_config</code>, along side a proper setter of <code>set_data</code>.</p>
+<p>First thing to do when needing accessible arguments is to add a config model that's returned from <code>grab_config</code>, along side a proper setter of <code>set_data</code>.</p>
 <p>Let's take a look at another plugin, this time the <code>overdue_api_keys</code> from the AWS IAM checks plugin, to see how it does it:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">OverdueAPIKeysConfig</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="n">iam_overdue_key_date_threshold</span><span class="p">:</span> <span class="n">Annotated</span><span class="p">[</span>
