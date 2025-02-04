@@ -50,7 +50,7 @@ These fields tell Opsbox what it needs to know to accurately manage Rego checks.
 
 Rego checks implement the hooks from `RegoSpec`. 
 
-The key method to implement is `report_findings(self, data: "Result") -> "Result"`. This hook takes in a Result with rego-processed details from the rego check speicified and formats it into an LLM-usable text format, returning the result.
+The key method to implement is `report_findings(self, data: "Result") -> "Result"`. This hook takes in a Result with rego-processed details from the rego check specified and formats it into an LLM-usable text format, returning the result.
 
 If you want to have user-settable parameters, you must also use the `inject_data(self, data: "Result") -> "Result"` method. This method will intercept data from the provider and modify it's `Result` object.
 
@@ -255,7 +255,7 @@ This allows for a bunch of fun, interesting dynamic attributes to be added to yo
 One of the more common things to do with this input injection method is to ***parameterize your rego functions*** by injecting user-specified arguments into the `input` object.
 
 ### Defining the arguments
-First thhing to do when needing accessible arguments is to add a config model that's returned from `grab_config`, along side a proper setter of `set_data`.
+First thing to do when needing accessible arguments is to add a config model that's returned from `grab_config`, along side a proper setter of `set_data`.
 
 Let's take a look at another plugin, this time the `overdue_api_keys` from the AWS IAM checks plugin, to see how it does it:
 
