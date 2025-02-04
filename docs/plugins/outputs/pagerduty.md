@@ -1,32 +1,27 @@
-# PagerDutyOutput Plugin
+# Pagerduty Output Plugin
 
 ## Overview
 
 The PagerDutyOutput Plugin processes and sends results to PagerDuty, allowing for incident creation and management based on the findings.
 
-### Commands to install the plugin
-to install the plugin use the following command
-```bash
-uv add opsbox-pagerduty-output
-```
+*This output plugin can be used by adding `pagerduty_out` to your pipeline.*
 
-***Description creation requires LLM***
+!!! note "Installation Package Name"
 
-## Key Features
+    `opsbox-pagerduty-output` is the name of this package.
+
+    To use it, add `opsbox-pagerduty-output` to your project.
+
+## Features
 
 - **PagerDuty Integration**: Sends results to PagerDuty.
 - **Customizable Incident Creation**: Allows specifying whether to create a description or an issue.
 
 ## Configuration Parameters
 
-### PagerDuty Configuration
+| Parameter          | Type | Description                                           | Required | Default |
+|--------------------|------|-------------------------------------------------------|----------|---------|
+| routing_key        | str  | The routing key to use.                               | Yes      | -       |
+| create_description | bool | Whether to create a description instead of an issue.  | No       | False   |
 
-- **routing_key**: The routing key to use.
-- **create_description**: Whether to create a description instead of an issue.
-
-## Example Configuration
-
-```yaml
-routing_key: your_routing_key
-create_description: true
-```
+***Description creation requires LLM***

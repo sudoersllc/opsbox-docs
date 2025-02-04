@@ -1,16 +1,18 @@
-# CLIOutput Plugin
+# CLI Output Plugin
 
 ## Overview
 
 The CLIOutput Plugin processes and displays results directly in the command line interface (CLI), providing immediate feedback and insights based on the results of checks.
 
-### Commands to install the plugin
-to install the plugin use the following command
-```bash
-uv add opsbox-cli-output
-```
+*This output plugin can be used by adding `cli_out` to your pipeline.*
 
-## Key Features
+!!! note "Installation Package Name"
+
+    `opsbox-cli-output` is the name of this package.
+
+    To use it, add `opsbox-cli-output` to your project.
+
+## Features
 
 - **Immediate Feedback**: Displays results directly in the CLI.
 - **Simple Integration**: Easily integrates with existing workflows.
@@ -18,10 +20,4 @@ uv add opsbox-cli-output
 
 ## Configuration Parameters
 
-### CLI Configuration
-
-This plugin does not require any specific configuration parameters.
-
-## Example Configuration
-
-No configuration is needed for the CLIOutput plugin.
+There are no configuration parameters for this plugin.
