@@ -2942,13 +2942,13 @@ They implement functions that can handle many plugin types and structures.</p>
 <h5 id="1-providers">1. Providers</h5>
 <p>Providers act as data sources (e.g., EC2, S3, etc.). They gather information from external sources and forward them to plugins that use them.</p>
 <h5 id="2-inputs">2. Inputs</h5>
-<p>Inputs can collect data from a plugin and proccess them or produce their own data, but they are always the start of a pipeline. They provide formatted results that other plugins can use.</p>
+<p>Inputs can collect data from a plugin and process them or produce their own data, but they are always the start of a pipeline. They provide formatted results that other plugins can use.</p>
 <h5 id="3-assistants">3. Assistants</h5>
 <p>Assistants process, transform, and enhance the results from inputs. They act as intermediaries, refining the data for better analysis and decision-making.</p>
 <h5 id="4-outputs">4. Outputs</h5>
 <p>Outputs handle the final formatted results, directing them to specified destinations (e.g., Jira, text files, etc.).</p>
 <h3 id="rego-handler"><em>Rego Handler</em></h3>
-<p>Allows for connection and proccessing of rego-formatted inputs called rego checks into the pipeline.
+<p>Allows for connection and processing of rego-formatted inputs called rego checks into the pipeline.
 Rego-based plugins use the Open Policy Agent to execute and gather details from associated rego code. </p>
 <h5 id="check">Check</h5>
 <p>A rego check collects data from a provider and executes given rego code on that data using a trusted OPA server.</p>

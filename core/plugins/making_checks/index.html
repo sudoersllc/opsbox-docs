@@ -2928,7 +2928,7 @@
 <p>These fields tell Opsbox what it needs to know to accurately manage Rego checks.</p>
 <h2 id="defining-hook-implementations">Defining Hook Implementations</h2>
 <p>Rego checks implement the hooks from <code>RegoSpec</code>. </p>
-<p>The key method to implement is <code>report_findings(self, data: "Result") -&gt; "Result"</code>. This hook takes in a Result with rego-proccessed details from the rego check speicified and formats it into an LLM-usable text format, returning the result.</p>
+<p>The key method to implement is <code>report_findings(self, data: "Result") -&gt; "Result"</code>. This hook takes in a Result with rego-processed details from the rego check speicified and formats it into an LLM-usable text format, returning the result.</p>
 <p>If you want to have user-settable parameters, you must also use the <code>inject_data(self, data: "Result") -&gt; "Result"</code> method. This method will intercept data from the provider and modify it's <code>Result</code> object.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
