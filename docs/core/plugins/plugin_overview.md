@@ -18,7 +18,7 @@ These plugins use the general handler, which handles code not specifically relat
 Providers act as data sources (e.g., EC2, S3, etc.). They gather information from external sources and forward them to plugins that use them.
 
 ##### 2. Inputs
-Inputs can collect data from a plugin and proccess them or produce their own data, but they are always the start of a pipeline. They provide formatted results that other plugins can use.
+Inputs can collect data from a plugin and process them or produce their own data, but they are always the start of a pipeline. They provide formatted results that other plugins can use.
 
 ##### 3. Assistants
 Assistants process, transform, and enhance the results from inputs. They act as intermediaries, refining the data for better analysis and decision-making.
@@ -27,7 +27,7 @@ Assistants process, transform, and enhance the results from inputs. They act as 
 Outputs handle the final formatted results, directing them to specified destinations (e.g., Jira, text files, etc.).
 
 ### *Rego Handler*
-Allows for connection and proccessing of rego-formatted inputs called rego checks into the pipeline.
+Allows for connection and processing of rego-formatted inputs called rego checks into the pipeline.
 Rego-based plugins use the Open Policy Agent to execute and gather details from associated rego code. 
 
 ##### Check

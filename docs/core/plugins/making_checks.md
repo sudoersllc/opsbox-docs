@@ -50,7 +50,7 @@ These fields tell Opsbox what it needs to know to accurately manage Rego checks.
 
 Rego checks implement the hooks from `RegoSpec`. 
 
-The key method to implement is `report_findings(self, data: "Result") -> "Result"`. This hook takes in a Result with rego-proccessed details from the rego check speicified and formats it into an LLM-usable text format, returning the result.
+The key method to implement is `report_findings(self, data: "Result") -> "Result"`. This hook takes in a Result with rego-processed details from the rego check speicified and formats it into an LLM-usable text format, returning the result.
 
 If you want to have user-settable parameters, you must also use the `inject_data(self, data: "Result") -> "Result"` method. This method will intercept data from the provider and modify it's `Result` object.
 
