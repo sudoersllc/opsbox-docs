@@ -1,4 +1,6 @@
-site_name: Opsbox Docs
+site_name: Opsbox Documentation
+site_url: https://sudoersllc.github.io/opsbox-docs/
+repo_url: https://github.com/sudoersllc/opsbox-core
 
 nav:
   - Welcome! : index.md
@@ -94,7 +96,13 @@ theme:
     - search.highlight
   # navigation
     - navigation.tabs
-    - navigation.indexes 
+    - navigation.indexes
+    - navigation.top
+    - navigation.sections
+  # xhr-spa
+    - navigation.instant
+    - navigation.instant.progress
+
 
 
 
