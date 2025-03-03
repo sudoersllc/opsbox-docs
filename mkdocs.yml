@@ -82,11 +82,20 @@ nav:
         - "Text File Output": plugins/outputs/text.md
         - "Json File Output": plugins/outputs/json.md
 
+plugins:
+  - search
+
 theme:
   name: material
   features:
+  # search
+    - search.share
+    - search.suggest
+    - search.highlight
+  # navigation
     - navigation.tabs
     - navigation.indexes 
+
 
 
 markdown_extensions:
